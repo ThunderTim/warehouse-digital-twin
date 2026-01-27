@@ -1,0 +1,4439 @@
+{
+  "config": {
+    "units": "feet",
+    "filledThreshold": 70
+  },
+  "campus": {
+    "id": "main-campus",
+    "name": "Main Campus",
+    "glbFile": "campus.glb",
+    "buildings": [
+      "bldg-22"
+    ]
+  },
+  "buildings": {
+    "bldg-22": {
+      "id": "bldg-22",
+      "name": "Building 22",
+      "glbFile": "bldg-22.glb",
+      "bays": [
+        "3W",
+        "3E",
+        "6W",
+        "6E"
+      ],
+      "stats": {
+        "totalSlots": 207,
+        "filledSlots": 68,
+        "availableSlots": 136,
+        "emptySlots": 3
+      }
+    }
+  },
+  "bays": {
+    "3W": {
+      "id": "3W",
+      "name": "Bay 3 West",
+      "buildingId": "bldg-22",
+      "hitMesh": "hit-3W",
+      "dimensions": [
+        60,
+        94
+      ],
+      "racks": [
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39"
+      ],
+      "stats": {
+        "totalSlots": 207,
+        "averageFill": 50.4,
+        "filledSlots": 68,
+        "availableSlots": 136,
+        "emptySlots": 3
+      }
+    },
+    "3E": {
+      "id": "3E",
+      "name": "Bay 3 East",
+      "buildingId": "bldg-22",
+      "hitMesh": "hit-3E",
+      "dimensions": [
+        60,
+        94
+      ],
+      "racks": [],
+      "stats": {
+        "totalSlots": 0,
+        "averageFill": 0,
+        "filledSlots": 0,
+        "availableSlots": 0,
+        "emptySlots": 0
+      }
+    },
+    "6W": {
+      "id": "6W",
+      "name": "Bay 6 West",
+      "buildingId": "bldg-22",
+      "hitMesh": "hit-6W",
+      "dimensions": [
+        60,
+        94
+      ],
+      "racks": [],
+      "stats": {
+        "totalSlots": 0,
+        "averageFill": 0,
+        "filledSlots": 0,
+        "availableSlots": 0,
+        "emptySlots": 0
+      }
+    },
+    "6E": {
+      "id": "6E",
+      "name": "Bay 6 East",
+      "buildingId": "bldg-22",
+      "hitMesh": "hit-6E",
+      "dimensions": [
+        60,
+        94
+      ],
+      "racks": [],
+      "stats": {
+        "totalSlots": 0,
+        "averageFill": 0,
+        "filledSlots": 0,
+        "availableSlots": 0,
+        "emptySlots": 0
+      }
+    }
+  },
+  "racks": {
+    "18": {
+      "id": "18",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    },
+    "19": {
+      "id": "19",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    },
+    "20": {
+      "id": "20",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    },
+    "21": {
+      "id": "21",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "slotCount": 12
+    },
+    "22": {
+      "id": "22",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "slotCount": 12
+    },
+    "23": {
+      "id": "23",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "slotCount": 12
+    },
+    "24": {
+      "id": "24",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "slotCount": 12
+    },
+    "25": {
+      "id": "25",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B"
+      ],
+      "slotCount": 12
+    },
+    "26": {
+      "id": "26",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "slotCount": 12
+    },
+    "39": {
+      "id": "39",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    },
+    "38": {
+      "id": "38",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    },
+    "37": {
+      "id": "37",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    },
+    "36": {
+      "id": "36",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    },
+    "35": {
+      "id": "35",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    },
+    "34": {
+      "id": "34",
+      "bayId": "3W",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "slotCount": 15
+    }
+  },
+  "slots": [
+    {
+      "id": "3W-18-A-01-01",
+      "label": "03W18A1",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 1.833,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 81
+    },
+    {
+      "id": "3W-18-A-02-01",
+      "label": "03W18A2",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 1.833,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 14
+    },
+    {
+      "id": "3W-18-A-03-01",
+      "label": "03W18A3",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 1.833,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 3
+    },
+    {
+      "id": "3W-18-B-01-01",
+      "label": "03W18B1",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 1.833,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 94
+    },
+    {
+      "id": "3W-18-B-02-01",
+      "label": "03W18B2",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 1.833,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 35
+    },
+    {
+      "id": "3W-18-B-03-01",
+      "label": "03W18B3",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 1.833,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 31
+    },
+    {
+      "id": "3W-18-C-01-01",
+      "label": "03W18C1",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 1.833,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 28
+    },
+    {
+      "id": "3W-18-C-02-01",
+      "label": "03W18C2",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 1.833,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 17
+    },
+    {
+      "id": "3W-18-C-03-01",
+      "label": "03W18C3",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 1.833,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 94
+    },
+    {
+      "id": "3W-18-D-01-01",
+      "label": "03W18D1",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 1.833,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 13
+    },
+    {
+      "id": "3W-18-D-02-01",
+      "label": "03W18D2",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 1.833,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 86
+    },
+    {
+      "id": "3W-18-D-03-01",
+      "label": "03W18D3",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 1.833,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 94
+    },
+    {
+      "id": "3W-18-E-01-01",
+      "label": "03W18E1",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 1.833,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 69
+    },
+    {
+      "id": "3W-18-E-02-01",
+      "label": "03W18E2",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 1.833,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 11
+    },
+    {
+      "id": "3W-18-E-03-01",
+      "label": "03W18E3",
+      "bayId": "3W",
+      "rackId": "18",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 1.833,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 75
+    },
+    {
+      "id": "3W-19-E-01-01",
+      "label": "03W19E1",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 13.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 54
+    },
+    {
+      "id": "3W-19-E-02-01",
+      "label": "03W19E2",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 13.167,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 4
+    },
+    {
+      "id": "3W-19-E-03-01",
+      "label": "03W19E3",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 13.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 3
+    },
+    {
+      "id": "3W-19-D-01-01",
+      "label": "03W19D1",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 13.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 11
+    },
+    {
+      "id": "3W-19-D-02-01",
+      "label": "03W19D2",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 13.167,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 27
+    },
+    {
+      "id": "3W-19-D-03-01",
+      "label": "03W19D3",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 13.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 29
+    },
+    {
+      "id": "3W-19-C-01-01",
+      "label": "03W19C1",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 13.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 64
+    },
+    {
+      "id": "3W-19-C-02-01",
+      "label": "03W19C2",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 13.167,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 77
+    },
+    {
+      "id": "3W-19-C-03-01",
+      "label": "03W19C3",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 13.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 3
+    },
+    {
+      "id": "3W-19-B-01-01",
+      "label": "03W19B1",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 13.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 71
+    },
+    {
+      "id": "3W-19-B-02-01",
+      "label": "03W19B2",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 13.167,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 25
+    },
+    {
+      "id": "3W-19-B-03-01",
+      "label": "03W19B3",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 13.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 91
+    },
+    {
+      "id": "3W-19-A-01-01",
+      "label": "03W19A1",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 13.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 83
+    },
+    {
+      "id": "3W-19-A-02-01",
+      "label": "03W19A2",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 13.167,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 89
+    },
+    {
+      "id": "3W-19-A-03-01",
+      "label": "03W19A3",
+      "bayId": "3W",
+      "rackId": "19",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 13.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 69
+    },
+    {
+      "id": "3W-20-A-01-01",
+      "label": "03W20A1",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 17.5,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 53
+    },
+    {
+      "id": "3W-20-A-02-01",
+      "label": "03W20A2",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 17.5,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 28
+    },
+    {
+      "id": "3W-20-A-03-01",
+      "label": "03W20A3",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 17.5,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 57
+    },
+    {
+      "id": "3W-20-B-01-01",
+      "label": "03W20B1",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 17.5,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 75
+    },
+    {
+      "id": "3W-20-B-02-01",
+      "label": "03W20B2",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 17.5,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 35
+    },
+    {
+      "id": "3W-20-B-03-01",
+      "label": "03W20B3",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 17.5,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 0
+    },
+    {
+      "id": "3W-20-C-01-01",
+      "label": "03W20C1",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 17.5,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 97
+    },
+    {
+      "id": "3W-20-C-02-01",
+      "label": "03W20C2",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 17.5,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 20
+    },
+    {
+      "id": "3W-20-C-03-01",
+      "label": "03W20C3",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 17.5,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 89
+    },
+    {
+      "id": "3W-20-D-01-01",
+      "label": "03W20D1",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 17.5,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 54
+    },
+    {
+      "id": "3W-20-D-02-01",
+      "label": "03W20D2",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 17.5,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 43
+    },
+    {
+      "id": "3W-20-D-03-01",
+      "label": "03W20D3",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 17.5,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 35
+    },
+    {
+      "id": "3W-20-E-01-01",
+      "label": "03W20E1",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 17.5,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 19
+    },
+    {
+      "id": "3W-20-E-02-01",
+      "label": "03W20E2",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 17.5,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 27
+    },
+    {
+      "id": "3W-20-E-03-01",
+      "label": "03W20E3",
+      "bayId": "3W",
+      "rackId": "20",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 17.5,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 97
+    },
+    {
+      "id": "3W-21-D-01-01",
+      "label": "03W21D1",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 29.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 43
+    },
+    {
+      "id": "3W-21-D-02-01",
+      "label": "03W21D2",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 29.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 13
+    },
+    {
+      "id": "3W-21-D-03-01",
+      "label": "03W21D3",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 29.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 11
+    },
+    {
+      "id": "3W-21-C-01-01",
+      "label": "03W21C1",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 29.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 48
+    },
+    {
+      "id": "3W-21-C-02-01",
+      "label": "03W21C2",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 29.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 12
+    },
+    {
+      "id": "3W-21-C-03-01",
+      "label": "03W21C3",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 29.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 45
+    },
+    {
+      "id": "3W-21-B-01-01",
+      "label": "03W21B1",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 29.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 44
+    },
+    {
+      "id": "3W-21-B-02-01",
+      "label": "03W21B2",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 29.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 77
+    },
+    {
+      "id": "3W-21-B-03-01",
+      "label": "03W21B3",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 29.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 33
+    },
+    {
+      "id": "3W-21-A-01-01",
+      "label": "03W21A1",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 29.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 5
+    },
+    {
+      "id": "3W-21-A-02-01",
+      "label": "03W21A2",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 29.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 93
+    },
+    {
+      "id": "3W-21-A-03-01",
+      "label": "03W21A3",
+      "bayId": "3W",
+      "rackId": "21",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 29.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 58
+    },
+    {
+      "id": "3W-22-A-01-01",
+      "label": "03W22A1",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 33.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 68
+    },
+    {
+      "id": "3W-22-A-02-01",
+      "label": "03W22A2",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 33.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 15
+    },
+    {
+      "id": "3W-22-A-03-01",
+      "label": "03W22A3",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 33.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 48
+    },
+    {
+      "id": "3W-22-B-01-01",
+      "label": "03W22B1",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 33.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 10
+    },
+    {
+      "id": "3W-22-B-02-01",
+      "label": "03W22B2",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 33.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 70
+    },
+    {
+      "id": "3W-22-B-03-01",
+      "label": "03W22B3",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 33.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 37
+    },
+    {
+      "id": "3W-22-C-01-01",
+      "label": "03W22C1",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 33.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 80
+    },
+    {
+      "id": "3W-22-C-02-01",
+      "label": "03W22C2",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 33.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 79
+    },
+    {
+      "id": "3W-22-C-03-01",
+      "label": "03W22C3",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 33.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 46
+    },
+    {
+      "id": "3W-22-D-01-01",
+      "label": "03W22D1",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 33.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 73
+    },
+    {
+      "id": "3W-22-D-02-01",
+      "label": "03W22D2",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 33.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 24
+    },
+    {
+      "id": "3W-22-D-03-01",
+      "label": "03W22D3",
+      "bayId": "3W",
+      "rackId": "22",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 33.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.333,
+        "depth": 3.333
+      },
+      "fillPercent": 90
+    },
+    {
+      "id": "3W-23-D-01-01",
+      "label": "03W23D1",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 45.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 8
+    },
+    {
+      "id": "3W-23-D-02-01",
+      "label": "03W23D2",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 45.167,
+        "z": 5.167
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 5
+    },
+    {
+      "id": "3W-23-D-03-01",
+      "label": "03W23D3",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 45.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 84
+    },
+    {
+      "id": "3W-23-C-01-01",
+      "label": "03W23C1",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 45.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 29
+    },
+    {
+      "id": "3W-23-C-02-01",
+      "label": "03W23C2",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 45.167,
+        "z": 5.167
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 98
+    },
+    {
+      "id": "3W-23-C-03-01",
+      "label": "03W23C3",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 45.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 37
+    },
+    {
+      "id": "3W-23-B-01-01",
+      "label": "03W23B1",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 45.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 10
+    },
+    {
+      "id": "3W-23-B-02-01",
+      "label": "03W23B2",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 45.167,
+        "z": 5.167
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 29
+    },
+    {
+      "id": "3W-23-B-03-01",
+      "label": "03W23B3",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 45.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 12
+    },
+    {
+      "id": "3W-23-A-01-01",
+      "label": "03W23A1",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 45.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 48
+    },
+    {
+      "id": "3W-23-A-02-01",
+      "label": "03W23A2",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 45.167,
+        "z": 5.167
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 35
+    },
+    {
+      "id": "3W-23-A-03-01",
+      "label": "03W23A3",
+      "bayId": "3W",
+      "rackId": "23",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 45.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 58
+    },
+    {
+      "id": "3W-24-A-01-01",
+      "label": "03W24A1",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 49.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 81
+    },
+    {
+      "id": "3W-24-A-02-01",
+      "label": "03W24A2",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 49.167,
+        "z": 5.167
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 46
+    },
+    {
+      "id": "3W-24-A-03-01",
+      "label": "03W24A3",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 1.167,
+        "y": 49.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 20
+    },
+    {
+      "id": "3W-24-B-01-01",
+      "label": "03W24B1",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 49.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 47
+    },
+    {
+      "id": "3W-24-B-02-01",
+      "label": "03W24B2",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 49.167,
+        "z": 5.167
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 45
+    },
+    {
+      "id": "3W-24-B-03-01",
+      "label": "03W24B3",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 49.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 26
+    },
+    {
+      "id": "3W-24-C-01-01",
+      "label": "03W24C1",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 49.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 85
+    },
+    {
+      "id": "3W-24-C-02-01",
+      "label": "03W24C2",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 49.167,
+        "z": 5.167
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 34
+    },
+    {
+      "id": "3W-24-C-03-01",
+      "label": "03W24C3",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 10.333,
+        "y": 49.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 89
+    },
+    {
+      "id": "3W-24-D-01-01",
+      "label": "03W24D1",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 49.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 87
+    },
+    {
+      "id": "3W-24-D-02-01",
+      "label": "03W24D2",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 49.167,
+        "z": 5.167
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 82
+    },
+    {
+      "id": "3W-24-D-03-01",
+      "label": "03W24D3",
+      "bayId": "3W",
+      "rackId": "24",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 49.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 9
+    },
+    {
+      "id": "3W-25-B-01-02",
+      "label": "03W25B1",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 2,
+      "position": {
+        "x": 1.167,
+        "y": 61.167,
+        "z": 8.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 77
+    },
+    {
+      "id": "3W-25-B-02-02",
+      "label": "03W25B2",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 2,
+      "position": {
+        "x": 1.167,
+        "y": 61.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 81
+    },
+    {
+      "id": "3W-25-B-03-02",
+      "label": "03W25B3",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 2,
+      "position": {
+        "x": 1.167,
+        "y": 61.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 21
+    },
+    {
+      "id": "3W-25-B-01-01",
+      "label": "03W25B1",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 61.167,
+        "z": 8.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 68
+    },
+    {
+      "id": "3W-25-B-02-01",
+      "label": "03W25B2",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 61.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 93
+    },
+    {
+      "id": "3W-25-B-03-01",
+      "label": "03W25B3",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 61.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 31
+    },
+    {
+      "id": "3W-25-A-01-02",
+      "label": "03W25A1",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 2,
+      "position": {
+        "x": 10.333,
+        "y": 61.167,
+        "z": 8.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 20
+    },
+    {
+      "id": "3W-25-A-02-02",
+      "label": "03W25A2",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 2,
+      "position": {
+        "x": 10.333,
+        "y": 61.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 59
+    },
+    {
+      "id": "3W-25-A-03-02",
+      "label": "03W25A3",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 2,
+      "position": {
+        "x": 10.333,
+        "y": 61.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 48
+    },
+    {
+      "id": "3W-25-A-01-01",
+      "label": "03W25A1",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 61.167,
+        "z": 8.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 34
+    },
+    {
+      "id": "3W-25-A-02-01",
+      "label": "03W25A2",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 61.167,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 81
+    },
+    {
+      "id": "3W-25-A-03-01",
+      "label": "03W25A3",
+      "bayId": "3W",
+      "rackId": "25",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 17.5,
+        "y": 61.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 88
+    },
+    {
+      "id": "3W-26-A-01-02",
+      "label": "03W26A1",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 2,
+      "position": {
+        "x": 1.167,
+        "y": 73.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 71
+    },
+    {
+      "id": "3W-26-A-02-02",
+      "label": "03W26A2",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 2,
+      "position": {
+        "x": 1.167,
+        "y": 73.167,
+        "z": 5.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 28
+    },
+    {
+      "id": "3W-26-A-03-02",
+      "label": "03W26A3",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 2,
+      "position": {
+        "x": 1.167,
+        "y": 73.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 87
+    },
+    {
+      "id": "3W-26-B-01-01",
+      "label": "03W26B1",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 73.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 41
+    },
+    {
+      "id": "3W-26-B-02-01",
+      "label": "03W26B2",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 73.167,
+        "z": 5.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 98
+    },
+    {
+      "id": "3W-26-B-03-01",
+      "label": "03W26B3",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 5.833,
+        "y": 73.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 99
+    },
+    {
+      "id": "3W-26-C-01-02",
+      "label": "03W26C1",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 2,
+      "position": {
+        "x": 10.333,
+        "y": 73.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 7
+    },
+    {
+      "id": "3W-26-C-02-02",
+      "label": "03W26C2",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 2,
+      "position": {
+        "x": 10.333,
+        "y": 73.167,
+        "z": 5.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 29
+    },
+    {
+      "id": "3W-26-C-03-02",
+      "label": "03W26C3",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 2,
+      "position": {
+        "x": 10.333,
+        "y": 73.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 4
+    },
+    {
+      "id": "3W-26-D-01-01",
+      "label": "03W26D1",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 73.167,
+        "z": 9.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 40
+    },
+    {
+      "id": "3W-26-D-02-01",
+      "label": "03W26D2",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 73.167,
+        "z": 5.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 51
+    },
+    {
+      "id": "3W-26-D-03-01",
+      "label": "03W26D3",
+      "bayId": "3W",
+      "rackId": "26",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 15.833,
+        "y": 73.167,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 34
+    },
+    {
+      "id": "3W-39-E-01-01",
+      "label": "03W39E1",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 24.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 8
+    },
+    {
+      "id": "3W-39-E-02-01",
+      "label": "03W39E2",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 24.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 27
+    },
+    {
+      "id": "3W-39-E-03-01",
+      "label": "03W39E3",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 24.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.833,
+        "depth": 3.333
+      },
+      "fillPercent": 72
+    },
+    {
+      "id": "3W-39-D-01-01",
+      "label": "03W39D1",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 24.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 91
+    },
+    {
+      "id": "3W-39-D-02-01",
+      "label": "03W39D2",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 24.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 40
+    },
+    {
+      "id": "3W-39-D-03-01",
+      "label": "03W39D3",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 24.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.667,
+        "depth": 3.333
+      },
+      "fillPercent": 27
+    },
+    {
+      "id": "3W-39-C-01-01",
+      "label": "03W39C1",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 24.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 83
+    },
+    {
+      "id": "3W-39-C-02-01",
+      "label": "03W39C2",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 24.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 63
+    },
+    {
+      "id": "3W-39-C-03-01",
+      "label": "03W39C3",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 24.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.833,
+        "depth": 3.333
+      },
+      "fillPercent": 50
+    },
+    {
+      "id": "3W-39-B-01-01",
+      "label": "03W39B1",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 24.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 82
+    },
+    {
+      "id": "3W-39-B-02-01",
+      "label": "03W39B2",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 24.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 58
+    },
+    {
+      "id": "3W-39-B-03-01",
+      "label": "03W39B3",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 24.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.833,
+        "depth": 3.333
+      },
+      "fillPercent": 18
+    },
+    {
+      "id": "3W-39-A-01-01",
+      "label": "03W39A1",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 24.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 33
+    },
+    {
+      "id": "3W-39-A-02-01",
+      "label": "03W39A2",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 24.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 17
+    },
+    {
+      "id": "3W-39-A-03-01",
+      "label": "03W39A3",
+      "bayId": "3W",
+      "rackId": "39",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 24.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.833,
+        "depth": 3.333
+      },
+      "fillPercent": 31
+    },
+    {
+      "id": "3W-38-A-01-01",
+      "label": "03W38A1",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 28.0,
+        "z": 7.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 95
+    },
+    {
+      "id": "3W-38-A-02-01",
+      "label": "03W38A2",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 28.0,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 71
+    },
+    {
+      "id": "3W-38-A-03-01",
+      "label": "03W38A3",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 28.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 68
+    },
+    {
+      "id": "3W-38-B-01-01",
+      "label": "03W38B1",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 28.0,
+        "z": 7.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 33
+    },
+    {
+      "id": "3W-38-B-02-01",
+      "label": "03W38B2",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 28.0,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 95
+    },
+    {
+      "id": "3W-38-B-03-01",
+      "label": "03W38B3",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 28.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 74
+    },
+    {
+      "id": "3W-38-C-01-01",
+      "label": "03W38C1",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 28.0,
+        "z": 7.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 54
+    },
+    {
+      "id": "3W-38-C-02-01",
+      "label": "03W38C2",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 28.0,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 74
+    },
+    {
+      "id": "3W-38-C-03-01",
+      "label": "03W38C3",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 28.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 51
+    },
+    {
+      "id": "3W-38-D-01-01",
+      "label": "03W38D1",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 28.0,
+        "z": 7.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 46
+    },
+    {
+      "id": "3W-38-D-02-01",
+      "label": "03W38D2",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 28.0,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 28
+    },
+    {
+      "id": "3W-38-D-03-01",
+      "label": "03W38D3",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 28.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 17
+    },
+    {
+      "id": "3W-38-E-01-01",
+      "label": "03W38E1",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 28.0,
+        "z": 7.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 65
+    },
+    {
+      "id": "3W-38-E-02-01",
+      "label": "03W38E2",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 28.0,
+        "z": 4.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 63
+    },
+    {
+      "id": "3W-38-E-03-01",
+      "label": "03W38E3",
+      "bayId": "3W",
+      "rackId": "38",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 28.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.667,
+        "depth": 3.333
+      },
+      "fillPercent": 11
+    },
+    {
+      "id": "3W-37-E-01-01",
+      "label": "03W37E1",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 40.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 96
+    },
+    {
+      "id": "3W-37-E-02-01",
+      "label": "03W37E2",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 40.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 6
+    },
+    {
+      "id": "3W-37-E-03-01",
+      "label": "03W37E3",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 40.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 14
+    },
+    {
+      "id": "3W-37-D-01-01",
+      "label": "03W37D1",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 40.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 19
+    },
+    {
+      "id": "3W-37-D-02-01",
+      "label": "03W37D2",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 40.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 80
+    },
+    {
+      "id": "3W-37-D-03-01",
+      "label": "03W37D3",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 40.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 20
+    },
+    {
+      "id": "3W-37-C-01-01",
+      "label": "03W37C1",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 40.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 87
+    },
+    {
+      "id": "3W-37-C-02-01",
+      "label": "03W37C2",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 40.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 54
+    },
+    {
+      "id": "3W-37-C-03-01",
+      "label": "03W37C3",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 40.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 76
+    },
+    {
+      "id": "3W-37-B-01-01",
+      "label": "03W37B1",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 40.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 8
+    },
+    {
+      "id": "3W-37-B-02-01",
+      "label": "03W37B2",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 40.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 49
+    },
+    {
+      "id": "3W-37-B-03-01",
+      "label": "03W37B3",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 40.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 48
+    },
+    {
+      "id": "3W-37-A-01-01",
+      "label": "03W37A1",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 40.0,
+        "z": 9.333
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 76
+    },
+    {
+      "id": "3W-37-A-02-01",
+      "label": "03W37A2",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 40.0,
+        "z": 5.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 59
+    },
+    {
+      "id": "3W-37-A-03-01",
+      "label": "03W37A3",
+      "bayId": "3W",
+      "rackId": "37",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 40.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 67
+    },
+    {
+      "id": "3W-36-A-01-01",
+      "label": "03W36A1",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 44.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 32
+    },
+    {
+      "id": "3W-36-A-02-01",
+      "label": "03W36A2",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 44.0,
+        "z": 4.833
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 70
+    },
+    {
+      "id": "3W-36-A-03-01",
+      "label": "03W36A3",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 44.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 1
+    },
+    {
+      "id": "3W-36-B-01-01",
+      "label": "03W36B1",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 44.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 87
+    },
+    {
+      "id": "3W-36-B-02-01",
+      "label": "03W36B2",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 44.0,
+        "z": 4.833
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 92
+    },
+    {
+      "id": "3W-36-B-03-01",
+      "label": "03W36B3",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 44.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 14
+    },
+    {
+      "id": "3W-36-C-01-01",
+      "label": "03W36C1",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 44.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 87
+    },
+    {
+      "id": "3W-36-C-02-01",
+      "label": "03W36C2",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 44.0,
+        "z": 4.833
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 68
+    },
+    {
+      "id": "3W-36-C-03-01",
+      "label": "03W36C3",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 44.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 96
+    },
+    {
+      "id": "3W-36-D-01-01",
+      "label": "03W36D1",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 44.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 34
+    },
+    {
+      "id": "3W-36-D-02-01",
+      "label": "03W36D2",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 44.0,
+        "z": 4.833
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 98
+    },
+    {
+      "id": "3W-36-D-03-01",
+      "label": "03W36D3",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 44.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 82
+    },
+    {
+      "id": "3W-36-E-01-01",
+      "label": "03W36E1",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 44.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 43
+    },
+    {
+      "id": "3W-36-E-02-01",
+      "label": "03W36E2",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 44.0,
+        "z": 4.833
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.333,
+        "depth": 3.333
+      },
+      "fillPercent": 14
+    },
+    {
+      "id": "3W-36-E-03-01",
+      "label": "03W36E3",
+      "bayId": "3W",
+      "rackId": "36",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 44.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.167,
+        "depth": 3.333
+      },
+      "fillPercent": 37
+    },
+    {
+      "id": "3W-35-E-01-01",
+      "label": "03W35E1",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 56.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 55
+    },
+    {
+      "id": "3W-35-E-02-01",
+      "label": "03W35E2",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 56.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 20
+    },
+    {
+      "id": "3W-35-E-03-01",
+      "label": "03W35E3",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 56.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 58
+    },
+    {
+      "id": "3W-35-D-01-01",
+      "label": "03W35D1",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 56.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 0
+    },
+    {
+      "id": "3W-35-D-02-01",
+      "label": "03W35D2",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 56.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 92
+    },
+    {
+      "id": "3W-35-D-03-01",
+      "label": "03W35D3",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 56.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 92
+    },
+    {
+      "id": "3W-35-C-01-01",
+      "label": "03W35C1",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 56.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 33
+    },
+    {
+      "id": "3W-35-C-02-01",
+      "label": "03W35C2",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 56.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 64
+    },
+    {
+      "id": "3W-35-C-03-01",
+      "label": "03W35C3",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 56.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 97
+    },
+    {
+      "id": "3W-35-B-01-01",
+      "label": "03W35B1",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 56.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 22
+    },
+    {
+      "id": "3W-35-B-02-01",
+      "label": "03W35B2",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 56.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 64
+    },
+    {
+      "id": "3W-35-B-03-01",
+      "label": "03W35B3",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 56.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 13
+    },
+    {
+      "id": "3W-35-A-01-01",
+      "label": "03W35A1",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 56.0,
+        "z": 8.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 80
+    },
+    {
+      "id": "3W-35-A-02-01",
+      "label": "03W35A2",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 56.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.0,
+        "depth": 3.333
+      },
+      "fillPercent": 38
+    },
+    {
+      "id": "3W-35-A-03-01",
+      "label": "03W35A3",
+      "bayId": "3W",
+      "rackId": "35",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 20.333,
+        "y": 56.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 81
+    },
+    {
+      "id": "3W-34-A-01-01",
+      "label": "03W34A1",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "A",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 60.0,
+        "z": 8.667
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 64
+    },
+    {
+      "id": "3W-34-A-02-01",
+      "label": "03W34A2",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "A",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 60.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 77
+    },
+    {
+      "id": "3W-34-A-03-01",
+      "label": "03W34A3",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "A",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 36.167,
+        "y": 60.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 25
+    },
+    {
+      "id": "3W-34-B-01-01",
+      "label": "03W34B1",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "B",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 60.0,
+        "z": 8.667
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 19
+    },
+    {
+      "id": "3W-34-B-02-01",
+      "label": "03W34B2",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "B",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 60.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 47
+    },
+    {
+      "id": "3W-34-B-03-01",
+      "label": "03W34B3",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "B",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 40.833,
+        "y": 60.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 97
+    },
+    {
+      "id": "3W-34-C-01-01",
+      "label": "03W34C1",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "C",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 60.0,
+        "z": 8.667
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 20
+    },
+    {
+      "id": "3W-34-C-02-01",
+      "label": "03W34C2",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "C",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 60.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 69
+    },
+    {
+      "id": "3W-34-C-03-01",
+      "label": "03W34C3",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "C",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 45.333,
+        "y": 60.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 99
+    },
+    {
+      "id": "3W-34-D-01-01",
+      "label": "03W34D1",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "D",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 60.0,
+        "z": 8.667
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 67
+    },
+    {
+      "id": "3W-34-D-02-01",
+      "label": "03W34D2",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "D",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 60.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 0
+    },
+    {
+      "id": "3W-34-D-03-01",
+      "label": "03W34D3",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "D",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 50.833,
+        "y": 60.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 76
+    },
+    {
+      "id": "3W-34-E-01-01",
+      "label": "03W34E1",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "E",
+      "level": 1,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 60.0,
+        "z": 8.667
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 2.0,
+        "depth": 3.333
+      },
+      "fillPercent": 41
+    },
+    {
+      "id": "3W-34-E-02-01",
+      "label": "03W34E2",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "E",
+      "level": 2,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 60.0,
+        "z": 5.0
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 3.167,
+        "depth": 3.333
+      },
+      "fillPercent": 62
+    },
+    {
+      "id": "3W-34-E-03-01",
+      "label": "03W34E3",
+      "bayId": "3W",
+      "rackId": "34",
+      "section": "E",
+      "level": 3,
+      "slotPosition": 1,
+      "position": {
+        "x": 55.333,
+        "y": 60.0,
+        "z": 0.5
+      },
+      "dimensions": {
+        "width": 3.833,
+        "height": 4.333,
+        "depth": 3.333
+      },
+      "fillPercent": 2
+    }
+  ]
+}
