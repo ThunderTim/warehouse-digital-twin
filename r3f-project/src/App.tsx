@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Canvas } from "@react-three/fiber";
+import { Environment } from "@react-three/drei";
+import { Suspense, useRef, useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import { Model, type SelectState } from "./components/Model";
+import { UseGltfCamera } from "./components/UseGltfCamera";
+import { CameraParallax } from "./components/CameraParallax";
+import type { CameraBase } from "./components/cameraTypes";
+
+export default function App() {
+  const [select, setSelect] = useState<SelectState>({
+    hoveredUuid: null,
+    selectedUuid: null,
+  });
+
+  const camBaseRef = useRef<CameraBase | null>(null);
+
+  
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div style={{ width: "100vw", height: "100vh" }}>
+      <Canvas>
+        <Suspense fallback={null}>
+          <UseGltfCamera
+            url="/models/campus.glb"
+            cameraName="CAM_START"
+            lookName="CAM_LOOK"
+            outRef={camBaseRef}
+          />
 
-export default App
+          <CameraParallax baseRef={camBaseRef} strength={4} lerp={0.12} zPush={1.5} />
+          <axesHelper args={[50]} />
+          <gridHelper args={[500, 50]} />
+
+
+
+          <Model url="/models/campus.glb" select={select} setSelect={setSelect} />
+          <Environment preset="city" />
+        </Suspense>
+      </Canvas>
+    </div>
+  );
+}
