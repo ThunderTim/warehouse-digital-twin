@@ -4,41 +4,48 @@ import type { ThreeEvent } from "@react-three/fiber";
 
 type Props = {
   mesh: THREE.Mesh;
-  color?: number;          // emissive hover color
-  intensity?: number;      // emissive intensity
+  outlineColor?: string;     // hex string like "#ffcc00"
+  outlineScale?: number;     // e.g. 1.06 (small is usually enough)
   onClick?: (mesh: THREE.Mesh) => void;
 };
 
 export function Hoverable({
   mesh,
-  color = 0x2a7fff,
-  intensity = 0.8,
+  outlineColor = "#ffcc00",
+  outlineScale = 1.32,
   onClick,
 }: Props) {
   const [hovered, setHovered] = useState(false);
 
-  // clone material so we don't mutate shared materials
-  const mat = useMemo(() => {
+  // clone the original material so we don't mutate shared materials
+  const baseMaterial = useMemo(() => {
     const m = mesh.material;
     return Array.isArray(m) ? m.map((x) => x.clone()) : m.clone();
   }, [mesh]);
 
-  // apply emissive when hovered
-  useMemo(() => {
-    const mats = Array.isArray(mat) ? mat : [mat];
-    for (const m of mats) {
-      const sm = m as THREE.MeshStandardMaterial;
-      if (!("emissive" in sm)) continue;
-      sm.emissive.set(hovered ? color : 0x000000);
-      sm.emissiveIntensity = hovered ? intensity : 0;
-      sm.needsUpdate = true;
-    }
-  }, [mat, hovered, color, intensity]);
+  // outline material (unlit, solid)
+ const outlineMaterial = useMemo(() => {
+  const mat = new THREE.MeshBasicMaterial({
+    color: new THREE.Color(outlineColor),
+    side: THREE.BackSide,
+  });
+
+  // ✅ draw outline on top of everything
+  mat.depthTest = false;   // ignore depth buffer
+  mat.depthWrite = false;
+
+  return mat;
+}, [outlineColor]);
+
+
+  // keep outline behind but still visible
+  // (renderOrder helps if you have coplanar surfaces)
+  const baseRenderOrder = 10;
+  const outlineRenderOrder = 9;
 
   return (
-    <mesh
-      geometry={mesh.geometry}
-      material={mat as any}
+    <group
+      // group is just to keep both meshes aligned
       position={mesh.position}
       rotation={mesh.rotation}
       scale={mesh.scale}
@@ -54,6 +61,19 @@ export function Hoverable({
         e.stopPropagation();
         onClick?.(mesh);
       }}
-    />
+    >
+      {/* Outline shell: only shown when hovered */}
+      {hovered && (
+        <mesh
+          geometry={mesh.geometry}
+          material={outlineMaterial}
+          scale={[outlineScale, outlineScale, outlineScale]}
+          renderOrder={outlineRenderOrder}
+        />
+      )}
+
+      {/* The real mesh */}
+      <mesh geometry={mesh.geometry} material={baseMaterial as any} renderOrder={baseRenderOrder} />
+    </group>
   );
 }
