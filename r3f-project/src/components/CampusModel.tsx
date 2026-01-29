@@ -3,7 +3,7 @@ import { useGLTF } from "@react-three/drei";
 import { useEffect, useMemo } from "react";
 import { useThree } from "@react-three/fiber";
 import { Hoverable } from "../interaction/Hoverable";
-import { useLayoutEffect } from "react";
+
 
 
 
@@ -12,7 +12,13 @@ type GLTFResult = {
   nodes: Record<string, THREE.Object3D>;
 };
 
-export function CampusModel({ url = "/models/campus.glb" }: { url?: string }) {
+export function CampusModel({
+  url = "/models/campus.glb",
+  onSelectBuilding,
+}: {
+  url?: string;
+  onSelectBuilding?: (id: string) => void;
+}) {
   const { scene, nodes } = useGLTF(url) as unknown as GLTFResult;
   const { set, size } = useThree();
 
@@ -63,6 +69,15 @@ export function CampusModel({ url = "/models/campus.glb" }: { url?: string }) {
   floor.material = unlit;
   floor.material.needsUpdate = true;
 
+  // ✅ move floor slightly down to avoid z-fighting with hover shells
+floor.position.y -= 2.02; // tweak: 0.005–0.05 depending on your unit scale
+
+// ✅ render floor first (then buildings + hover)
+floor.renderOrder = 0;
+
+// (optional but helpful) ensure it doesn't occlude overlays strangely
+floor.material.depthWrite = false;
+
 
   }, [scene, set, size.width, size.height]);
 
@@ -76,7 +91,11 @@ export function CampusModel({ url = "/models/campus.glb" }: { url?: string }) {
         <Hoverable
           key={mesh.uuid}
           mesh={mesh}
-          onClick={() => console.log("clicked", mesh.name)}
+          onClick={() => {
+            // Example: you decide the mapping rule
+            // If your hitbox mesh name is like "BLDG_22__HIT"
+            if (mesh.name.includes("bldg-22__HIT")) onSelectBuilding?.("bldg-22");
+          }}
         />
 
         
