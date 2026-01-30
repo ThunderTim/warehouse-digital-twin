@@ -5,10 +5,17 @@ import { useMemo } from "react";
 type Props = {
   size: [number, number, number]; // [w,h,d]
   fillPct: number; // 0..1
-  frontIsNegativeZ?: boolean; // if your "front" points toward -Z
+  shrinkPct?: number; // 0..1 (visual buffer)
+  frontIsNegativeZ?: boolean;
 };
 
-export function SlotContainer({ size, fillPct, frontIsNegativeZ = false }: Props) {
+export function SlotContainer({
+  size,
+  fillPct,
+  // SHRINK BUFFER !!!! 5%
+  shrinkPct = 0.95,
+  frontIsNegativeZ = false,
+}: Props) {
   const { color, opacity } = useMemo(() => {
     if (fillPct <= 0) return { color: "#dddddd", opacity: 0.18 };
     if (fillPct < 0.7) return { color: "#2f5bff", opacity: 0.95 };
@@ -17,15 +24,20 @@ export function SlotContainer({ size, fillPct, frontIsNegativeZ = false }: Props
 
   const geometry = useMemo(() => {
     const [w, h, d] = size;
-    const g = new THREE.BoxGeometry(w, h, d);
 
-    // Move geometry so mesh origin is at front-left-bottom corner
-    // left -> +w/2, bottom -> +h/2, front -> +/- d/2
-    const zHalf = d / 2;
-    g.translate(w / 2, h / 2, frontIsNegativeZ ? -zHalf : zHalf);
+    // 🔹 apply uniform visual shrink
+    const sw = w * shrinkPct;
+    const sh = h * shrinkPct;
+    const sd = d * shrinkPct;
+
+    const g = new THREE.BoxGeometry(sw, sh, sd);
+
+    // pivot stays front-left-bottom
+    const zHalf = sd / 2;
+    g.translate(sw / 2, sh / 2, frontIsNegativeZ ? -zHalf : zHalf);
 
     return g;
-  }, [size, frontIsNegativeZ]);
+  }, [size, shrinkPct, frontIsNegativeZ]);
 
   return (
     <mesh geometry={geometry}>
