@@ -10,6 +10,12 @@ import type { ViewMode, Selection } from "./types";
 export default function App() {
   const [viewMode, setViewMode] = useState<ViewMode>("campus");
   const [selection, setSelection] = useState<Selection>({});
+  
+  // Dynamic camera position (set by rack selection, etc.)
+  const [dynamicCamera, setDynamicCamera] = useState<{
+    position: [number, number, number];
+    rotation: [number, number, number];
+  } | null>(null);
 
   // ─────────────────────────────────────────────────
   // Calculate camera config based on viewMode + selection
@@ -30,19 +36,28 @@ export default function App() {
         return CAMERA_POSITIONS.building;
       
       case "rack":
-        // TODO: Calculate based on selected rack
-        return CAMERA_POSITIONS.rack;
-      
       case "row":
-        return CAMERA_POSITIONS.row;
-      
       case "slot":
-        return CAMERA_POSITIONS.slot;
+        // Use dynamic camera if set, otherwise fallback
+        if (dynamicCamera) {
+          return {
+            position: dynamicCamera.position,
+            rotation: dynamicCamera.rotation,
+            fov: 45,
+          };
+        }
+        return CAMERA_POSITIONS.rack;
       
       default:
         return CAMERA_POSITIONS.campus;
     }
-  }, [viewMode, selection]);
+  }, [viewMode, selection, dynamicCamera]);
+
+  // Handle camera update from child components (e.g., rack selection)
+  const handleCameraUpdate = (config: { position: [number, number, number]; rotation: [number, number, number] }) => {
+    console.log("[App] camera update:", config);
+    setDynamicCamera(config);
+  };
 
   // Helper to go back one level
   const goBack = () => {
@@ -50,10 +65,12 @@ export default function App() {
       case "building":
         setViewMode("campus");
         setSelection({});
+        setDynamicCamera(null);
         break;
       case "bay":
         setViewMode("building");
         setSelection({ buildingId: selection.buildingId });
+        setDynamicCamera(null);
         break;
       case "rack":
         setViewMode("bay");
@@ -61,6 +78,7 @@ export default function App() {
           buildingId: selection.buildingId, 
           bayId: selection.bayId 
         });
+        setDynamicCamera(null);
         break;
       case "row":
         setViewMode("rack");
@@ -160,6 +178,7 @@ export default function App() {
               setViewMode={setViewMode}
               selection={selection}
               setSelection={setSelection}
+              onCameraUpdate={handleCameraUpdate}
             />
           )}
         </Suspense>

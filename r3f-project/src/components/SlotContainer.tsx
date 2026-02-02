@@ -39,7 +39,7 @@ export function SlotContainer({
     }
     // Default colors based on fill
     if (fillPct <= 0) return { color: "#dddddd", opacity: 0.18 };
-    if (fillPct < 0.7) return { color: "#2f5bff", opacity: 0.95 };
+    if (fillPct < 0.7) return { color: "#2f5bff", opacity: 1 };
     return { color: "#86a8ff", opacity: 0.6 };
   }, [fillPct, hovered, isInteractive, isSelected]);
 

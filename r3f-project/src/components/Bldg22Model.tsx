@@ -17,6 +17,7 @@ type Props = {
   setViewMode: (v: ViewMode) => void;
   selection: Selection;
   setSelection: (s: Selection) => void;
+  onCameraUpdate?: (config: { position: [number, number, number]; rotation: [number, number, number] }) => void;
 };
 
 export function Bldg22Model({
@@ -25,6 +26,7 @@ export function Bldg22Model({
   setViewMode,
   selection,
   setSelection,
+  onCameraUpdate,
 }: Props) {
   const { scene, nodes } = useGLTF(url) as unknown as GLTFResult;
 
@@ -130,7 +132,7 @@ export function Bldg22Model({
     <>
       <primitive object={scene} />
 
-      {/* Bay/Rack hover targets */}
+      {/* Bay hover targets - only interactive at building level */}
       {hoverMeshes.map((mesh) => (
         <HoverHit
           key={mesh.uuid}
@@ -150,6 +152,7 @@ export function Bldg22Model({
           setViewMode={setViewMode}
           selection={selection}
           setSelection={setSelection}
+          onCameraUpdate={onCameraUpdate}
         />
       )}
     </>
