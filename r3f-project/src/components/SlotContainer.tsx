@@ -79,7 +79,7 @@ export function SlotContainer({
         onClick?.();
       }}
     >
-      <meshBasicMaterial 
+      <meshStandardMaterial 
         color={new THREE.Color(color)} 
         transparent 
         opacity={opacity} 

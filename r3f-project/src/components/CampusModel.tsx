@@ -1,11 +1,8 @@
+// CampusModel.tsx
 import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { useEffect, useMemo } from "react";
-import { useThree } from "@react-three/fiber";
 import { Hoverable } from "../interaction/Hoverable";
-
-
-
 
 type GLTFResult = {
   scene: THREE.Group;
@@ -20,85 +17,66 @@ export function CampusModel({
   onSelectBuilding?: (id: string) => void;
 }) {
   const { scene, nodes } = useGLTF(url) as unknown as GLTFResult;
-  const { set, size } = useThree();
 
-  
-
-  // ✅ derive hover meshes (not a side-effect)
+  // Derive hover meshes
   const hoverMeshes = useMemo(() => {
     return Object.values(nodes)
       .filter((o): o is THREE.Mesh => (o as THREE.Mesh).isMesh)
       .filter((m) => m.name.includes("__HIT") || m.name.includes("__HIIT"));
   }, [nodes]);
 
-  // ✅ side-effect: set camera once after load
+  // Fix floor material (no camera setup here anymore!)
   useEffect(() => {
-    const cam = scene.getObjectByName("CAM_START") as THREE.PerspectiveCamera | null;
-  if (!cam) return;
-
-  // make active
-  set({ camera: cam });
-
-  // ✅ fix initial warp
-  cam.aspect = size.width / size.height;
-  cam.updateProjectionMatrix();
-    
-    
     const floor = scene.getObjectByName("floor-map") as THREE.Mesh | null;
-  if (!floor) return;
+    if (!floor) return;
 
-  const oldMat = floor.material;
-  const srcMat = Array.isArray(oldMat) ? oldMat[0] : oldMat;
+    const oldMat = floor.material;
+    const srcMat = Array.isArray(oldMat) ? oldMat[0] : oldMat;
+    const tex = (srcMat as any)?.map as THREE.Texture | undefined;
+    
+    if (!tex) {
+      console.warn("floor-map has no material.map texture");
+      return;
+    }
 
-  const tex = (srcMat as any)?.map as THREE.Texture | undefined;
-  if (!tex) {
-    console.warn("floor-map has no material.map texture");
-    return;
-  }
+    tex.colorSpace = THREE.SRGBColorSpace;
+    tex.needsUpdate = true;
 
-  // ✅ Make the texture display correctly
-  tex.colorSpace = THREE.SRGBColorSpace;
-  tex.needsUpdate = true;
+    const unlit = new THREE.MeshBasicMaterial({ map: tex });
+    (unlit as any).toneMapped = false;
 
-  // ✅ Unlit material (ignores lights)
-  const unlit = new THREE.MeshBasicMaterial({ map: tex });
+    floor.material = unlit;
+    floor.material.needsUpdate = true;
 
-  // ✅ Avoid renderer tone-mapping affecting it (keeps true whites/blacks)
-  (unlit as any).toneMapped = false;
+    // Move floor slightly down to avoid z-fighting
+    floor.position.y -= 2.02;
+    floor.renderOrder = 0;
+    floor.material.depthWrite = false;
+  }, [scene]);
 
-  floor.material = unlit;
-  floor.material.needsUpdate = true;
-
-  // ✅ move floor slightly down to avoid z-fighting with hover shells
-floor.position.y -= 2.02; // tweak: 0.005–0.05 depending on your unit scale
-
-// ✅ render floor first (then buildings + hover)
-floor.renderOrder = 0;
-
-// (optional but helpful) ensure it doesn't occlude overlays strangely
-floor.material.depthWrite = false;
-
-
-  }, [scene, set, size.width, size.height]);
+  // Hide any cameras in the GLB (we're using our own)
+  useEffect(() => {
+    scene.traverse((obj) => {
+      if ((obj as THREE.Camera).isCamera) {
+        obj.visible = false;
+      }
+    });
+  }, [scene]);
 
   return (
     <>
       <primitive object={scene} />
-      
-      
 
       {hoverMeshes.map((mesh) => (
         <Hoverable
           key={mesh.uuid}
           mesh={mesh}
           onClick={() => {
-            // Example: you decide the mapping rule
-            // If your hitbox mesh name is like "BLDG_22__HIT"
-            if (mesh.name.includes("bldg-22__HIT")) onSelectBuilding?.("bldg-22");
+            if (mesh.name.includes("bldg-22__HIT")) {
+              onSelectBuilding?.("bldg-22");
+            }
           }}
         />
-
-        
       ))}
     </>
   );

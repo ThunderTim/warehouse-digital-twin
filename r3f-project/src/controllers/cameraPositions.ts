@@ -1,29 +1,99 @@
-// cameraPositions.ts — define these based on your scene
-export const cameraConfigs = {
+// cameraPositions.ts
+// Centralized camera positions for all views
+
+export type CameraConfig = {
+  position: [number, number, number];
+  rotation: [number, number, number]; // Euler angles in radians
+  fov: number;
+  near?: number;
+  far?: number;
+};
+
+// =====================================================
+// 📷 CAMERA POSITIONS - EDIT THESE!
+// =====================================================
+// position = [x, y, z] where the camera sits
+// rotation = [x, y, z] Euler angles in RADIANS
+//
+// Tip: -1.5708 (-π/2) = looking straight down
+//      0 = looking at horizon
+
+export const CAMERA_POSITIONS: {
+  campus: CameraConfig;
+  building: CameraConfig;
+  bays: Record<string, CameraConfig>;
+  rack: CameraConfig;
+  row: CameraConfig;
+  slot: CameraConfig;
+} = {
+  // ─────────────────────────────────────────────────
+  // CAMPUS VIEW (top-down of whole campus)
+  // ─────────────────────────────────────────────────
+  campus: {
+    position: [12, 1500.61, 115.9],
+    rotation: [-1.51, 0, 0],
+    fov: 22,
+    near: 1,
+    far: 5000,
+  },
+
+  // ─────────────────────────────────────────────────
+  // BUILDING VIEW (top-down of building interior)
+  // ─────────────────────────────────────────────────
   building: {
-    // Top-down overview of whole building
-    position: [0, 150, 0] as const,
-    lookAt: [0, 0, 0] as const,
+    position: [0, 1100.61, 60],
+    rotation: [-1.5009831567151237, 0, 0],
+    fov: 22,
   },
-  bay: {
-    // Top-down of specific bay (you'd offset based on bayId)
-    position: [0, 80, 0] as const,
-    lookAt: [0, 0, 0] as const,
+
+  // ─────────────────────────────────────────────────
+  // BAY VIEWS (one per bay)
+  // ─────────────────────────────────────────────────
+  bays: {
+    "BAY_3W": {
+      position: [97.25, 260, -52.9],
+      rotation: [-1.55, 0, 0],
+      fov: 30,
+    },
+    "BAY_3E": {
+      position: [97.25, 260, 75.9],
+      rotation: [-1.5009831567151237, 0, 0],
+      fov: 30,
+    },
+    "BAY_6W": {
+      position: [-99, 260, -55.9],
+      rotation: [-1.5009831567151237, 0, 0],
+      fov: 30,
+    },
+    "BAY_6E": {
+      position: [-99, 260, 75.9],
+      rotation: [-1.5009831567151237, 0, 0],
+      fov: 30,
+    },
   },
+
+  // ─────────────────────────────────────────────────
+  // RACK / ROW / SLOT (placeholder - will be dynamic)
+  // ─────────────────────────────────────────────────
   rack: {
-    // Isometric/front view of rack
-    // Position will be calculated based on which rack + which side is "front"
-    position: [20, 15, 20] as const,
-    lookAt: [0, 5, 0] as const,
+    position: [80, 25, -40],
+    rotation: [-0.8, 0, 0],
+    fov: 40,
   },
   row: {
-    // Closer view of row
-    position: [10, 8, 10] as const,
-    lookAt: [0, 4, 0] as const,
+    position: [85, 15, -45],
+    rotation: [-0.6, 0, 0],
+    fov: 45,
   },
   slot: {
-    // Isolated slot view
-    position: [3, 2, 3] as const,
-    lookAt: [0, 1, 0] as const,
+    position: [90, 10, -50],
+    rotation: [-0.4, 0, 0],
+    fov: 50,
   },
 };
+
+// Helper to get bay camera (with fallback)
+export function getBayCamera(bayId: string): CameraConfig {
+  const bayKey = bayId.replace("__HIIT", "").replace("__HIT", "");
+  return CAMERA_POSITIONS.bays[bayKey] ?? CAMERA_POSITIONS.bays["BAY_3W"];
+}
