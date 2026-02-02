@@ -2,21 +2,58 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
 import { CampusModel } from "./components/CampusModel";
-import { Bldg22Model } from "./components/Bldg22Model"; // create this
-
-
+import { Bldg22Model } from "./components/Bldg22Model";
+import type { ViewMode, Selection } from "./types";
 
 export default function App() {
-  const [scene, setScene] = useState<"campus" | "bldg22">("campus");
+  const [viewMode, setViewMode] = useState<ViewMode>("campus");
+  const [selection, setSelection] = useState<Selection>({});
 
+  // Helper to go back one level
+  const goBack = () => {
+    switch (viewMode) {
+      case "building":
+        setViewMode("campus");
+        setSelection({});
+        break;
+      case "bay":
+        setViewMode("building");
+        setSelection({ buildingId: selection.buildingId });
+        break;
+      case "rack":
+        setViewMode("bay");
+        setSelection({ 
+          buildingId: selection.buildingId, 
+          bayId: selection.bayId 
+        });
+        break;
+      case "row":
+        setViewMode("rack");
+        setSelection({ 
+          buildingId: selection.buildingId,
+          bayId: selection.bayId,
+          rackId: selection.rackId,
+        });
+        break;
+      case "slot":
+        setViewMode("row");
+        setSelection({
+          buildingId: selection.buildingId,
+          bayId: selection.bayId,
+          rackId: selection.rackId,
+          rowId: selection.rowId,
+        });
+        break;
+    }
+  };
 
   return (
     <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
       
-      {/* 🔘 BACK BUTTON (HTML) */}
-      {scene === "bldg22" && (
+      {/* Back button - shown when not at campus level */}
+      {viewMode !== "campus" && (
         <button
-          onClick={() => setScene("campus")}
+          onClick={goBack}
           style={{
             position: "absolute",
             top: 20,
@@ -31,24 +68,57 @@ export default function App() {
             color: "white",
           }}
         >
-          ← Back to Campus
+          ← Back
         </button>
       )}
 
-      {/* 🎥 3D CANVAS */}
+      {/* Debug: Current view indicator */}
+      <div 
+        style={{ 
+          position: "absolute", 
+          top: 20, 
+          right: 20, 
+          zIndex: 10, 
+          color: "#fff", 
+          background: "#333", 
+          padding: "8px 12px", 
+          borderRadius: "4px",
+          fontFamily: "monospace",
+          fontSize: "12px",
+        }}
+      >
+        view: {viewMode}
+        {selection.buildingId && ` | bldg: ${selection.buildingId}`}
+        {selection.bayId && ` | bay: ${selection.bayId}`}
+        {selection.rackId && ` | rack: ${selection.rackId}`}
+      </div>
+
+      {/* 3D Canvas */}
       <Canvas>
         <ambientLight intensity={8.6} />
         <directionalLight position={[5, 10, 5]} intensity={3.2} />
         <Suspense fallback={null}>
-          {scene === "campus" && (
+          
+          {/* Campus scene - show when no building selected */}
+          {!selection.buildingId && (
             <CampusModel
               onSelectBuilding={(id) => {
-                if (id === "bldg-22") setScene("bldg22");
+                setSelection({ buildingId: id });
+                setViewMode("building");
               }}
             />
           )}
 
-          {scene === "bldg22" && <Bldg22Model />}
+          {/* Building scene - show when building is selected */}
+          {selection.buildingId && (
+            <Bldg22Model
+              viewMode={viewMode}
+              setViewMode={setViewMode}
+              selection={selection}
+              setSelection={setSelection}
+            />
+          )}
+          
         </Suspense>
       </Canvas>
     </div>

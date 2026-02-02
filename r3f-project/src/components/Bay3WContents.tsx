@@ -1,7 +1,9 @@
+// Bay3WContents.tsx
 import * as THREE from "three";
 import bay3Slots from "../data/bay3_slots.json";
 import { SpawnInBay } from "../functions/SpawnInBay";
 import { SlotContainer } from "./SlotContainer";
+import type { ViewMode, Selection } from "../types";
 
 type BayTransform = {
   position: THREE.Vector3;
@@ -22,9 +24,18 @@ type RawSlot = {
 
 type SlotRecord = {
   id: string;
+  rack: number;
   size: [number, number, number];
   pos: [number, number, number];
   fillPct: number;
+};
+
+type Props = {
+  bayTransform: BayTransform;
+  viewMode: ViewMode;
+  setViewMode: (v: ViewMode) => void;
+  selection: Selection;
+  setSelection: (s: Selection) => void;
 };
 
 function toVec3(arr: number[]): [number, number, number] {
@@ -32,13 +43,17 @@ function toVec3(arr: number[]): [number, number, number] {
 }
 
 function mapDbPosToThree(pos: [number, number, number]): [number, number, number] {
-  const [x, y, z] = pos;         // from Excel: POS X, POS Y, POS Z
-  return [x, z, y];              // Three: X, Y(up), Z
-  // if forward/back is reversed, use: return [x, z, -y];
+  const [x, y, z] = pos;
+  return [x, z, y]; // Three: X, Y(up), Z
 }
 
-
-export function Bay3WContents({ bayTransform }: { bayTransform: BayTransform }) {
+export function Bay3WContents({ 
+  bayTransform, 
+  viewMode, 
+  setViewMode, 
+  selection, 
+  setSelection 
+}: Props) {
   const raw = bay3Slots as RawSlot[];
 
   const slots: SlotRecord[] = raw.map((r) => {
@@ -47,21 +62,40 @@ export function Bay3WContents({ bayTransform }: { bayTransform: BayTransform }) 
 
     return {
       id: r.id,
+      rack: r.rack,
       size,
-      pos: mapDbPosToThree(rawPos), // 👈 AXIS FIX HERE
+      pos: mapDbPosToThree(rawPos),
       fillPct: r.fillPct,
     };
   });
+
+  // Determine if slots should be interactive based on viewMode
+  const slotsAreInteractive = viewMode === "row";
+
+  // Handle slot click
+  const handleSlotClick = (slotId: string) => {
+    if (!slotsAreInteractive) return;
+    console.log("[Bay3WContents] slot clicked:", slotId);
+    setSelection({ ...selection, slotId });
+    setViewMode("slot");
+  };
 
   return (
     <>
       {slots.map((rec, index) => (
         <SpawnInBay
-          key={`${rec.id}-${index}`}   // avoid duplicate key warning
+          key={`${rec.id}-${index}`}
           bayTransform={bayTransform}
           localPos={rec.pos}
         >
-          <SlotContainer size={rec.size} fillPct={rec.fillPct} />
+          <SlotContainer 
+            size={rec.size} 
+            fillPct={rec.fillPct}
+            slotId={rec.id}
+            isInteractive={slotsAreInteractive}
+            isSelected={selection.slotId === rec.id}
+            onClick={() => handleSlotClick(rec.id)}
+          />
         </SpawnInBay>
       ))}
     </>

@@ -1,3 +1,4 @@
+// HoverHit.tsx
 import * as THREE from "three";
 import { useMemo, useState } from "react";
 import type { ThreeEvent } from "@react-three/fiber";
@@ -8,17 +9,21 @@ type Props = {
   onClick?: (mesh: THREE.Mesh) => void;
 
   /** Hover highlight */
-  color?: string; // default: yellow
-  opacity?: number; // 0..1
+  color?: string;
+  opacity?: number;
+  
   /** Small lift to avoid z-fighting with coplanar surfaces */
   zBias?: number;
+
+  /** NEW: Controls whether this mesh responds to hover/click */
+  isInteractive?: boolean;
 };
 
 /**
- * Unity mental model:
- * - This is a "HoverHit" MonoBehaviour wrapper.
- * - We render an always-present invisible hit mesh for raycasting.
- * - On hover, we render a semi-transparent yellow mesh as the highlight.
+ * HoverHit - A hover/click target mesh
+ * - Renders an invisible hit mesh for raycasting
+ * - On hover, shows a semi-transparent highlight
+ * - isInteractive controls whether it responds to events
  */
 export function HoverHit({
   mesh,
@@ -26,6 +31,7 @@ export function HoverHit({
   color = "#ffd400",
   opacity = 0.18,
   zBias = 0.001,
+  isInteractive = true,
 }: Props) {
   const [hovered, setHovered] = useState(false);
 
@@ -35,7 +41,6 @@ export function HoverHit({
       opacity: 0,
       depthWrite: false,
     });
-    // keep it unlit + unaffected by tone mapping
     (mat as any).toneMapped = false;
     return mat;
   }, []);
@@ -48,14 +53,39 @@ export function HoverHit({
       depthWrite: false,
     });
     (mat as any).toneMapped = false;
-
-    // helps when highlight and surfaces are very close
     mat.polygonOffset = true;
     mat.polygonOffsetFactor = -1;
     mat.polygonOffsetUnits = -1;
-
     return mat;
   }, [color, opacity]);
+
+  // Pointer handlers that respect isInteractive
+  const handlePointerOver = (e: ThreeEvent<PointerEvent>) => {
+    if (!isInteractive) return;
+    e.stopPropagation();
+    setHovered(true);
+    document.body.style.cursor = "pointer";
+  };
+
+  const handlePointerOut = (e: ThreeEvent<PointerEvent>) => {
+    if (!isInteractive) return;
+    e.stopPropagation();
+    setHovered(false);
+    document.body.style.cursor = "default";
+  };
+
+  const handleClick = (e: ThreeEvent<MouseEvent>) => {
+    if (!isInteractive) return;
+    e.stopPropagation();
+    onClick?.(mesh);
+  };
+
+  // Reset hover state if we become non-interactive while hovered
+  // (This prevents stuck hover states)
+  if (!isInteractive && hovered) {
+    setHovered(false);
+    document.body.style.cursor = "default";
+  }
 
   return (
     <group position={mesh.position} rotation={mesh.rotation} scale={mesh.scale}>
@@ -63,22 +93,13 @@ export function HoverHit({
       <mesh
         geometry={mesh.geometry}
         material={hitMaterial}
-        onPointerOver={(e: ThreeEvent<PointerEvent>) => {
-          e.stopPropagation();
-          setHovered(true);
-        }}
-        onPointerOut={(e: ThreeEvent<PointerEvent>) => {
-          e.stopPropagation();
-          setHovered(false);
-        }}
-        onClick={(e: ThreeEvent<MouseEvent>) => {
-          e.stopPropagation();
-          onClick?.(mesh);
-        }}
+        onPointerOver={handlePointerOver}
+        onPointerOut={handlePointerOut}
+        onClick={handleClick}
       />
 
-      {/* Hover highlight */}
-      {hovered && (
+      {/* Hover highlight - only shown when hovered AND interactive */}
+      {hovered && isInteractive && (
         <mesh
           geometry={mesh.geometry}
           material={highlightMaterial}
