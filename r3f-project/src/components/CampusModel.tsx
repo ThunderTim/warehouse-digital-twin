@@ -18,30 +18,35 @@ export function CampusModel({
 }) {
   const { scene, nodes } = useGLTF(url) as unknown as GLTFResult;
 
-  // Derive hover meshes
+  // Derive hover meshes (hitboxes)
   const hoverMeshes = useMemo(() => {
     return Object.values(nodes)
       .filter((o): o is THREE.Mesh => (o as THREE.Mesh).isMesh)
       .filter((m) => m.name.includes("__HIT") || m.name.includes("__HIIT"));
   }, [nodes]);
 
-  // Fix floor material (no camera setup here anymore!)
+  // Fix floor material (separate from camera logic!)
   useEffect(() => {
     const floor = scene.getObjectByName("floor-map") as THREE.Mesh | null;
-    if (!floor) return;
+    if (!floor) {
+      console.warn("[CampusModel] floor-map not found");
+      return;
+    }
 
     const oldMat = floor.material;
     const srcMat = Array.isArray(oldMat) ? oldMat[0] : oldMat;
     const tex = (srcMat as any)?.map as THREE.Texture | undefined;
-    
+
     if (!tex) {
-      console.warn("floor-map has no material.map texture");
+      console.warn("[CampusModel] floor-map has no material.map texture");
       return;
     }
 
+    // Make the texture display correctly
     tex.colorSpace = THREE.SRGBColorSpace;
     tex.needsUpdate = true;
 
+    // Unlit material (ignores lights)
     const unlit = new THREE.MeshBasicMaterial({ map: tex });
     (unlit as any).toneMapped = false;
 
@@ -49,16 +54,30 @@ export function CampusModel({
     floor.material.needsUpdate = true;
 
     // Move floor slightly down to avoid z-fighting
-    floor.position.y -= 2.02;
+    floor.position.y = -.01;
+    floor.position.z = 55;
+
+    // Render floor first
     floor.renderOrder = 0;
     floor.material.depthWrite = false;
   }, [scene]);
 
-  // Hide any cameras in the GLB (we're using our own)
+  // Hide cameras and hitbox meshes from the GLB scene
+  // (we render hitboxes separately via Hoverable)
   useEffect(() => {
     scene.traverse((obj) => {
+      // Hide any cameras in the GLB (we use our own)
       if ((obj as THREE.Camera).isCamera) {
         obj.visible = false;
+      }
+
+      // Hide hitbox meshes (we render them via Hoverable)
+      if ((obj as THREE.Mesh).isMesh) {
+        const name = obj.name;
+        if (name.includes("__HIT") || name.includes("__HIIT")) {
+          obj.visible = false;
+          (obj as any).raycast = () => null; // Disable raycasting on original
+        }
       }
     });
   }, [scene]);
@@ -71,6 +90,7 @@ export function CampusModel({
         <Hoverable
           key={mesh.uuid}
           mesh={mesh}
+          renderBase={true}  // Don't render base - buildings are already in scene
           onClick={() => {
             if (mesh.name.includes("bldg-22__HIT")) {
               onSelectBuilding?.("bldg-22");
@@ -81,3 +101,5 @@ export function CampusModel({
     </>
   );
 }
+
+useGLTF.preload("/models/campus.glb");

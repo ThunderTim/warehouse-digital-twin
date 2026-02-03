@@ -1,8 +1,7 @@
 // RackHitboxes.tsx
-import * as THREE from "three";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import type { ThreeEvent } from "@react-three/fiber";
-import { calculateRackBounds, type RackBounds } from "../utils/rackUtilis";
+import { calculateRackBounds, type RackBounds } from "../utils/rackUtils";
 
 type RawSlot = {
   id: string;
@@ -57,7 +56,7 @@ export function RackHitboxes({
   );
 }
 
-// Individual rack hitbox
+// Individual rack hitbox - using declarative R3F approach
 function RackHitbox({
   rack,
   isInteractive,
@@ -79,6 +78,21 @@ function RackHitbox({
 }) {
   const [hovered, setHovered] = useState(false);
 
+  // Reset hover state when isInteractive changes
+  useEffect(() => {
+    if (!isInteractive) {
+      setHovered(false);
+      document.body.style.cursor = "default";
+    }
+  }, [isInteractive]);
+
+  // Reset cursor on unmount
+  useEffect(() => {
+    return () => {
+      document.body.style.cursor = "default";
+    };
+  }, []);
+
   // Determine current color/opacity
   const currentColor = useMemo(() => {
     if (isSelected) return "#00ff88";
@@ -92,21 +106,6 @@ function RackHitbox({
     return opacity;
   }, [isSelected, hovered, isInteractive, hoverOpacity, opacity]);
 
-  // Create box geometry for the rack bounds
-  const geometry = useMemo(() => {
-    return new THREE.BoxGeometry(rack.size[0], rack.size[1], rack.size[2]);
-  }, [rack.size]);
-
-  // Material
-  const material = useMemo(() => {
-    return new THREE.MeshBasicMaterial({
-      color: new THREE.Color(currentColor),
-      transparent: true,
-      opacity: currentOpacity,
-      depthWrite: false,
-    });
-  }, [currentColor, currentOpacity]);
-
   // Event handlers
   const handlePointerOver = (e: ThreeEvent<PointerEvent>) => {
     if (!isInteractive) return;
@@ -116,7 +115,6 @@ function RackHitbox({
   };
 
   const handlePointerOut = (e: ThreeEvent<PointerEvent>) => {
-    if (!isInteractive) return;
     e.stopPropagation();
     setHovered(false);
     document.body.style.cursor = "default";
@@ -129,20 +127,21 @@ function RackHitbox({
     onClick();
   };
 
-  // Reset hover if becomes non-interactive
-  if (!isInteractive && hovered) {
-    setHovered(false);
-    document.body.style.cursor = "default";
-  }
-
+  // Use declarative R3F syntax - this handles material updates properly
   return (
     <mesh
       position={rack.center}
-      geometry={geometry}
-      material={material}
       onPointerOver={handlePointerOver}
       onPointerOut={handlePointerOut}
       onClick={handleClick}
-    />
+    >
+      <boxGeometry args={[rack.size[0], rack.size[1], rack.size[2]]} />
+      <meshBasicMaterial
+        color={currentColor}
+        transparent
+        opacity={currentOpacity}
+        depthWrite={false}
+      />
+    </mesh>
   );
 }

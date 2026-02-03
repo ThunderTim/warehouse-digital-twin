@@ -5,7 +5,7 @@ import bay3Slots from "../data/bay3_slots.json";
 import { SpawnInBay } from "../functions/SpawnInBay";
 import { SlotContainer } from "./SlotContainer";
 import { RackHitboxes } from "./RackHitboxes";
-import { getCameraForRack, type RackBounds } from "../utils/rackUtilis";
+import { getCameraForRack, type RackBounds } from "../utils/rackUtils";
 import type { ViewMode, Selection } from "../types";
 
 type BayTransform = {
@@ -39,7 +39,7 @@ type Props = {
   setViewMode: (v: ViewMode) => void;
   selection: Selection;
   setSelection: (s: Selection) => void;
-  onCameraUpdate?: (config: { position: [number, number, number]; rotation: [number, number, number] }) => void;
+  onCameraUpdate?: (config: { position: [number, number, number]; lookAt: [number, number, number] }) => void;
 };
 
 function toVec3(arr: number[]): [number, number, number] {
@@ -78,8 +78,8 @@ export function Bay3WContents({
   }, [raw]);
 
   // Determine interactivity based on viewMode
-  const racksAreInteractive = viewMode === "bay";
-  const slotsAreInteractive = viewMode === "row";
+  // Slots are interactive at RACK level (and row level if you add that later)
+  const slotsAreInteractive = viewMode === "rack" || viewMode === "row";
 
   // Get bay position as array for camera calculations
   const bayPos: [number, number, number] = useMemo(() => {
@@ -124,15 +124,17 @@ export function Bay3WContents({
 
   return (
     <group>
-      {/* Rack Hitboxes - only interactive at bay level */}
-      <SpawnInBay bayTransform={bayTransform} localPos={[0, 0, 0]}>
-        <RackHitboxes
-          slots={raw}
-          isInteractive={racksAreInteractive}
-          selectedRackId={selection.rackId}
-          onRackClick={handleRackClick}
-        />
-      </SpawnInBay>
+      {/* Rack Hitboxes - only show/render at bay level */}
+      {viewMode === "bay" && (
+        <SpawnInBay bayTransform={bayTransform} localPos={[0, 0, 0]}>
+          <RackHitboxes
+            slots={raw}
+            isInteractive={true}
+            selectedRackId={selection.rackId}
+            onRackClick={handleRackClick}
+          />
+        </SpawnInBay>
+      )}
 
       {/* Slot containers */}
       {visibleSlots.map((rec, index) => (

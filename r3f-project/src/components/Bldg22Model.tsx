@@ -17,7 +17,7 @@ type Props = {
   setViewMode: (v: ViewMode) => void;
   selection: Selection;
   setSelection: (s: Selection) => void;
-  onCameraUpdate?: (config: { position: [number, number, number]; rotation: [number, number, number] }) => void;
+  onCameraUpdate?: (config: { position: [number, number, number]; lookAt: [number, number, number] }) => void;
 };
 
 export function Bldg22Model({

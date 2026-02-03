@@ -3,19 +3,20 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense, useState, useMemo } from "react";
 import { CampusModel } from "./components/CampusModel";
 import { Bldg22Model } from "./components/Bldg22Model";
-import { CameraController } from "./controllers/CameraController";
+import { CameraController } from "./controllers/CameraController"
 import { CAMERA_POSITIONS, getBayCamera } from "./controllers/cameraPositions";
 import type { ViewMode, Selection } from "./types";
+
+// Dynamic camera can use lookAt (for rack views) instead of rotation
+type DynamicCamera = {
+  position: [number, number, number];
+  lookAt: [number, number, number];
+};
 
 export default function App() {
   const [viewMode, setViewMode] = useState<ViewMode>("campus");
   const [selection, setSelection] = useState<Selection>({});
-  
-  // Dynamic camera position (set by rack selection, etc.)
-  const [dynamicCamera, setDynamicCamera] = useState<{
-    position: [number, number, number];
-    rotation: [number, number, number];
-  } | null>(null);
+  const [dynamicCamera, setDynamicCamera] = useState<DynamicCamera | null>(null);
 
   // ─────────────────────────────────────────────────
   // Calculate camera config based on viewMode + selection
@@ -23,38 +24,38 @@ export default function App() {
   const cameraConfig = useMemo(() => {
     switch (viewMode) {
       case "campus":
-        return CAMERA_POSITIONS.campus;
-      
+        return { ...CAMERA_POSITIONS.campus, lookAt: undefined };
+
       case "building":
-        return CAMERA_POSITIONS.building;
-      
+        return { ...CAMERA_POSITIONS.building, lookAt: undefined };
+
       case "bay":
-        // Use bay-specific camera if we have a bayId
         if (selection.bayId) {
-          return getBayCamera(selection.bayId);
+          return { ...getBayCamera(selection.bayId), lookAt: undefined };
         }
-        return CAMERA_POSITIONS.building;
-      
+        return { ...CAMERA_POSITIONS.building, lookAt: undefined };
+
       case "rack":
       case "row":
       case "slot":
-        // Use dynamic camera if set, otherwise fallback
+        // Use dynamic camera with lookAt
         if (dynamicCamera) {
           return {
             position: dynamicCamera.position,
-            rotation: dynamicCamera.rotation,
+            lookAt: dynamicCamera.lookAt,
+            rotation: undefined,  // Use lookAt, not rotation
             fov: 45,
           };
         }
-        return CAMERA_POSITIONS.rack;
-      
+        return { ...CAMERA_POSITIONS.rack, lookAt: undefined };
+
       default:
-        return CAMERA_POSITIONS.campus;
+        return { ...CAMERA_POSITIONS.campus, lookAt: undefined };
     }
   }, [viewMode, selection, dynamicCamera]);
 
-  // Handle camera update from child components (e.g., rack selection)
-  const handleCameraUpdate = (config: { position: [number, number, number]; rotation: [number, number, number] }) => {
+  // Handle camera update from child components (rack selection)
+  const handleCameraUpdate = (config: DynamicCamera) => {
     console.log("[App] camera update:", config);
     setDynamicCamera(config);
   };
@@ -74,15 +75,15 @@ export default function App() {
         break;
       case "rack":
         setViewMode("bay");
-        setSelection({ 
-          buildingId: selection.buildingId, 
-          bayId: selection.bayId 
+        setSelection({
+          buildingId: selection.buildingId,
+          bayId: selection.bayId,
         });
         setDynamicCamera(null);
         break;
       case "row":
         setViewMode("rack");
-        setSelection({ 
+        setSelection({
           buildingId: selection.buildingId,
           bayId: selection.bayId,
           rackId: selection.rackId,
@@ -102,7 +103,6 @@ export default function App() {
 
   return (
     <div style={{ width: "100vw", height: "100vh", position: "relative" }}>
-      
       {/* Back button */}
       {viewMode !== "campus" && (
         <button
@@ -126,15 +126,15 @@ export default function App() {
       )}
 
       {/* Debug: Current view indicator */}
-      <div 
-        style={{ 
-          position: "absolute", 
-          top: 20, 
-          right: 20, 
-          zIndex: 10, 
-          color: "#fff", 
-          background: "#333", 
-          padding: "8px 12px", 
+      <div
+        style={{
+          position: "absolute",
+          top: 20,
+          right: 20,
+          zIndex: 10,
+          color: "#fff",
+          background: "#333",
+          padding: "8px 12px",
           borderRadius: "4px",
           fontFamily: "monospace",
           fontSize: "12px",
@@ -152,14 +152,15 @@ export default function App() {
         <CameraController
           position={cameraConfig.position}
           rotation={cameraConfig.rotation}
+          lookAt={cameraConfig.lookAt}
           fov={cameraConfig.fov}
-          near={cameraConfig.near}
-          far={cameraConfig.far}
+          //near={cameraConfig.near}
+          //far={cameraConfig.far}
         />
 
         <ambientLight intensity={8.6} />
         <directionalLight position={[5, 10, 5]} intensity={3.2} />
-        
+
         <Suspense fallback={null}>
           {/* Campus scene */}
           {!selection.buildingId && (

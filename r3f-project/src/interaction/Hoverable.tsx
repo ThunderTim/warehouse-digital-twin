@@ -19,16 +19,17 @@ export function Hoverable({
   outlineColor = "#ffb700",
   outlineScale = 1.16,
   onClick,
-  renderBase = true,
+  renderBase = false,
   
 }: Props) {
   const [hovered, setHovered] = useState(false);
 
   // clone the original material so we don't mutate shared materials
-  const baseMaterial = useMemo(() => {
-    const m = mesh.material;
-    return Array.isArray(m) ? m.map((x) => x.clone()) : m.clone();
-  }, [mesh]);
+ const baseMaterial = useMemo(() => {
+  if (!renderBase) return null;
+  const m = mesh.material;
+  return Array.isArray(m) ? m.map((x) => x.clone()) : m.clone();
+}, [mesh, renderBase]);
 
   // outline material (unlit, solid)
   const outlineMaterial = useMemo(() => {
@@ -88,13 +89,10 @@ export function Hoverable({
       )}
 
       {/* Base mesh (optional) */}
-      {renderBase && (
-        <mesh
-          geometry={mesh.geometry}
-          material={baseMaterial as any}
-          renderOrder={baseRenderOrder}
-        />
-      )}
+     {renderBase && baseMaterial && (
+  <mesh geometry={mesh.geometry} material={baseMaterial as any} renderOrder={baseRenderOrder} />
+)}
+
     </group>
   );
 }
