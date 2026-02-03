@@ -20,7 +20,7 @@ export function SlotContainer({
   fillPct,
   shrinkPct = 0.95,
   frontIsNegativeZ = false,
-  //slotId,
+  
   isInteractive = false,
   isSelected = false,
   onClick,
