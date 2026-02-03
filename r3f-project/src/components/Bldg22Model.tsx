@@ -6,6 +6,7 @@ import { HoverHit } from "../interaction/HoverHit";
 import { Bay3WContents } from "../components/Bay3WContents";
 import type { ViewMode, Selection } from "../types";
 
+
 type GLTFResult = {
   scene: THREE.Group;
   nodes: Record<string, THREE.Object3D>;
@@ -29,6 +30,9 @@ export function Bldg22Model({
   onCameraUpdate,
 }: Props) {
   const { scene, nodes } = useGLTF(url) as unknown as GLTFResult;
+
+  const showSlotLabels = viewMode === "rack" || viewMode === "slot";
+
 
   // Derive __HIIT meshes 
   const hoverMeshes = useMemo(() => {
@@ -153,6 +157,8 @@ export function Bldg22Model({
           selection={selection}
           setSelection={setSelection}
           onCameraUpdate={onCameraUpdate}
+          showSlotLabels={viewMode === "rack" || viewMode === "slot"}
+          labelOnHoverOnly={viewMode !== "slot"}
         />
       )}
     </>

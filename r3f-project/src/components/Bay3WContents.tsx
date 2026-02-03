@@ -39,7 +39,11 @@ type Props = {
   setViewMode: (v: ViewMode) => void;
   selection: Selection;
   setSelection: (s: Selection) => void;
+  
   onCameraUpdate?: (config: { position: [number, number, number]; lookAt: [number, number, number] }) => void;
+  showSlotLabels?: boolean;
+  labelOnHoverOnly?: boolean;
+
 };
 
 function toVec3(arr: number[]): [number, number, number] {
@@ -51,14 +55,17 @@ function mapDbPosToThree(pos: [number, number, number]): [number, number, number
   return [x, z, y]; // Three: X, Y(up), Z
 }
 
-export function Bay3WContents({ 
-  bayTransform, 
-  viewMode, 
-  setViewMode, 
-  selection, 
+export function Bay3WContents({
+  bayTransform,
+  viewMode,
+  setViewMode,
+  selection,
   setSelection,
   onCameraUpdate,
+  showSlotLabels = false,
+  labelOnHoverOnly = true,
 }: Props) {
+
   const raw = bay3Slots as RawSlot[];
 
   // Process slots for rendering
@@ -147,9 +154,12 @@ export function Bay3WContents({
             size={rec.size} 
             fillPct={rec.fillPct}
             slotId={rec.id}
+            
             isInteractive={slotsAreInteractive}
             isSelected={selection.slotId === rec.id}
             onClick={() => handleSlotClick(rec.id)}
+            showLabel={showSlotLabels}  
+            labelOnHoverOnly={labelOnHoverOnly ?? true}  
           />
         </SpawnInBay>
       ))}
