@@ -20,12 +20,14 @@ export function SlotContainer({
   fillPct,
   shrinkPct = 0.95,
   frontIsNegativeZ = false,
-  
+  slotId,
   isInteractive = false,
   isSelected = false,
   onClick,
 }: Props) {
   const [hovered, setHovered] = useState(false);
+
+  
 
   // Base colors based on fill percentage
   const { color, opacity } = useMemo(() => {
@@ -42,6 +44,8 @@ export function SlotContainer({
     if (fillPct < 0.7) return { color: "#2f5bff", opacity: 1 };
     return { color: "#86a8ff", opacity: 0.6 };
   }, [fillPct, hovered, isInteractive, isSelected]);
+  void slotId;
+
 
   const geometry = useMemo(() => {
     const [w, h, d] = size;
@@ -57,6 +61,8 @@ export function SlotContainer({
 
     return g;
   }, [size, shrinkPct, frontIsNegativeZ]);
+
+  
 
   return (
     <mesh 
