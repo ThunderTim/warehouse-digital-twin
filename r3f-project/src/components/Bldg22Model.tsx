@@ -31,7 +31,7 @@ export function Bldg22Model({
 }: Props) {
   const { scene, nodes } = useGLTF(url) as unknown as GLTFResult;
 
-  const showSlotLabels = viewMode === "rack" || viewMode === "slot";
+  
 
 
   // Derive __HIIT meshes 
