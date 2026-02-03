@@ -29,7 +29,7 @@ export function HoverHit({
   mesh,
   onClick,
   color = "#ffd400",
-  opacity = 0.18,
+  opacity = 0.88,
   zBias = 0.001,
   isInteractive = true,
 }: Props) {
@@ -38,7 +38,7 @@ export function HoverHit({
   const hitMaterial = useMemo(() => {
     const mat = new THREE.MeshBasicMaterial({
       transparent: true,
-      opacity: 0,
+      opacity: 0.12,
       depthWrite: false,
     });
     (mat as any).toneMapped = false;
@@ -49,7 +49,7 @@ export function HoverHit({
     const mat = new THREE.MeshBasicMaterial({
       color: new THREE.Color(color),
       transparent: true,
-      opacity,
+      opacity: 0.8,
       depthWrite: false,
     });
     (mat as any).toneMapped = false;
