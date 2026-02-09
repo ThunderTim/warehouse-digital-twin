@@ -138,6 +138,7 @@ export default function App() {
           borderRadius: "4px",
           fontFamily: "monospace",
           fontSize: "12px",
+          overflow: "visible",
         }}
       >
         view: {viewMode}

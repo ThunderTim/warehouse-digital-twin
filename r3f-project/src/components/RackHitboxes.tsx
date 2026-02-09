@@ -2,6 +2,7 @@
 import { useMemo, useState, useEffect } from "react";
 import type { ThreeEvent } from "@react-three/fiber";
 import { calculateRackBounds, type RackBounds } from "../utils/rackUtils";
+import { Popup } from "../interaction/Popup";
 
 type RawSlot = {
   id: string;
@@ -32,7 +33,6 @@ export function RackHitboxes({
   opacity = 0.15,
   hoverOpacity = 0.35,
 }: Props) {
-  // Calculate rack bounds from slots
   const rackBounds = useMemo(() => {
     return calculateRackBounds(slots);
   }, [slots]);
@@ -56,7 +56,6 @@ export function RackHitboxes({
   );
 }
 
-// Individual rack hitbox - using declarative R3F approach
 function RackHitbox({
   rack,
   isInteractive,
@@ -78,7 +77,6 @@ function RackHitbox({
 }) {
   const [hovered, setHovered] = useState(false);
 
-  // Reset hover state when isInteractive changes
   useEffect(() => {
     if (!isInteractive) {
       setHovered(false);
@@ -86,14 +84,12 @@ function RackHitbox({
     }
   }, [isInteractive]);
 
-  // Reset cursor on unmount
   useEffect(() => {
     return () => {
       document.body.style.cursor = "default";
     };
   }, []);
 
-  // Determine current color/opacity
   const currentColor = useMemo(() => {
     if (isSelected) return "#00ff88";
     if (hovered && isInteractive) return hoverColor;
@@ -106,7 +102,6 @@ function RackHitbox({
     return opacity;
   }, [isSelected, hovered, isInteractive, hoverOpacity, opacity]);
 
-  // Event handlers
   const handlePointerOver = (e: ThreeEvent<PointerEvent>) => {
     if (!isInteractive) return;
     e.stopPropagation();
@@ -127,7 +122,9 @@ function RackHitbox({
     onClick();
   };
 
-  // Use declarative R3F syntax - this handles material updates properly
+  // Popup offset - above the rack
+  const popupOffset: [number, number, number] = [0, rack.size[1] / 2 + 0.5, 0];
+
   return (
     <mesh
       position={rack.center}
@@ -142,6 +139,13 @@ function RackHitbox({
         opacity={currentOpacity}
         depthWrite={false}
       />
+
+      {/* Popup on hover */}
+      {hovered && isInteractive && (
+        <Popup offset={popupOffset}>
+          {rack.rackId}
+        </Popup>
+      )}
     </mesh>
   );
 }

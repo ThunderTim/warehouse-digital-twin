@@ -87,17 +87,18 @@ export function CampusModel({
       <primitive object={scene} />
 
       {hoverMeshes.map((mesh) => (
-        <Hoverable
-          key={mesh.uuid}
-          mesh={mesh}
-          renderBase={true}  // Don't render base - buildings are already in scene
-          onClick={() => {
-            if (mesh.name.includes("bldg-22__HIT")) {
-              onSelectBuilding?.("bldg-22");
-            }
-          }}
-        />
-      ))}
+  <Hoverable
+    key={mesh.uuid}
+    mesh={mesh}
+    renderBase={true}
+    popupContent={mesh.name.replace("__HIT", "").replace("__HIIT", "")}
+    onClick={() => {
+      if (mesh.name.includes("bldg-22__HIT")) {
+        onSelectBuilding?.("bldg-22");
+      }
+    }}
+  />
+))}
     </>
   );
 }

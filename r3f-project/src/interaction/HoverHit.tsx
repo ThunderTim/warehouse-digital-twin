@@ -1,30 +1,21 @@
 // HoverHit.tsx
 import * as THREE from "three";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import type { ThreeEvent } from "@react-three/fiber";
+import type { ReactNode } from "react";
+import { Popup } from "./Popup";
 
 type Props = {
-  /** Source mesh from the GLB (we only read its transform + geometry) */
   mesh: THREE.Mesh;
   onClick?: (mesh: THREE.Mesh) => void;
-
-  /** Hover highlight */
   color?: string;
   opacity?: number;
-  
-  /** Small lift to avoid z-fighting with coplanar surfaces */
   zBias?: number;
-
-  /** NEW: Controls whether this mesh responds to hover/click */
   isInteractive?: boolean;
+  popupContent?: ReactNode;
+  popupOffset?: [number, number, number];
 };
 
-/**
- * HoverHit - A hover/click target mesh
- * - Renders an invisible hit mesh for raycasting
- * - On hover, shows a semi-transparent highlight
- * - isInteractive controls whether it responds to events
- */
 export function HoverHit({
   mesh,
   onClick,
@@ -32,8 +23,23 @@ export function HoverHit({
   opacity = 0.88,
   zBias = 0.001,
   isInteractive = true,
+  popupContent,
+  popupOffset = [0, 0.5, 0],
 }: Props) {
   const [hovered, setHovered] = useState(false);
+
+  // DEBUG: Log when hover state changes
+  useEffect(() => {
+    console.log(`[HoverHit] ${mesh.name} | hovered: ${hovered} | isInteractive: ${isInteractive}`);
+  }, [hovered, isInteractive, mesh.name]);
+
+  // DEBUG: Log when popup SHOULD render
+  const shouldShowPopup = hovered && isInteractive && !!popupContent;
+  useEffect(() => {
+    if (shouldShowPopup) {
+      console.log(`[HoverHit] POPUP VISIBLE for: ${mesh.name}`);
+    }
+  }, [shouldShowPopup, mesh.name]);
 
   const hitMaterial = useMemo(() => {
     const mat = new THREE.MeshBasicMaterial({
@@ -59,8 +65,8 @@ export function HoverHit({
     return mat;
   }, [color, opacity]);
 
-  // Pointer handlers that respect isInteractive
   const handlePointerOver = (e: ThreeEvent<PointerEvent>) => {
+    console.log(`[HoverHit] pointerOver: ${mesh.name} | isInteractive: ${isInteractive}`);
     if (!isInteractive) return;
     e.stopPropagation();
     setHovered(true);
@@ -68,6 +74,7 @@ export function HoverHit({
   };
 
   const handlePointerOut = (e: ThreeEvent<PointerEvent>) => {
+    console.log(`[HoverHit] pointerOut: ${mesh.name}`);
     if (!isInteractive) return;
     e.stopPropagation();
     setHovered(false);
@@ -80,8 +87,6 @@ export function HoverHit({
     onClick?.(mesh);
   };
 
-  // Reset hover state if we become non-interactive while hovered
-  // (This prevents stuck hover states)
   if (!isInteractive && hovered) {
     setHovered(false);
     document.body.style.cursor = "default";
@@ -89,7 +94,7 @@ export function HoverHit({
 
   return (
     <group position={mesh.position} rotation={mesh.rotation} scale={mesh.scale}>
-      {/* Always-present invisible hit target */}
+      {/* Invisible hit target */}
       <mesh
         geometry={mesh.geometry}
         material={hitMaterial}
@@ -98,7 +103,7 @@ export function HoverHit({
         onClick={handleClick}
       />
 
-      {/* Hover highlight - only shown when hovered AND interactive */}
+      {/* Hover highlight */}
       {hovered && isInteractive && (
         <mesh
           geometry={mesh.geometry}
@@ -106,6 +111,11 @@ export function HoverHit({
           position={[0, 0, zBias]}
           renderOrder={50}
         />
+      )}
+
+      {/* Popup on hover */}
+      {shouldShowPopup && (
+        <Popup offset={popupOffset}>{popupContent}</Popup>
       )}
     </group>
   );

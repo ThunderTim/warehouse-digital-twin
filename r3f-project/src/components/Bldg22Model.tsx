@@ -138,15 +138,16 @@ export function Bldg22Model({
 
       {/* Bay hover targets - only interactive at building level */}
       {hoverMeshes.map((mesh) => (
-        <HoverHit
-          key={mesh.uuid}
-          mesh={mesh}
-          color="#ffd400"
-          opacity={0.22}
-          isInteractive={viewMode === "building"}
-          onClick={() => handleHitClick(mesh)}
-        />
-      ))}
+      <HoverHit
+        key={mesh.uuid}
+        mesh={mesh}
+        color="#ffd400"
+        opacity={0.22}
+        isInteractive={viewMode === "building"}
+        popupContent={mesh.name.replace("__HIIT", "").replace("__HIT", "")}
+        onClick={() => handleHitClick(mesh)}
+      />
+    ))}
 
       {/* Bay contents */}
       {bayTransform && (

@@ -1,17 +1,22 @@
+// Hoverable.tsx
 import * as THREE from "three";
 import { useMemo, useState } from "react";
 import type { ThreeEvent } from "@react-three/fiber";
+import type { ReactNode } from "react";
+import { Popup } from "./Popup";
 
 type Props = {
   mesh: THREE.Mesh;
-  outlineColor?: string;     // hex string like "#ffcc00"
-  outlineScale?: number;     // e.g. 1.06 (small is usually enough)
+  outlineColor?: string;
+  outlineScale?: number;
   onClick?: (mesh: THREE.Mesh) => void;
-
-  // New options
-  renderBase?: boolean;      // default true
-  fillOnHover?: boolean;     // default false
-  fillOpacity?: number;      // e.g. 0.15
+  renderBase?: boolean;
+  fillOnHover?: boolean;
+  fillOpacity?: number;
+  isInteractive?: boolean;
+  /** Popup content - if provided, shows on hover */
+  popupContent?: ReactNode;
+  popupOffset?: [number, number, number];
 };
 
 export function Hoverable({
@@ -20,39 +25,57 @@ export function Hoverable({
   outlineScale = 1.16,
   onClick,
   renderBase = true,
-  
+  isInteractive = true,
+  popupContent,
+  popupOffset = [0, 1, 0],
 }: Props) {
   const [hovered, setHovered] = useState(false);
 
-  // clone the original material so we don't mutate shared materials
   const baseMaterial = useMemo(() => {
     const m = mesh.material;
     return Array.isArray(m) ? m.map((x) => x.clone()) : m.clone();
   }, [mesh]);
 
-  // outline material (unlit, solid)
   const outlineMaterial = useMemo(() => {
     const mat = new THREE.MeshBasicMaterial({
       color: new THREE.Color(outlineColor),
       side: THREE.BackSide,
     });
-    mat.depthTest = true;  
-    mat.depthWrite = false
-;
+    mat.depthTest = true;
+    mat.depthWrite = false;
     mat.polygonOffset = true;
     mat.polygonOffsetFactor = 1;
     mat.polygonOffsetUnits = 1.1;
-
-
-
     return mat;
   }, [outlineColor]);
 
-  
+  const handlePointerOver = (e: ThreeEvent<PointerEvent>) => {
+    if (!isInteractive) return;
+    e.stopPropagation();
+    setHovered(true);
+    document.body.style.cursor = "pointer";
+  };
 
-  // render ordering (helps with coplanar / near-coplanar)
+  const handlePointerOut = (e: ThreeEvent<PointerEvent>) => {
+    if (!isInteractive) return;
+    e.stopPropagation();
+    setHovered(false);
+    document.body.style.cursor = "default";
+  };
+
+  const handleClick = (e: ThreeEvent<MouseEvent>) => {
+    if (!isInteractive) return;
+    e.stopPropagation();
+    onClick?.(mesh);
+  };
+
+  // Reset if becomes non-interactive while hovered
+  if (!isInteractive && hovered) {
+    setHovered(false);
+    document.body.style.cursor = "default";
+  }
+
   const baseRenderOrder = 31;
-  
   const outlineRenderOrder = 21;
 
   return (
@@ -60,40 +83,32 @@ export function Hoverable({
       position={mesh.position}
       rotation={mesh.rotation}
       scale={mesh.scale}
-      onPointerOver={(e: ThreeEvent<PointerEvent>) => {
-        e.stopPropagation();
-        setHovered(true);
-      }}
-      onPointerOut={(e: ThreeEvent<PointerEvent>) => {
-        e.stopPropagation();
-        setHovered(false);
-      }}
-      onClick={(e: ThreeEvent<MouseEvent>) => {
-        e.stopPropagation();
-        onClick?.(mesh);
-      }}
+      onPointerOver={handlePointerOver}
+      onPointerOut={handlePointerOut}
+      onClick={handleClick}
     >
-      {/* Hover visuals */}
-      {hovered && (
-        <>
-          
-
-          <mesh
-            geometry={mesh.geometry}
-            material={outlineMaterial}
-            scale={[outlineScale, outlineScale, outlineScale]}
-            renderOrder={outlineRenderOrder}
-          />
-        </>
+      {/* Hover outline */}
+      {hovered && isInteractive && (
+        <mesh
+          geometry={mesh.geometry}
+          material={outlineMaterial}
+          scale={[outlineScale, outlineScale, outlineScale]}
+          renderOrder={outlineRenderOrder}
+        />
       )}
 
-      {/* Base mesh (optional) */}
+      {/* Base mesh */}
       {renderBase && (
         <mesh
           geometry={mesh.geometry}
           material={baseMaterial as any}
           renderOrder={baseRenderOrder}
         />
+      )}
+
+      {/* Popup on hover */}
+      {hovered && isInteractive && popupContent && (
+        <Popup offset={popupOffset}>{popupContent}</Popup>
       )}
     </group>
   );

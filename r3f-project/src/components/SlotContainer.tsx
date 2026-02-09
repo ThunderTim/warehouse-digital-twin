@@ -2,24 +2,23 @@
 import * as THREE from "three";
 import { useMemo, useState } from "react";
 import { Text, Billboard } from "@react-three/drei";
+import { Popup } from "../interaction/Popup";
 
 type Props = {
-  size: [number, number, number];      // [w, h, d]
-  fillPct: number;                     // 0..1
-  shrinkPct?: number;                  // default 0.95
-  frontIsNegativeZ?: boolean;          // default false
+  size: [number, number, number];
+  fillPct: number;
+  shrinkPct?: number;
+  frontIsNegativeZ?: boolean;
 
-  // Interactivity
   slotId?: string;
   isInteractive?: boolean;
   isSelected?: boolean;
   onClick?: () => void;
 
-  // Label controls
-  showLabel?: boolean;                 // default false
-  labelOnHoverOnly?: boolean;          // default true
-  labelFontSize?: number;              // default 0.35 (tune to your world scale)
-  labelYOffset?: number;               // default small offset above the slot
+  showLabel?: boolean;
+  labelOnHoverOnly?: boolean;
+  labelFontSize?: number;
+  labelYOffset?: number;
 };
 
 export function SlotContainer({
@@ -40,10 +39,8 @@ export function SlotContainer({
 }: Props) {
   const [hovered, setHovered] = useState(false);
 
-  // ✅ use slotId so TS/Vercel doesn't flag it as unused
   const label = slotId ?? "";
 
-  // Base colors based on fill percentage / hover / selection
   const { color, opacity } = useMemo(() => {
     if (isSelected) return { color: "#00ff88", opacity: 0.95 };
     if (hovered && isInteractive) return { color: "#ffd400", opacity: 0.9 };
@@ -53,7 +50,6 @@ export function SlotContainer({
     return { color: "#86a8ff", opacity: 0.6 };
   }, [fillPct, hovered, isInteractive, isSelected]);
 
-  // Geometry: shrink + translate so the "front face" is aligned to front
   const geometry = useMemo(() => {
     const [w, h, d] = size;
 
@@ -63,15 +59,12 @@ export function SlotContainer({
 
     const g = new THREE.BoxGeometry(sw, sh, sd);
 
-    // Move geometry so it occupies the slot volume starting at (0,0,0),
-    // but the Z face is pushed toward the front (depending on rack orientation)
     const zHalf = sd / 2;
     g.translate(sw / 2, sh / 2, frontIsNegativeZ ? -zHalf : zHalf);
 
     return g;
   }, [size, shrinkPct, frontIsNegativeZ]);
 
-  // Label position: slightly above the slot, slightly toward the front
   const labelPos = useMemo<[number, number, number]>(() => {
     const [w, h, d] = size;
 
@@ -85,6 +78,16 @@ export function SlotContainer({
 
     return [x, y, z];
   }, [size, shrinkPct, frontIsNegativeZ, labelYOffset]);
+
+  // Popup position - center of the slot, slightly above
+  const popupOffset = useMemo<[number, number, number]>(() => {
+    const [w, h, d] = size;
+    const sw = w * shrinkPct;
+    const sh = h * shrinkPct;
+    const sd = d * shrinkPct;
+
+    return [sw / 2, sh + 0.3, (frontIsNegativeZ ? -1 : 1) * (sd / 2)];
+  }, [size, shrinkPct, frontIsNegativeZ]);
 
   const shouldShowLabel =
     showLabel &&
@@ -134,8 +137,19 @@ export function SlotContainer({
           >
             {label}
           </Text>
-
         </Billboard>
+      )}
+
+      {/* Popup on hover */}
+      {hovered && isInteractive && (
+        <Popup offset={popupOffset}>
+          <div>
+            <strong>{slotId}</strong>
+            <div style={{ fontSize: "11px", opacity: 0.8 }}>
+              {Math.round(fillPct * 100)}% filled
+            </div>
+          </div>
+        </Popup>
       )}
     </mesh>
   );

@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.popup-container {
+  background: rgba(20, 20, 25, 0.92);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 212, 0, 0.3);
+  z-index: 9999;
+}
