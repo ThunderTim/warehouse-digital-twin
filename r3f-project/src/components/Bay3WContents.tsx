@@ -39,11 +39,7 @@ type Props = {
   setViewMode: (v: ViewMode) => void;
   selection: Selection;
   setSelection: (s: Selection) => void;
-  
   onCameraUpdate?: (config: { position: [number, number, number]; lookAt: [number, number, number] }) => void;
-  showSlotLabels?: boolean;
-  labelOnHoverOnly?: boolean;
-
 };
 
 function toVec3(arr: number[]): [number, number, number] {
@@ -52,7 +48,7 @@ function toVec3(arr: number[]): [number, number, number] {
 
 function mapDbPosToThree(pos: [number, number, number]): [number, number, number] {
   const [x, y, z] = pos;
-  return [x, z, y]; // Three: X, Y(up), Z
+  return [x, z, y];
 }
 
 export function Bay3WContents({
@@ -62,54 +58,36 @@ export function Bay3WContents({
   selection,
   setSelection,
   onCameraUpdate,
-  showSlotLabels = false,
-  labelOnHoverOnly = true,
 }: Props) {
-
   const raw = bay3Slots as RawSlot[];
 
-  // Process slots for rendering
   const slots: SlotRecord[] = useMemo(() => {
-    return raw.map((r) => {
-      const size = toVec3(r.size);
-      const rawPos = toVec3(r.pos);
-
-      return {
-        id: r.id,
-        rack: r.rack,
-        size,
-        pos: mapDbPosToThree(rawPos),
-        fillPct: r.fillPct,
-      };
-    });
+    return raw.map((r) => ({
+      id: r.id,
+      rack: r.rack,
+      size: toVec3(r.size),
+      pos: mapDbPosToThree(toVec3(r.pos)),
+      fillPct: r.fillPct,
+    }));
   }, [raw]);
 
-  // Determine interactivity based on viewMode
-  // Slots are interactive at RACK level (and row level if you add that later)
   const slotsAreInteractive = viewMode === "rack" || viewMode === "row";
 
-  // Get bay position as array for camera calculations
   const bayPos: [number, number, number] = useMemo(() => {
     return [bayTransform.position.x, bayTransform.position.y, bayTransform.position.z];
   }, [bayTransform.position]);
 
-  // Handle rack click
   const handleRackClick = (rack: RackBounds) => {
-    console.log("[Bay3WContents] rack clicked:", rack.rackId, rack);
-    
-    // Update selection
+    console.log("[Bay3WContents] rack clicked:", rack.rackId);
     setSelection({ ...selection, rackId: rack.rackId });
     setViewMode("rack");
 
-    // Calculate camera position for this rack
     if (onCameraUpdate) {
       const cameraConfig = getCameraForRack(rack, bayPos);
-      console.log("[Bay3WContents] calculated camera:", cameraConfig);
       onCameraUpdate(cameraConfig);
     }
   };
 
-  // Handle slot click
   const handleSlotClick = (slotId: string) => {
     if (!slotsAreInteractive) return;
     console.log("[Bay3WContents] slot clicked:", slotId);
@@ -117,10 +95,8 @@ export function Bay3WContents({
     setViewMode("slot");
   };
 
-  // Filter slots to only show selected rack's slots when in rack/row/slot view
   const visibleSlots = useMemo(() => {
     if (viewMode === "rack" || viewMode === "row" || viewMode === "slot") {
-      // Extract rack number from rackId (e.g., "rack-18" -> 18)
       const rackNum = selection.rackId ? parseInt(selection.rackId.replace("rack-", "")) : null;
       if (rackNum !== null) {
         return slots.filter(s => s.rack === rackNum);
@@ -131,7 +107,7 @@ export function Bay3WContents({
 
   return (
     <group>
-      {/* Rack Hitboxes - only show/render at bay level */}
+      {/* Rack Hitboxes - only at bay level */}
       {viewMode === "bay" && (
         <SpawnInBay bayTransform={bayTransform} localPos={[0, 0, 0]}>
           <RackHitboxes
@@ -150,16 +126,13 @@ export function Bay3WContents({
           bayTransform={bayTransform}
           localPos={rec.pos}
         >
-          <SlotContainer 
-            size={rec.size} 
+          <SlotContainer
+            size={rec.size}
             fillPct={rec.fillPct}
             slotId={rec.id}
-            
             isInteractive={slotsAreInteractive}
             isSelected={selection.slotId === rec.id}
             onClick={() => handleSlotClick(rec.id)}
-            showLabel={showSlotLabels}  
-            labelOnHoverOnly={labelOnHoverOnly ?? true}  
           />
         </SpawnInBay>
       ))}
