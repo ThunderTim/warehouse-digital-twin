@@ -1,9 +1,12 @@
-// Hoverable.tsx
+
+
+// HoverHit.tsx
 import * as THREE from "three";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import type { ThreeEvent } from "@react-three/fiber";
 import type { ReactNode } from "react";
-import { Popup } from "./Popup";
+import { Popup } from "../interaction/PopUp"
+
 
 type Props = {
   mesh: THREE.Mesh;

@@ -1,7 +1,7 @@
 // Interactable.tsx
 import { useState, useEffect, type ReactNode } from "react";
 import type { ThreeEvent } from "@react-three/fiber";
-import { Popup } from "./Popup";
+import { Popup } from "../interaction/PopUp"
 
 type Props = {
   /** Is this currently interactive? (like Unity's enabled) */
