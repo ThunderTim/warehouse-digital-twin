@@ -150,18 +150,17 @@ export function Bldg22Model({
     ))}
 
       {/* Bay contents */}
-      {bayTransform && (
-        <Bay3WContents 
-          bayTransform={bayTransform}
-          viewMode={viewMode}
-          setViewMode={setViewMode}
-          selection={selection}
-          setSelection={setSelection}
-          onCameraUpdate={onCameraUpdate}
-          showSlotLabels={viewMode === "rack" || viewMode === "slot"}
-          labelOnHoverOnly={viewMode !== "slot"}
-        />
-      )}
+        {bayTransform && (
+          <Bay3WContents
+            bayTransform={bayTransform}
+            viewMode={viewMode}
+            setViewMode={setViewMode}
+            selection={selection}
+            setSelection={setSelection}
+            onCameraUpdate={onCameraUpdate}
+            // REMOVED: showSlotLabels and labelOnHoverOnly
+          />
+        )}
     </>
   );
 }
