@@ -2,10 +2,9 @@
 import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { useEffect, useMemo } from "react";
-import { HoverHit } from "../interaction/HoverHit";
+import { Interactable } from "../interaction/Interactable";
 import { Bay3WContents } from "../components/Bay3WContents";
 import type { ViewMode, Selection } from "../types";
-
 
 type GLTFResult = {
   scene: THREE.Group;
@@ -31,10 +30,7 @@ export function Bldg22Model({
 }: Props) {
   const { scene, nodes } = useGLTF(url) as unknown as GLTFResult;
 
-  
-
-
-  // Derive __HIIT meshes 
+  // Derive __HIIT meshes
   const hoverMeshes = useMemo(() => {
     return Object.values(nodes)
       .filter((o): o is THREE.Mesh => (o as THREE.Mesh).isMesh)
@@ -49,7 +45,7 @@ export function Bldg22Model({
     console.log("[Bldg22] __HIIT meshes:", hoverMeshes.map((m) => m.name));
   }, [viewMode, selection, hoverMeshes]);
 
-  // Fix floor material (no camera setup here anymore!)
+  // Fix floor material
   useEffect(() => {
     const floor = scene.getObjectByName("building-22-map") as THREE.Mesh | null;
     if (!floor) return;
@@ -57,7 +53,7 @@ export function Bldg22Model({
     const oldMat = floor.material;
     const srcMat = Array.isArray(oldMat) ? oldMat[0] : oldMat;
     const tex = (srcMat as any)?.map as THREE.Texture | undefined;
-    
+
     if (!tex) {
       console.warn("building-22-map has no material.map texture");
       return;
@@ -76,20 +72,17 @@ export function Bldg22Model({
   // Hide GLB helper meshes and cameras
   useEffect(() => {
     scene.traverse((obj) => {
-      // Hide cameras (we're using our own)
       if ((obj as THREE.Camera).isCamera) {
         obj.visible = false;
       }
 
       if (!(obj as any).isMesh) return;
 
-      // __ORIG: always invisible
       if (obj.name.includes("__ORIG")) {
         obj.visible = false;
         (obj as any).raycast = () => null;
       }
 
-      // __HIIT / __HIT: hide originals 
       if (obj.name.includes("__HIIT") || obj.name.includes("__HIT")) {
         obj.visible = false;
         (obj as any).raycast = () => null;
@@ -112,25 +105,21 @@ export function Bldg22Model({
     };
   }, [bay]);
 
-  // Handle clicks based on viewMode
-  const handleHitClick = (mesh: THREE.Mesh) => {
-    const meshName = mesh.name;
+  // Handle bay click
+  const handleBayClick = (meshName: string) => {
     console.log("[Bldg22] clicked:", meshName, "at viewMode:", viewMode);
-
-    if (viewMode === "building") {
-      const bayId = meshName.replace("__HIIT", "").replace("__HIT", "");
-      setSelection({ ...selection, bayId });
-      setViewMode("bay");
-      return;
-    }
-
-    if (viewMode === "bay") {
-      const rackId = meshName.replace("__HIIT", "").replace("__HIT", "");
-      setSelection({ ...selection, rackId });
-      setViewMode("rack");
-      return;
-    }
+    const bayId = meshName.replace("__HIIT", "").replace("__HIT", "");
+    setSelection({ ...selection, bayId });
+    setViewMode("bay");
   };
+
+  // Get bay label for popup
+  const getBayLabel = (meshName: string): string => {
+    return meshName.replace("__HIIT", "").replace("__HIT", "").replace("_", " ");
+  };
+
+  // Check if bays should be interactive
+  const baysAreInteractive = viewMode === "building";
 
   return (
     <>
@@ -138,29 +127,59 @@ export function Bldg22Model({
 
       {/* Bay hover targets - only interactive at building level */}
       {hoverMeshes.map((mesh) => (
-      <HoverHit
-        key={mesh.uuid}
-        mesh={mesh}
-        color="#ffd400"
-        opacity={0.22}
-        isInteractive={viewMode === "building"}
-        popupContent={mesh.name.replace("__HIIT", "").replace("__HIT", "")}
-        onClick={() => handleHitClick(mesh)}
-      />
-    ))}
+        <Interactable
+          key={mesh.uuid}
+          isInteractive={baysAreInteractive}
+          onClick={() => handleBayClick(mesh.name)}
+          popupContent={getBayLabel(mesh.name)}
+          popupOffset={[0, 0.5, 0]}
+        >
+          {(hovered) => (
+            <group
+              position={mesh.position}
+              rotation={mesh.rotation}
+              scale={mesh.scale}
+            >
+              {/* Invisible hit target (always present for raycasting) */}
+              <mesh geometry={mesh.geometry}>
+                <meshBasicMaterial
+                  transparent
+                  opacity={0}
+                  depthWrite={false}
+                />
+              </mesh>
+
+              {/* Highlight on hover */}
+              {hovered && baysAreInteractive && (
+                <mesh
+                  geometry={mesh.geometry}
+                  position={[0, 0, 0.001]}
+                  renderOrder={50}
+                >
+                  <meshBasicMaterial
+                    color="#ffd400"
+                    transparent
+                    opacity={0.8}
+                    depthWrite={false}
+                  />
+                </mesh>
+              )}
+            </group>
+          )}
+        </Interactable>
+      ))}
 
       {/* Bay contents */}
-        {bayTransform && (
-          <Bay3WContents
-            bayTransform={bayTransform}
-            viewMode={viewMode}
-            setViewMode={setViewMode}
-            selection={selection}
-            setSelection={setSelection}
-            onCameraUpdate={onCameraUpdate}
-            // REMOVED: showSlotLabels and labelOnHoverOnly
-          />
-        )}
+      {bayTransform && (
+        <Bay3WContents
+          bayTransform={bayTransform}
+          viewMode={viewMode}
+          setViewMode={setViewMode}
+          selection={selection}
+          setSelection={setSelection}
+          onCameraUpdate={onCameraUpdate}
+        />
+      )}
     </>
   );
 }

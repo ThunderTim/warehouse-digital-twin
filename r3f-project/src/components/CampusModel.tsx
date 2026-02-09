@@ -2,7 +2,7 @@
 import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { useEffect, useMemo } from "react";
-import { Hoverable } from "../interaction/Hoverable";
+import { Interactable } from "../interaction/Interactable";
 
 type GLTFResult = {
   scene: THREE.Group;
@@ -25,7 +25,7 @@ export function CampusModel({
       .filter((m) => m.name.includes("__HIT") || m.name.includes("__HIIT"));
   }, [nodes]);
 
-  // Fix floor material (separate from camera logic!)
+  // Fix floor material
   useEffect(() => {
     const floor = scene.getObjectByName("floor-map") as THREE.Mesh | null;
     if (!floor) {
@@ -42,63 +42,101 @@ export function CampusModel({
       return;
     }
 
-    // Make the texture display correctly
     tex.colorSpace = THREE.SRGBColorSpace;
     tex.needsUpdate = true;
 
-    // Unlit material (ignores lights)
     const unlit = new THREE.MeshBasicMaterial({ map: tex });
     (unlit as any).toneMapped = false;
 
     floor.material = unlit;
     floor.material.needsUpdate = true;
-
-    // Move floor slightly down to avoid z-fighting
-    floor.position.y = -.01;
+    floor.position.y = -0.01;
     floor.position.z = 55;
-
-    // Render floor first
     floor.renderOrder = 0;
     floor.material.depthWrite = false;
   }, [scene]);
 
   // Hide cameras and hitbox meshes from the GLB scene
-  // (we render hitboxes separately via Hoverable)
   useEffect(() => {
     scene.traverse((obj) => {
-      // Hide any cameras in the GLB (we use our own)
       if ((obj as THREE.Camera).isCamera) {
         obj.visible = false;
       }
 
-      // Hide hitbox meshes (we render them via Hoverable)
       if ((obj as THREE.Mesh).isMesh) {
         const name = obj.name;
         if (name.includes("__HIT") || name.includes("__HIIT")) {
           obj.visible = false;
-          (obj as any).raycast = () => null; // Disable raycasting on original
+          (obj as any).raycast = () => null;
         }
       }
     });
   }, [scene]);
 
+  // Extract building ID from mesh name
+  const getBuildingId = (meshName: string): string | null => {
+    if (meshName.includes("bldg-22")) return "bldg-22";
+    // Add more buildings here as needed
+    // if (meshName.includes("bldg-23")) return "bldg-23";
+    return null;
+  };
+
+  // Get display name for popup
+  const getBuildingLabel = (meshName: string): string => {
+    const id = getBuildingId(meshName);
+    if (id === "bldg-22") return "Building 22";
+    // Add more as needed
+    return meshName.replace("__HIT", "").replace("__HIIT", "");
+  };
+
   return (
     <>
       <primitive object={scene} />
 
-      {hoverMeshes.map((mesh) => (
-  <Hoverable
-    key={mesh.uuid}
-    mesh={mesh}
-    renderBase={true}
-    popupContent={mesh.name.replace("__HIT", "").replace("__HIIT", "")}
-    onClick={() => {
-      if (mesh.name.includes("bldg-22__HIT")) {
-        onSelectBuilding?.("bldg-22");
-      }
-    }}
-  />
-))}
+      {hoverMeshes.map((mesh) => {
+        const buildingId = getBuildingId(mesh.name);
+
+        return (
+          <Interactable
+            key={mesh.uuid}
+            isInteractive={!!buildingId}
+            onClick={() => buildingId && onSelectBuilding?.(buildingId)}
+            popupContent={getBuildingLabel(mesh.name)}
+            popupOffset={[0, 1, 0]}
+          >
+            {(hovered) => (
+              <group
+                position={mesh.position}
+                rotation={mesh.rotation}
+                scale={mesh.scale}
+              >
+                {/* Base mesh */}
+                <mesh geometry={mesh.geometry}>
+                  <meshBasicMaterial
+                    color={hovered ? "#ffb700" : "#888888"}
+                    transparent
+                    opacity={hovered ? 0.9 : 0.7}
+                  />
+                </mesh>
+
+                {/* Outline on hover */}
+                {hovered && (
+                  <mesh
+                    geometry={mesh.geometry}
+                    scale={[1.06, 1.06, 1.06]}
+                  >
+                    <meshBasicMaterial
+                      color="#ffb700"
+                      side={THREE.BackSide}
+                      depthWrite={false}
+                    />
+                  </mesh>
+                )}
+              </group>
+            )}
+          </Interactable>
+        );
+      })}
     </>
   );
 }
