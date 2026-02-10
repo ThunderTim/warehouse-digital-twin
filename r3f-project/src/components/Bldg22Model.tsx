@@ -5,7 +5,7 @@ import { useEffect, useMemo } from "react";
 import { Interactable } from "../interaction/Interactable";
 import { Bay3WContents } from "../components/Bay3WContents";
 import type { ViewMode, Selection } from "../types";
-import { PopupMenu } from "../components/PopupMenu";
+
 
 
 type GLTFResult = {
