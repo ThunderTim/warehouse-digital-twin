@@ -4,6 +4,11 @@ import { useGLTF } from "@react-three/drei";
 import { useEffect, useMemo } from "react";
 import { Interactable } from "../interaction/Interactable";
 
+
+// Ready buildings list - add IDs as you finish them
+const READY_BUILDINGS = new Set(["bldg-22"]);
+
+
 type GLTFResult = {
   scene: THREE.Group;
   nodes: Record<string, THREE.Object3D>;
@@ -74,21 +79,43 @@ export function CampusModel({
   }, [scene]);
 
   // Extract building ID from mesh name
-  const getBuildingId = (meshName: string): string | null => {
-    if (meshName.includes("bldg-22")) return "bldg-22";
-    // Add more buildings here as needed
-    // if (meshName.includes("bldg-23")) return "bldg-23";
-    return null;
-  };
+const getBuildingId = (meshName: string): string | null => {
+  const match = meshName.match(/bldg-(\d+)/);
+  return match ? match[0] : null; // returns "bldg-22", "bldg-1217", etc.
+};
 
-  // Get display name for popup
-  const getBuildingLabel = (meshName: string): string => {
-    const id = getBuildingId(meshName);
-    if (id === "bldg-22") return "Building 22";
-    // Add more as needed
-    return meshName.replace("__HIT", "").replace("__HIIT", "");
-  };
+    // Get display name for popup
+  const getBuildingLabel = (meshName: string): string | null => {
+  const match = meshName.match(/bldg-(\d+)/);
+  return match ? `Building ${match[1]}` : null;
+};
 
+//Temporary values
+const Items: string = '8,345';
+const Today: string = new Date().toDateString(); // () to call it, returns string
+const FullAmount: string = '43%';
+
+
+  //Conditional Formatting inside the JSX
+  const getBuildingPopup = (id: string) => (
+    <div>
+      <h3>{getBuildingLabel(id)}</h3>
+      <p>{READY_BUILDINGS.has(id) ? "Click to explore" : "Coming soon"}</p>
+      
+      
+      {id === "bldg-22" && (
+        <>
+          <p>Total Inventory: {Items}</p>
+          <p>Last Update: {Today}</p>
+          <p>Fill Level: {FullAmount}</p>
+        </>
+      )}
+    </div>
+  );
+
+  
+
+  
   return (
     <>
       <primitive object={scene} />
@@ -96,46 +123,48 @@ export function CampusModel({
       {hoverMeshes.map((mesh) => {
         const buildingId = getBuildingId(mesh.name);
 
-        return (
-          <Interactable
-            key={mesh.uuid}
-            isInteractive={!!buildingId}
-            onClick={() => buildingId && onSelectBuilding?.(buildingId)}
-            popupContent={getBuildingLabel(mesh.name)}
-            popupOffset={[0, 1, 0]}
-          >
-            {(hovered) => (
+       return (
               <group
+                key={mesh.uuid}
                 position={mesh.position}
                 rotation={mesh.rotation}
                 scale={mesh.scale}
               >
-                {/* Base mesh */}
-                <mesh geometry={mesh.geometry}>
-                  <meshBasicMaterial
-                    color={hovered ? "#ffb700" : "#888888"}
-                    transparent
-                    opacity={hovered ? 0.9 : 0.7}
-                  />
-                </mesh>
+                <Interactable
+                  isInteractive={!!buildingId}
+                  onClick={() => 
+                            buildingId && READY_BUILDINGS.has(buildingId) && onSelectBuilding?.(buildingId)
+                          }
+                  //popupContent={getBuildingLabel(mesh.name)+"text field"}
+                  popupContent={buildingId ? getBuildingPopup(buildingId) : null}
+                  popupOffset={[0, 1, 0]}
+                >
+                  {(hovered) => (
+                    <>
+                      <mesh geometry={mesh.geometry}>
+                        <meshBasicMaterial
+                          color={hovered ? "#aaff00" : "#888888"}
+                          transparent 
+                          opacity={hovered ? 0.5 : 0.5}
+                        />
+                      </mesh>
 
-                {/* Outline on hover */}
-                {hovered && (
-                  <mesh
-                    geometry={mesh.geometry}
-                    scale={[1.06, 1.06, 1.06]}
-                  >
-                    <meshBasicMaterial
-                      color="#ffb700"
-                      side={THREE.BackSide}
-                      depthWrite={false}
-                    />
-                  </mesh>
-                )}
+                      {hovered && (
+                        <mesh geometry={mesh.geometry} scale={[1.25, 1.25, 1.25]}>
+                          <meshBasicMaterial
+                            color="#f67316"
+                             transparent 
+                             opacity={ 0.5}
+                            side={THREE.BackSide}
+                            depthWrite={false}
+                          />
+                        </mesh>
+                      )}
+                    </>
+                  )}
+                </Interactable>
               </group>
-            )}
-          </Interactable>
-        );
+            );
       })}
     </>
   );

@@ -26,11 +26,11 @@ export function RackHitboxes({
 }: Props) {
   const rackBounds = useMemo(() => calculateRackBounds(slots), [slots]);
 
-  return (
-    <group>
-      {rackBounds.map((rack) => (
+ return (
+  <group>
+    {rackBounds.map((rack) => (
+      <group key={rack.rackId} position={rack.center}>
         <Interactable
-          key={rack.rackId}
           isInteractive={isInteractive}
           onClick={() => onRackClick(rack)}
           popupContent={rack.rackId}
@@ -42,7 +42,7 @@ export function RackHitboxes({
             const opacity = isSelected ? 0.4 : hovered ? 0.35 : 0.15;
 
             return (
-              <mesh position={rack.center}>
+              <mesh>
                 <boxGeometry args={[rack.size[0], rack.size[1], rack.size[2]]} />
                 <meshBasicMaterial
                   color={color}
@@ -54,7 +54,8 @@ export function RackHitboxes({
             );
           }}
         </Interactable>
-      ))}
-    </group>
-  );
+      </group>
+    ))}
+  </group>
+);
 }

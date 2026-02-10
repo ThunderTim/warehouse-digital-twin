@@ -2,17 +2,20 @@
 import { Html } from "@react-three/drei";
 import type { ReactNode } from "react";
 
+
 type Props = {
   children: ReactNode;
   offset?: [number, number, number];
+  interactive?: boolean; 
+  onHover?: (isHovered: boolean) => void; 
 };
 
-export function Popup({ 
-  children, 
+export function Popup({
+  children,
   offset = [0, 0.5, 0],
+  interactive = false,
+  onHover,
 }: Props) {
-  console.log("[Popup] rendering with offset:", offset);
-  
   return (
     <Html
       position={offset}
@@ -20,28 +23,31 @@ export function Popup({
       zIndexRange={[9999, 9998]}
       occlude={false}
       sprite
-      // Try these debug settings:
       style={{
-        pointerEvents: "none",
-        transform: "none",  // Override any transform issues
+        pointerEvents: interactive ? "auto" : "none",
+        transform: "none",
       }}
-      // This is key - check if the wrapper div exists
       wrapperClass="popup-wrapper"
     >
       <div
+      onMouseEnter={() => onHover?.(true)}
+      onMouseLeave={() => onHover?.(false)}
         style={{
-          background: "red",  // VERY visible
+          background: "#111",
           color: "white",
-          padding: "20px 30px",
-          borderRadius: "6px",
-          fontSize: "18px",
+          padding: "12px 14px",
+          borderRadius: "10px",
+          fontSize: "14px",
           fontFamily: "system-ui, sans-serif",
-          whiteSpace: "nowrap",
-          position: "relative",
-          zIndex: 99999,
+          minWidth: 220,
+          boxShadow: "0 8px 24px rgba(0,0,0,0.35)",
         }}
+        // Optional: prevent clicks from selecting text
+            onMouseDown={(e) => {
+              if (!interactive) e.preventDefault();
+            }}
       >
-        DEBUG: {String(children)}
+        {children}
       </div>
     </Html>
   );

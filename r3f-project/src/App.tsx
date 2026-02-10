@@ -157,6 +157,7 @@ export default function App() {
           fov={cameraConfig.fov}
           //near={cameraConfig.near}
           //far={cameraConfig.far}
+          smooth={1}
         />
 
         <ambientLight intensity={8.6} />

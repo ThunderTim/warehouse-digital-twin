@@ -1,0 +1,28 @@
+{
+  "indocn": "g3NSfYWj-884589",
+  "lofull": "100",
+  "inavlq": "94",
+  "lolodp": "40",
+  "loloht": "54",
+  "lolowd": "48",
+  "lolocn": "3W34A03",
+  "skskun": "0TW3TVEdghzejHVz",
+  "skpart": "P0008282",
+  "innumb": "I0877468",
+  "status": "success"
+}
+
+//info
+
+
+""skskun" =  "sku" SKU number
+"skpart" =  "sku" internal SKU part number
+"innumb" =  "invt" internal Inventory number
+"indocn" =  "invt" the Transfer Order number that sent the material to the location
+"inavlq" =  "invt" the current available quantity
+"lolowd" =  "locn" location width
+"lolodp" =  "locn" location depth, front to back
+"loloht" =  "locn" location height
+"lofull" =  "locn" fullness indicator
+"status" =  "success" or "error message" < not part of seer
+"

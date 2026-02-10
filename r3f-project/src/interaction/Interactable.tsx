@@ -1,27 +1,29 @@
 // Interactable.tsx
 import { useState, useEffect, type ReactNode } from "react";
 import type { ThreeEvent } from "@react-three/fiber";
-import { Popup } from "../interaction/PopUp"
+import { Popup } from "../interaction/PopUp";
 
 type Props = {
   /** Is this currently interactive? (like Unity's enabled) */
   isInteractive?: boolean;
-  
+
   /** What to show in the popup */
   popupContent?: ReactNode;
-  
+
   /** Popup position offset */
   popupOffset?: [number, number, number];
-  
+
   /** Click handler */
   onClick?: () => void;
-  
-  /** 
-   * Render prop - receives hover state so children can react to it
-   * Like Unity's OnMouseEnter/OnMouseExit changing a material
-   */
+
+  /** Render prop - receives hover state so children can react */
   children: ReactNode | ((hovered: boolean) => ReactNode);
+
+  /** NEW: show popup on hover or click */
+  popupMode?: "hover" | "click";
 };
+
+
 
 export function Interactable({
   isInteractive = true,
@@ -29,16 +31,20 @@ export function Interactable({
   popupOffset = [0, 0.5, 0],
   onClick,
   children,
+  popupMode = "hover", // ✅ default here
 }: Props) {
   const [hovered, setHovered] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false); // ✅ inside component
+  const [popupHovered, setPopupHovered] = useState(false);
 
-  // Reset hover when becoming non-interactive
+  // Reset hover + popup when becoming non-interactive
   useEffect(() => {
-    if (!isInteractive && hovered) {
-      setHovered(false);
+    if (!isInteractive) {
+      if (hovered) setHovered(false);
+      if (popupOpen) setPopupOpen(false);
       document.body.style.cursor = "default";
     }
-  }, [isInteractive, hovered]);
+  }, [isInteractive, hovered, popupOpen]);
 
   // Reset cursor on unmount
   useEffect(() => {
@@ -64,13 +70,21 @@ export function Interactable({
   const handleClick = (e: ThreeEvent<MouseEvent>) => {
     if (!isInteractive) return;
     e.stopPropagation();
+
+    if (popupContent && popupMode === "click") {
+      setPopupOpen((v) => !v);
+    }
+
     onClick?.();
   };
 
-  // Resolve children - either static or function that receives hovered
-  const resolvedChildren = typeof children === "function" 
-    ? children(hovered) 
-    : children;
+  const shouldShowPopup =
+  !!isInteractive &&
+  !!popupContent &&
+  (popupMode === "hover" ? (hovered || popupHovered) : popupOpen);
+
+  const resolvedChildren =
+    typeof children === "function" ? children(hovered) : children;
 
   return (
     <group
@@ -80,9 +94,14 @@ export function Interactable({
     >
       {resolvedChildren}
 
-      {/* Popup - automatically shows on hover */}
-      {hovered && isInteractive && popupContent && (
-        <Popup offset={popupOffset}>{popupContent}</Popup>
+      {shouldShowPopup && (
+        <Popup
+          offset={popupOffset}
+          interactive={true}  // ← always allow pointer events now
+          onHover={setPopupHovered}
+        >
+          {popupContent}
+        </Popup>
       )}
     </group>
   );

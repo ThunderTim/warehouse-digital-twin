@@ -5,6 +5,8 @@ import { useEffect, useMemo } from "react";
 import { Interactable } from "../interaction/Interactable";
 import { Bay3WContents } from "../components/Bay3WContents";
 import type { ViewMode, Selection } from "../types";
+import { PopupMenu } from "../components/PopupMenu";
+
 
 type GLTFResult = {
   scene: THREE.Group;
@@ -122,24 +124,39 @@ export function Bldg22Model({
   const baysAreInteractive = viewMode === "building";
 
   return (
-    <>
-      <primitive object={scene} />
+  <>
+    <primitive object={scene} />
 
-      {/* Bay hover targets - only interactive at building level */}
-      {hoverMeshes.map((mesh) => (
+    {/* Bay hover targets - only interactive at building level */}
+    {hoverMeshes.map((mesh) => (
+      <group
+        key={mesh.uuid}
+        position={mesh.position}
+        rotation={mesh.rotation}
+        scale={mesh.scale}
+      >
         <Interactable
-          key={mesh.uuid}
           isInteractive={baysAreInteractive}
+          popupMode="hover"
+          popupOffset={[0, 1, 0]}
           onClick={() => handleBayClick(mesh.name)}
-          popupContent={getBayLabel(mesh.name)}
-          popupOffset={[0, 0.5, 0]}
+          popupContent={
+            <div>
+              <h3>{getBayLabel(mesh.name)}</h3>
+              <p>Bay info here</p>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  console.log("button clicked - open image view popup");
+                }}
+              >
+                View Images
+              </button>
+            </div>
+          }
         >
           {(hovered) => (
-            <group
-              position={mesh.position}
-              rotation={mesh.rotation}
-              scale={mesh.scale}
-            >
+            <>
               {/* Invisible hit target (always present for raycasting) */}
               <mesh geometry={mesh.geometry}>
                 <meshBasicMaterial
@@ -164,24 +181,25 @@ export function Bldg22Model({
                   />
                 </mesh>
               )}
-            </group>
+            </>
           )}
         </Interactable>
-      ))}
+      </group>
+    ))}
 
-      {/* Bay contents */}
-      {bayTransform && (
-        <Bay3WContents
-          bayTransform={bayTransform}
-          viewMode={viewMode}
-          setViewMode={setViewMode}
-          selection={selection}
-          setSelection={setSelection}
-          onCameraUpdate={onCameraUpdate}
-        />
-      )}
-    </>
-  );
+    {/* Bay contents */}
+    {bayTransform && (
+      <Bay3WContents
+        bayTransform={bayTransform}
+        viewMode={viewMode}
+        setViewMode={setViewMode}
+        selection={selection}
+        setSelection={setSelection}
+        onCameraUpdate={onCameraUpdate}
+      />
+    )}
+  </>
+);
 }
 
 useGLTF.preload("/models/bldg-22.glb");
