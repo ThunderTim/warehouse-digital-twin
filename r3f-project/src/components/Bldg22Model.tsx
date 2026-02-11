@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 import { useEffect, useMemo } from "react";
 import { Interactable } from "../interaction/Interactable";
 import { Bay3WContents } from "../components/Bay3WContents";
-import type { ViewMode, Selection } from "../types";
+import type { ViewMode, Selection } from "../types/viewTypes";
 
 
 

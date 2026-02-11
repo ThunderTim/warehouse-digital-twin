@@ -6,7 +6,7 @@ import { SpawnInBay } from "../functions/SpawnInBay";
 import { SlotContainer } from "./SlotContainer";
 import { RackHitboxes } from "./RackHitboxes";
 import { getCameraForRack, type RackBounds } from "../utils/rackUtils";
-import type { ViewMode, Selection } from "../types";
+import type { ViewMode, Selection } from "../types/viewTypes";
 
 type BayTransform = {
   position: THREE.Vector3;
@@ -41,6 +41,8 @@ type Props = {
   setSelection: (s: Selection) => void;
   onCameraUpdate?: (config: { position: [number, number, number]; lookAt: [number, number, number] }) => void;
 };
+
+
 
 function toVec3(arr: number[]): [number, number, number] {
   return [arr[0] ?? 0, arr[1] ?? 0, arr[2] ?? 0];

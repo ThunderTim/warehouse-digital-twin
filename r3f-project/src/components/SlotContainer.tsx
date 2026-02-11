@@ -2,6 +2,7 @@
 import * as THREE from "three";
 import { useMemo } from "react";
 import { Interactable } from "../interaction/Interactable";
+import { SlotContainerVisual } from "../Materials/SlotContainerVisual";
 
 type Props = {
   size: [number, number, number];
@@ -11,6 +12,7 @@ type Props = {
   slotId?: string;
   isInteractive?: boolean;
   isSelected?: boolean;
+  edgeWidth?: number;           // NEW: pass from Bay3WContents
   onClick?: () => void;
 };
 
@@ -22,49 +24,53 @@ export function SlotContainer({
   slotId,
   isInteractive = false,
   isSelected = false,
+  edgeWidth = 2.5,
   onClick,
 }: Props) {
-  const geometry = useMemo(() => {
+  const dims = useMemo(() => {
     const [w, h, d] = size;
-    const sw = w * shrinkPct;
-    const sh = h * shrinkPct;
-    const sd = d * shrinkPct;
+    return {
+      sw: w * shrinkPct,
+      sh: h * shrinkPct,
+      sd: d * shrinkPct,
+    };
+  }, [size, shrinkPct]);
 
+  const geometry = useMemo(() => {
+    const { sw, sh, sd } = dims;
+
+    // Anchored box: min corner at (0,0,0), depth extrudes forward or backward
     const g = new THREE.BoxGeometry(sw, sh, sd);
+
+    // Default box is centered at origin; move it so min corner sits at 0,0 and z face aligns with "front"
     const zHalf = sd / 2;
     g.translate(sw / 2, sh / 2, frontIsNegativeZ ? -zHalf : zHalf);
 
     return g;
-  }, [size, shrinkPct, frontIsNegativeZ]);
+  }, [dims, frontIsNegativeZ]);
 
   const popupOffset = useMemo<[number, number, number]>(() => {
-    const [w, h, d] = size;
-    const sw = w * shrinkPct;
-    const sh = h * shrinkPct;
-    const sd = d * shrinkPct;
+    const { sw, sh, sd } = dims;
+    // Above the top, centered in X, and at the “front face” in Z
     return [sw / 2, sh + 0.3, (frontIsNegativeZ ? -1 : 1) * (sd / 2)];
-  }, [size, shrinkPct, frontIsNegativeZ]);
+  }, [dims, frontIsNegativeZ]);
 
-  // Color logic based on fill
-  const getColor = (hovered: boolean) => {
-    if (isSelected) return "#00ff88";
-    if (hovered) return "#ffd400";
-    if (fillPct <= 0) return "#dddddd";
-    if (fillPct < 0.7) return "#2f5bff";
-    return "#86a8ff";
-  };
+  const isEmpty = fillPct <= 0.001;
 
-  const getOpacity = (hovered: boolean) => {
-    if (isSelected) return 0.95;
-    if (hovered) return 0.9;
-    if (fillPct <= 0) return 0.18;
-    return fillPct < 0.7 ? 1 : 0.6;
-  };
+  // Visual styling (simple + tweakable)
+  const edgeColor = isSelected ? "#00ff88" : "#838383";
+  const hoverEdgeColor = "#ffd400";
+
+  const fillColor =
+    fillPct <= 0 ? "#000000" :
+    fillPct > 0.7 ? "#ff402f"  :
+    "#3727b2";
 
   return (
     <Interactable
       isInteractive={isInteractive}
       onClick={onClick}
+      popupOffset={popupOffset}
       popupContent={
         <div>
           <strong>{slotId}</strong>
@@ -73,16 +79,19 @@ export function SlotContainer({
           </div>
         </div>
       }
-      popupOffset={popupOffset}
     >
       {(hovered) => (
-        <mesh geometry={geometry}>
-          <meshStandardMaterial
-            color={new THREE.Color(getColor(hovered))}
-            transparent
-            opacity={getOpacity(hovered)}
-          />
-        </mesh>
+        <SlotContainerVisual
+          geometry={geometry}
+          size={[dims.sw, dims.sh, dims.sd]}
+          fillPct={fillPct}
+          
+          edgeWidth={hovered || isSelected ? edgeWidth + 0.8 : edgeWidth}
+          edgeColor={hovered ? hoverEdgeColor : edgeColor}
+          shellOpacity={isEmpty ? 0.16 : 0.22}
+          fillColor={fillColor}
+          fillOpacity={isEmpty ? 0 : 0.85}
+        />
       )}
     </Interactable>
   );

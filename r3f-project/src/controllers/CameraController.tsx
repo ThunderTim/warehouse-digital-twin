@@ -18,7 +18,7 @@ export function CameraController({
   position,
   rotation,
   lookAt,
-  fov = 22,
+  fov = 50,
   near = 0.1,
   far = 2000,
   smooth = 0.08,
