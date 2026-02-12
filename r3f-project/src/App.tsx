@@ -8,13 +8,14 @@ import { CAMERA_POSITIONS, getBayCamera } from "./controllers/cameraPositions";
 import type { ViewMode, Selection } from "./types/viewTypes";
 import rawInventory from "./data/inventory.json";
 import type { Inventory } from "../src/types/Inventory";
-import type { InventoryApi } from "../src/types/InventoryAPI"; // note: InventoryAPI.ts file
+import type { InventoryApi } from "./types/InventoryApi"; // note: InventoryAPI.ts file
 import { mapInventory } from "./utils/mapInventory";
 import { InventoryDropdown } from "./components/InventoryDropdown";
 import companyLogo from "../src/assets/ccsoft_logo_opt.png"
 import { Compass } from "./components/Compass";
 import './index.css'
 import './App.css' 
+import { ImagePreview } from "./components/ImagePreview";
 
 
 
@@ -172,14 +173,14 @@ export default function App() {
           </div>
 
           {selectedInventory.imageUrl ? (
-            <img
-              src={selectedInventory.imageUrl}
-              alt={selectedInventory.skuPart}
-              style={{ width: "100%", maxWidth: 240, borderRadius: 8 }}
-            />
-          ) : (
-            <div style={{ opacity: 0.7 }}>No image.</div>
-          )}
+              <ImagePreview
+                src={selectedInventory.imageUrl}
+                alt={selectedInventory.skuPart}
+                modalTitle={selectedInventory.skuPart}
+              />
+            ) : (
+              <div style={{ opacity: 0.7 }}>No image.</div>
+            )}
         </div>
       )}
     </div>

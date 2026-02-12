@@ -1,3 +1,4 @@
+[
 {
   "indocn": "g3NSfYWj-884589",
   "lofull": "100",
@@ -9,7 +10,78 @@
   "skskun": "0TW3TVEdghzejHVz",
   "skpart": "P0008282",
   "innumb": "I0877468",
+  "imageUrl": "../public/images/googleDisplay.webp",
+  "status": "success"
+},
+{
+  "indocn": "96ipbNCl-836052",
+  "lofull": "0",
+  "inavlq": "189",
+  "itemdp": "47",
+  "itemht": "50",
+  "itemwd": "56",
+  "lolocn": "3E01A1A",
+  "skskun": "4for9duMl7JRU7BT",
+  "skpart": "P0812693",
+  "innumb": "I9682875",
+  "imageUrl": "",
+  "status": "success"
+},
+{
+  "indocn": "UuXlJXqY-143992",
+  "lofull": "100",
+  "inavlq": "44",
+  "itemdp": "35",
+  "itemht": "27",
+  "itemwd": "24",
+  "lolocn": "3E01A1B",
+  "skskun": "FjJ6V8mAq2tRk1Lb",
+  "skpart": "P4920183",
+  "innumb": "I3409821",
+  "imageUrl": "",
+  "status": "success"
+},
+{
+  "indocn": "YtN9xPqR-775391",
+  "lofull": "75",
+  "inavlq": "12",
+  "itemdp": "22",
+  "itemht": "68",
+  "itemwd": "40",
+  "lolocn": "3E01A1C",
+  "skskun": "Zx4Lp9Mn2QaRt8Us",
+  "skpart": "P9182736",
+  "innumb": "I1827364",
+  "imageUrl": "",
+  "status": "success"
+},
+{
+  "indocn": "TqWmBnEr-502991",
+  "lofull": "50",
+  "inavlq": "97",
+  "itemdp": "51",
+  "itemht": "39",
+  "itemwd": "33",
+  "lolocn": "3E01A1F",
+  "skskun": "Lp2Qx9Vr6Nt8WaZe",
+  "skpart": "P7361829",
+  "innumb": "I5463728",
+  "imageUrl": "",
+  "status": "success"
+},
+{
+  "indocn": "HsYtLmQa-668104",
+  "lofull": "25",
+  "inavlq": "166",
+  "itemdp": "18",
+  "itemht": "61",
+  "itemwd": "29",
+  "lolocn": "3E01A1G",
+  "skskun": "Vr8Tn4QaLp6Mz1Wx",
+  "skpart": "P1287364",
+  "innumb": "I7648392",
   "imageUrl": "",
   "status": "success"
 }
 
+]

@@ -1,5 +1,5 @@
 // utils/mapInventory.ts
-import type { InventoryApi } from "../types/InventoryAPI";
+import type { InventoryApi } from "../types/InventoryApi";
 import type { Inventory } from "../types/Inventory";
 
 function toNumber(v: string, field: string): number {

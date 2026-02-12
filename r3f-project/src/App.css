@@ -1,3 +1,30 @@
+/* App.css - at the top */
+:root {
+  /* Core palette */
+  --color-bg-dark: #2d2d2d;
+  --color-bg-dark-alt: #181818;
+  --color-bg-mid: #4f4f4f;
+  --color-bg-light: #e2e2e2;
+  
+  /* Text */
+  --color-text: #e0e0e0;
+  --color-text-muted: #888;
+  
+  /* Accent */
+  --color-accent: #3890f5;
+  --color-accent-hover: #c4e434;
+  
+  /* Feedback */
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --color-error: #f44336;
+  
+  /* Common values */
+  --radius: 12px;
+  --transition-fast: 0.15s ease;
+}
+
+
 .mainContainer {
   display: flex;
   width: 100vw;
@@ -7,7 +34,7 @@
 .leftNav {
   width: 280px;
   min-width: 280px;
-  background: #2d2d2d;
+  background: var(--color-bg-dark);
   color: #fff;
   margin: 20px;
   border-radius: 12px;
@@ -59,3 +86,5 @@
   
   
 }
+
+
