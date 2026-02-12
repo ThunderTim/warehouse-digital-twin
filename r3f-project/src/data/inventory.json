@@ -10,7 +10,7 @@
   "skskun": "0TW3TVEdghzejHVz",
   "skpart": "P0008282",
   "innumb": "I0877468",
-  "imageUrl": "../public/images/googleDisplay.webp",
+  "imageUrl": "./src/assets/images/googleDisplay.webp", 
   "status": "success"
 },
 {
