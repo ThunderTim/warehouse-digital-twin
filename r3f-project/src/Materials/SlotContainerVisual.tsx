@@ -92,12 +92,48 @@ export function SlotContainerVisual({
       )}
 
       {/* EDGES: thick outline using fat lines */}
-      <Line points={corners.topLoop} color={edgeColor} lineWidth={edgeWidth} />
-      <Line points={corners.botLoop} color={edgeColor} lineWidth={edgeWidth} />
-      <Line points={corners.v1} color={edgeColor} lineWidth={edgeWidth} />
-      <Line points={corners.v2} color={edgeColor} lineWidth={edgeWidth} />
-      <Line points={corners.v3} color={edgeColor} lineWidth={edgeWidth} />
-      <Line points={corners.v4} color={edgeColor} lineWidth={edgeWidth} />
+<Line 
+  points={corners.topLoop} 
+  color={edgeColor} 
+  lineWidth={edgeWidth}
+  depthWrite={false}
+  renderOrder={1}
+/>
+<Line 
+  points={corners.botLoop} 
+  color={edgeColor} 
+  lineWidth={edgeWidth}
+  depthWrite={false}
+  renderOrder={1}
+/>
+<Line 
+  points={corners.v1} 
+  color={edgeColor} 
+  lineWidth={edgeWidth}
+  depthWrite={false}
+  renderOrder={1}
+/>
+<Line 
+  points={corners.v2} 
+  color={edgeColor} 
+  lineWidth={edgeWidth}
+  depthWrite={false}
+  renderOrder={1}
+/>
+<Line 
+  points={corners.v3} 
+  color={edgeColor} 
+  lineWidth={edgeWidth}
+  depthWrite={false}
+  renderOrder={1}
+/>
+<Line 
+  points={corners.v4} 
+  color={edgeColor} 
+  lineWidth={edgeWidth}
+  depthWrite={false}
+  renderOrder={1}
+/>
     </group>
   );
 }

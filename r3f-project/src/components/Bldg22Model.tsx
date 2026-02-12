@@ -3,10 +3,12 @@ import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { useEffect, useMemo } from "react";
 import { Interactable } from "../interaction/Interactable";
-import { Bay3WContents } from "../components/Bay3WContents";
+import { BayContents } from "../components/BayContents";
 import type { ViewMode, Selection } from "../types/viewTypes";
+import type { RawSlot } from "../types/slotTypes";
 
-
+// Data
+import bay3WSlots from "../data/bay3W_slots.json";
 
 type GLTFResult = {
   scene: THREE.Group;
@@ -20,6 +22,13 @@ type Props = {
   selection: Selection;
   setSelection: (s: Selection) => void;
   onCameraUpdate?: (config: { position: [number, number, number]; lookAt: [number, number, number] }) => void;
+};
+
+// Bay slot data lookup - add more bays here as you get them
+const baySlotData: Record<string, RawSlot[]> = {
+  "BAY_3W": bay3WSlots as RawSlot[],
+  // "BAY_3E": bay3ESlots as RawSlot[],
+  // "BAY_6W": bay6WSlots as RawSlot[],
 };
 
 export function Bldg22Model({
@@ -123,83 +132,89 @@ export function Bldg22Model({
   // Check if bays should be interactive
   const baysAreInteractive = viewMode === "building";
 
+  // Determine which bay to show (default to BAY_3W when none selected)
+  const activeBayId = selection.bayId ?? "BAY_3W";
+  const activeBaySlots = baySlotData[activeBayId] ?? [];
+
   return (
-  <>
-    <primitive object={scene} />
+    <>
+      <primitive object={scene} />
 
-    {/* Bay hover targets - only interactive at building level */}
-    {hoverMeshes.map((mesh) => (
-      <group
-        key={mesh.uuid}
-        position={mesh.position}
-        rotation={mesh.rotation}
-        scale={mesh.scale}
-      >
-        <Interactable
-          isInteractive={baysAreInteractive}
-          popupMode="hover"
-          popupOffset={[0, 1, 0]}
-          onClick={() => handleBayClick(mesh.name)}
-          popupContent={
-            <div>
-              <h3>{getBayLabel(mesh.name)}</h3>
-              <p>Bay info here</p>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  console.log("button clicked - open image view popup");
-                }}
-              >
-                View Images
-              </button>
-            </div>
-          }
+      {/* Bay hover targets - only interactive at building level */}
+      {hoverMeshes.map((mesh) => (
+        <group
+          key={mesh.uuid}
+          position={mesh.position}
+          rotation={mesh.rotation}
+          scale={mesh.scale}
         >
-          {(hovered) => (
-            <>
-              {/* Invisible hit target (always present for raycasting) */}
-              <mesh geometry={mesh.geometry}>
-                <meshBasicMaterial
-                  transparent
-                  opacity={0}
-                  depthWrite={false}
-                />
-              </mesh>
-
-              {/* Highlight on hover */}
-              {hovered && baysAreInteractive && (
-                <mesh
-                  geometry={mesh.geometry}
-                  position={[0, 0, 0.001]}
-                  renderOrder={50}
+          <Interactable
+            isInteractive={baysAreInteractive}
+            popupMode="hover"
+            popupOffset={[0, 1, 0]}
+            onClick={() => handleBayClick(mesh.name)}
+            popupContent={
+              <div>
+                <h3>{getBayLabel(mesh.name)}</h3>
+                <p>Bay info here</p>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    console.log("button clicked - open image view popup");
+                  }}
                 >
+                  View Images
+                </button>
+              </div>
+            }
+          >
+            {(hovered) => (
+              <>
+                {/* Invisible hit target (always present for raycasting) */}
+                <mesh geometry={mesh.geometry}>
                   <meshBasicMaterial
-                    color="#ffd400"
                     transparent
-                    opacity={0.8}
+                    opacity={0}
                     depthWrite={false}
                   />
                 </mesh>
-              )}
-            </>
-          )}
-        </Interactable>
-      </group>
-    ))}
 
-    {/* Bay contents */}
-    {bayTransform && (
-      <Bay3WContents
-        bayTransform={bayTransform}
-        viewMode={viewMode}
-        setViewMode={setViewMode}
-        selection={selection}
-        setSelection={setSelection}
-        onCameraUpdate={onCameraUpdate}
-      />
-    )}
-  </>
-);
+                {/* Highlight on hover */}
+                {hovered && baysAreInteractive && (
+                  <mesh
+                    geometry={mesh.geometry}
+                    position={[0, 0, 0.001]}
+                    renderOrder={50}
+                  >
+                    <meshBasicMaterial
+                      color="#ffd400"
+                      transparent
+                      opacity={0.8}
+                      depthWrite={false}
+                    />
+                  </mesh>
+                )}
+              </>
+            )}
+          </Interactable>
+        </group>
+      ))}
+
+      {/* Bay contents */}
+      {bayTransform && activeBaySlots.length > 0 && (
+        <BayContents
+          bayId={activeBayId}
+          slots={activeBaySlots}
+          bayTransform={bayTransform}
+          viewMode={viewMode}
+          setViewMode={setViewMode}
+          selection={selection}
+          setSelection={setSelection}
+          onCameraUpdate={onCameraUpdate}
+        />
+      )}
+    </>
+  );
 }
 
 useGLTF.preload("/models/bldg-22.glb");

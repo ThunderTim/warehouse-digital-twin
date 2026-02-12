@@ -1,28 +1,16 @@
-// Bay3WContents.tsx
+// src/components/BayContents.tsx
 import * as THREE from "three";
 import { useMemo } from "react";
-import bay3Slots from "../data/bay3_slots.json";
 import { SpawnInBay } from "../functions/SpawnInBay";
 import { SlotContainer } from "./SlotContainer";
 import { RackHitboxes } from "./RackHitboxes";
 import { getCameraForRack, type RackBounds } from "../utils/rackUtils";
 import type { ViewMode, Selection } from "../types/viewTypes";
+import type { RawSlot } from "../types/slotTypes";  // Shared type
 
 type BayTransform = {
   position: THREE.Vector3;
   rotation: THREE.Euler;
-};
-
-type RawSlot = {
-  id: string;
-  label: string;
-  rack: number;
-  sect: string;
-  level: number;
-  slot: number;
-  size: number[];
-  pos: number[];
-  fillPct: number;
 };
 
 type SlotRecord = {
@@ -34,6 +22,8 @@ type SlotRecord = {
 };
 
 type Props = {
+  bayId: string;           // NEW
+  slots: RawSlot[];        // NEW - passed in, not imported
   bayTransform: BayTransform;
   viewMode: ViewMode;
   setViewMode: (v: ViewMode) => void;
@@ -41,8 +31,6 @@ type Props = {
   setSelection: (s: Selection) => void;
   onCameraUpdate?: (config: { position: [number, number, number]; lookAt: [number, number, number] }) => void;
 };
-
-
 
 function toVec3(arr: number[]): [number, number, number] {
   return [arr[0] ?? 0, arr[1] ?? 0, arr[2] ?? 0];
@@ -53,7 +41,9 @@ function mapDbPosToThree(pos: [number, number, number]): [number, number, number
   return [x, z, y];
 }
 
-export function Bay3WContents({
+export function BayContents({
+  bayId,
+  slots: rawSlots,        // Renamed to avoid confusion
   bayTransform,
   viewMode,
   setViewMode,
@@ -61,17 +51,16 @@ export function Bay3WContents({
   setSelection,
   onCameraUpdate,
 }: Props) {
-  const raw = bay3Slots as RawSlot[];
-
+  
   const slots: SlotRecord[] = useMemo(() => {
-    return raw.map((r) => ({
+    return rawSlots.map((r) => ({
       id: r.id,
       rack: r.rack,
       size: toVec3(r.size),
       pos: mapDbPosToThree(toVec3(r.pos)),
       fillPct: r.fillPct,
     }));
-  }, [raw]);
+  }, [rawSlots]);
 
   const slotsAreInteractive = viewMode === "rack" || viewMode === "row";
 
@@ -80,7 +69,7 @@ export function Bay3WContents({
   }, [bayTransform.position]);
 
   const handleRackClick = (rack: RackBounds) => {
-    console.log("[Bay3WContents] rack clicked:", rack.rackId);
+    console.log(`[BayContents:${bayId}] rack clicked:`, rack.rackId);
     setSelection({ ...selection, rackId: rack.rackId });
     setViewMode("rack");
 
@@ -92,7 +81,7 @@ export function Bay3WContents({
 
   const handleSlotClick = (slotId: string) => {
     if (!slotsAreInteractive) return;
-    console.log("[Bay3WContents] slot clicked:", slotId);
+    console.log(`[BayContents:${bayId}] slot clicked:`, slotId);
     setSelection({ ...selection, slotId });
     setViewMode("slot");
   };
@@ -107,13 +96,17 @@ export function Bay3WContents({
     return slots;
   }, [slots, viewMode, selection.rackId]);
 
+  const showSlotLabels = viewMode === "bay" || viewMode === "rack" || viewMode === "row" || viewMode === "slot";
+
+
+
   return (
     <group>
       {/* Rack Hitboxes - only at bay level */}
       {viewMode === "bay" && (
         <SpawnInBay bayTransform={bayTransform} localPos={[0, 0, 0]}>
           <RackHitboxes
-            slots={raw}
+            slots={rawSlots}
             isInteractive={true}
             selectedRackId={selection.rackId}
             onRackClick={handleRackClick}
@@ -134,6 +127,7 @@ export function Bay3WContents({
             slotId={rec.id}
             isInteractive={slotsAreInteractive}
             isSelected={selection.slotId === rec.id}
+            showLabel={showSlotLabels}           // NEW
             onClick={() => handleSlotClick(rec.id)}
           />
         </SpawnInBay>
