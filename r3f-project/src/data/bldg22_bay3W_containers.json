@@ -1,0 +1,2488 @@
+{
+  "building": "BLDG 22",
+  "bay": "3W",
+  "bay_origin": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "note": "Origin is at top-left of bay (westernmost & southernmost point)"
+  },
+  "metadata": {
+    "total_containers": 119,
+    "total_racks": 15,
+    "units": "feet",
+    "coordinate_system": {
+      "x": "horizontal (left-right, positive = east)",
+      "y": "vertical (height, 0 = floor, positive = up)",
+      "z": "depth (positive = north, into warehouse)"
+    }
+  },
+  "containers": [
+    {
+      "id": "3W18A2",
+      "row": "18",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 1.3333,
+        "z": 5.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19A2",
+      "row": "19",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 5.0833,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19A3",
+      "row": "19",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 8.5,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19B3",
+      "row": "19",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 8.5,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19C1",
+      "row": "19",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 0.1667,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19C2",
+      "row": "19",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19C3",
+      "row": "19",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 8.5,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19D1",
+      "row": "19",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 0.1667,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19D2",
+      "row": "19",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 5.0833,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19D3",
+      "row": "19",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 8.5,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19E1",
+      "row": "19",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 0.1667,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19E2",
+      "row": "19",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W19E3",
+      "row": "19",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": 16.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20A2",
+      "row": "20",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20A3",
+      "row": "20",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20B2",
+      "row": "20",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 5.0833,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20B3",
+      "row": "20",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 8.5,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20C1",
+      "row": "20",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 0.1667,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20C2",
+      "row": "20",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20D1",
+      "row": "20",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20E1",
+      "row": "20",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 22.5,
+        "y": 0.1667,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20E2",
+      "row": "20",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 22.5,
+        "y": 5.0833,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W20E3",
+      "row": "20",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 22.5,
+        "y": 8.5,
+        "z": 20.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21A1",
+      "row": "21",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21A2",
+      "row": "21",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 3.9167,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21A3",
+      "row": "21",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 7.6667,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21B1",
+      "row": "21",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 0.1667,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21B2",
+      "row": "21",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 3.9167,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21B3",
+      "row": "21",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 7.6667,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21C1",
+      "row": "21",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 0.1667,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21C2",
+      "row": "21",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 3.9167,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21C3",
+      "row": "21",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 7.6667,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W21D2",
+      "row": "21",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 3.9167,
+        "z": 31.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W22A2",
+      "row": "22",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 3.9167,
+        "z": 35.66
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W22A3",
+      "row": "22",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 7.6667,
+        "z": 35.66
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W22B2",
+      "row": "22",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 3.9167,
+        "z": 35.66
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W22B3",
+      "row": "22",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 7.6667,
+        "z": 35.66
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W22C1",
+      "row": "22",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 0.1667,
+        "z": 35.66
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W22C2",
+      "row": "22",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 3.9167,
+        "z": 35.66
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.5,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W22C3",
+      "row": "22",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 7.6667,
+        "z": 35.66
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24A2",
+      "row": "24",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 4.5833,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24A3",
+      "row": "24",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 7.1667,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24B1",
+      "row": "24",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 0.1667,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 4.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24B2",
+      "row": "24",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 4.5833,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24C2",
+      "row": "24",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 4.5833,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24C3",
+      "row": "24",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 7.1667,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24D1",
+      "row": "24",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 4.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24D2",
+      "row": "24",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 4.5833,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W24D3",
+      "row": "24",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 7.1667,
+        "z": 51.2
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W25A1",
+      "row": "25",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 6.33,
+        "y": 0.1667,
+        "z": 67.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W25A2",
+      "row": "25",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 6.33,
+        "y": 4.0833,
+        "z": 67.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W25A3",
+      "row": "25",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 6.33,
+        "y": 6.6667,
+        "z": 67.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W25B1",
+      "row": "25",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 16.2,
+        "y": 0.1667,
+        "z": 67.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W25B2",
+      "row": "25",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 16.2,
+        "y": 4.0833,
+        "z": 67.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W25B3",
+      "row": "25",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 16.2,
+        "y": 6.6667,
+        "z": 67.67
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W26A2",
+      "row": "26",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 1.3333,
+        "z": 74.0
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W26A3",
+      "row": "26",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 4.5833,
+        "z": 74.0
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W26B2",
+      "row": "26",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 1.3333,
+        "z": 74.0
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W26B3",
+      "row": "26",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 4.5833,
+        "z": 74.0
+      },
+      "dimensions": {
+        "x": 4.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W31E2",
+      "row": "31",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 46.5,
+        "y": 1.3333,
+        "z": -77.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34A1",
+      "row": "34",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 0.1667,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 4.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34A2",
+      "row": "34",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 4.75,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34A3",
+      "row": "34",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 8.1667,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34B2",
+      "row": "34",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 4.75,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34B3",
+      "row": "34",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 8.1667,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34C1",
+      "row": "34",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 0.1667,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34C2",
+      "row": "34",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 4.75,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34C3",
+      "row": "34",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 8.1667,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34D2",
+      "row": "34",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 4.75,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34D3",
+      "row": "34",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 8.1667,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34E2",
+      "row": "34",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 4.75,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W34E3",
+      "row": "34",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 8.1667,
+        "z": -61.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35A1",
+      "row": "35",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 0.1667,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 4.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35A2",
+      "row": "35",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 4.75,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35A3",
+      "row": "35",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 8.0,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35B1",
+      "row": "35",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 0.1667,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35B2",
+      "row": "35",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 4.75,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35B3",
+      "row": "35",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 8.0,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35C3",
+      "row": "35",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 8.0,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35D1",
+      "row": "35",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 0.1667,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35E2",
+      "row": "35",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 4.75,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W35E3",
+      "row": "35",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 8.0,
+        "z": -57.3
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36A1",
+      "row": "36",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 0.1667,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 4.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36A2",
+      "row": "36",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 4.5833,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36A3",
+      "row": "36",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 7.1667,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36B2",
+      "row": "36",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 4.5833,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36B3",
+      "row": "36",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 7.1667,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36C1",
+      "row": "36",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 0.1667,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36C3",
+      "row": "36",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 7.1667,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36D3",
+      "row": "36",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 7.1667,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36E1",
+      "row": "36",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 0.1667,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36E2",
+      "row": "36",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 4.5833,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W36E3",
+      "row": "36",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 7.1667,
+        "z": -46.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37A2",
+      "row": "37",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 4.75,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37A3",
+      "row": "37",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 8.0,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37B2",
+      "row": "37",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 4.75,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37B3",
+      "row": "37",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 8.0,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37D1",
+      "row": "37",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 0.1667,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37D2",
+      "row": "37",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 4.75,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37D3",
+      "row": "37",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 8.0,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37E2",
+      "row": "37",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 4.75,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W37E3",
+      "row": "37",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 8.0,
+        "z": -42.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38A1",
+      "row": "38",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 0.1667,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 4.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38A2",
+      "row": "38",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 4.75,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38A3",
+      "row": "38",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 37.33,
+        "y": 7.3333,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38B2",
+      "row": "38",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 4.75,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38B3",
+      "row": "38",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.0,
+        "y": 7.3333,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38C1",
+      "row": "38",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 0.1667,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38C2",
+      "row": "38",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 4.75,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38C3",
+      "row": "38",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 7.3333,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38D2",
+      "row": "38",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 4.75,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38D3",
+      "row": "38",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 7.3333,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W38E3",
+      "row": "38",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 7.3333,
+        "z": -30.8
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W39A2",
+      "row": "39",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 1.3333,
+        "z": -27.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W39A3",
+      "row": "39",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.75,
+        "y": 4.5833,
+        "z": -27.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W39B2",
+      "row": "39",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 1.3333,
+        "z": -27.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W39B3",
+      "row": "39",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 52.0,
+        "y": 4.5833,
+        "z": -27.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W39C2",
+      "row": "39",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 1.3333,
+        "z": -27.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3W39C3",
+      "row": "39",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 47.1,
+        "y": 4.5833,
+        "z": -27.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    }
+  ],
+  "racks": [
+    {
+      "id": "R18",
+      "row": "18",
+      "sections": [
+        "A"
+      ],
+      "max_level": 2,
+      "container_count": 1,
+      "bounds": {
+        "min": {
+          "x": 18.25,
+          "y": 1.3333,
+          "z": 5.0
+        },
+        "max": {
+          "x": 23.0,
+          "y": 4.5,
+          "z": 8.3333
+        }
+      },
+      "center": {
+        "x": 20.625,
+        "y": 2.9167,
+        "z": 6.6667
+      }
+    },
+    {
+      "id": "R19",
+      "row": "19",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 12,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": 16.25
+        },
+        "max": {
+          "x": 26.8333,
+          "y": 13.5,
+          "z": 19.5833
+        }
+      },
+      "center": {
+        "x": 15.1667,
+        "y": 6.8333,
+        "z": 17.9167
+      }
+    },
+    {
+      "id": "R20",
+      "row": "20",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 10,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": 20.25
+        },
+        "max": {
+          "x": 27.25,
+          "y": 13.5,
+          "z": 23.5833
+        }
+      },
+      "center": {
+        "x": 15.375,
+        "y": 6.8333,
+        "z": 21.9167
+      }
+    },
+    {
+      "id": "R21",
+      "row": "21",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "max_level": 3,
+      "container_count": 10,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": 31.67
+        },
+        "max": {
+          "x": 23.0833,
+          "y": 12.6667,
+          "z": 35.0033
+        }
+      },
+      "center": {
+        "x": 13.2917,
+        "y": 6.4167,
+        "z": 33.3367
+      }
+    },
+    {
+      "id": "R22",
+      "row": "22",
+      "sections": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_level": 3,
+      "container_count": 7,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": 35.66
+        },
+        "max": {
+          "x": 18.0833,
+          "y": 12.6667,
+          "z": 38.9933
+        }
+      },
+      "center": {
+        "x": 10.7917,
+        "y": 6.4167,
+        "z": 37.3267
+      }
+    },
+    {
+      "id": "R24",
+      "row": "24",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "max_level": 3,
+      "container_count": 9,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": 51.2
+        },
+        "max": {
+          "x": 23.0833,
+          "y": 12.1667,
+          "z": 54.5333
+        }
+      },
+      "center": {
+        "x": 13.2917,
+        "y": 6.1667,
+        "z": 52.8667
+      }
+    },
+    {
+      "id": "R25",
+      "row": "25",
+      "sections": [
+        "A",
+        "B"
+      ],
+      "max_level": 3,
+      "container_count": 6,
+      "bounds": {
+        "min": {
+          "x": 6.33,
+          "y": 0.1667,
+          "z": 67.67
+        },
+        "max": {
+          "x": 21.0333,
+          "y": 11.6667,
+          "z": 71.0033
+        }
+      },
+      "center": {
+        "x": 13.6817,
+        "y": 5.9167,
+        "z": 69.3367
+      }
+    },
+    {
+      "id": "R26",
+      "row": "26",
+      "sections": [
+        "A",
+        "B"
+      ],
+      "max_level": 3,
+      "container_count": 4,
+      "bounds": {
+        "min": {
+          "x": 13.25,
+          "y": 1.3333,
+          "z": 74.0
+        },
+        "max": {
+          "x": 23.0833,
+          "y": 9.5833,
+          "z": 77.3333
+        }
+      },
+      "center": {
+        "x": 18.1667,
+        "y": 5.4583,
+        "z": 75.6667
+      }
+    },
+    {
+      "id": "R31",
+      "row": "31",
+      "sections": [
+        "E"
+      ],
+      "max_level": 2,
+      "container_count": 1,
+      "bounds": {
+        "min": {
+          "x": 46.5,
+          "y": 1.3333,
+          "z": -77.5
+        },
+        "max": {
+          "x": 51.25,
+          "y": 4.5,
+          "z": -74.1667
+        }
+      },
+      "center": {
+        "x": 48.875,
+        "y": 2.9167,
+        "z": -75.8333
+      }
+    },
+    {
+      "id": "R34",
+      "row": "34",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 12,
+      "bounds": {
+        "min": {
+          "x": 37.33,
+          "y": 0.1667,
+          "z": -61.0
+        },
+        "max": {
+          "x": 61.5,
+          "y": 13.1667,
+          "z": -57.6667
+        }
+      },
+      "center": {
+        "x": 49.415,
+        "y": 6.6667,
+        "z": -59.3333
+      }
+    },
+    {
+      "id": "R35",
+      "row": "35",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 10,
+      "bounds": {
+        "min": {
+          "x": 37.33,
+          "y": 0.1667,
+          "z": -57.3
+        },
+        "max": {
+          "x": 60.5833,
+          "y": 13.0,
+          "z": -53.9667
+        }
+      },
+      "center": {
+        "x": 48.9567,
+        "y": 6.5833,
+        "z": -55.6333
+      }
+    },
+    {
+      "id": "R36",
+      "row": "36",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 11,
+      "bounds": {
+        "min": {
+          "x": 37.33,
+          "y": 0.1667,
+          "z": -46.0
+        },
+        "max": {
+          "x": 61.5,
+          "y": 12.1667,
+          "z": -42.6667
+        }
+      },
+      "center": {
+        "x": 49.415,
+        "y": 6.1667,
+        "z": -44.3333
+      }
+    },
+    {
+      "id": "R37",
+      "row": "37",
+      "sections": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 9,
+      "bounds": {
+        "min": {
+          "x": 37.33,
+          "y": 0.1667,
+          "z": -42.25
+        },
+        "max": {
+          "x": 60.5833,
+          "y": 13.0,
+          "z": -38.9167
+        }
+      },
+      "center": {
+        "x": 48.9567,
+        "y": 6.5833,
+        "z": -40.5833
+      }
+    },
+    {
+      "id": "R38",
+      "row": "38",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 11,
+      "bounds": {
+        "min": {
+          "x": 37.33,
+          "y": 0.1667,
+          "z": -30.8
+        },
+        "max": {
+          "x": 61.5,
+          "y": 12.3333,
+          "z": -27.4667
+        }
+      },
+      "center": {
+        "x": 49.415,
+        "y": 6.25,
+        "z": -29.1333
+      }
+    },
+    {
+      "id": "R39",
+      "row": "39",
+      "sections": [
+        "A",
+        "B",
+        "C"
+      ],
+      "max_level": 3,
+      "container_count": 6,
+      "bounds": {
+        "min": {
+          "x": 47.1,
+          "y": 1.3333,
+          "z": -27.0
+        },
+        "max": {
+          "x": 60.5833,
+          "y": 9.5833,
+          "z": -23.6667
+        }
+      },
+      "center": {
+        "x": 53.8417,
+        "y": 5.4583,
+        "z": -25.3333
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "Bay 3W: 1/135 containers missing X coordinate",
+    "Bay 3W: 10/135 containers missing Y coordinate",
+    "Could not parse bin name: 3W19AZ",
+    "Skipping special bin: 3W1CON (CON)",
+    "Skipping special bin: 3W22ENDCAP (ENDCAP)",
+    "Skipping special bin: 3W24ENDCAP (ENDCAP)",
+    "Skipping special bin: 3W25ENDCAP (ENDCAP)",
+    "Skipping special bin: 3W37A3WALL (WALL)",
+    "Skipping special bin: 3WBACKAREA (BACKAREA)"
+  ]
+}

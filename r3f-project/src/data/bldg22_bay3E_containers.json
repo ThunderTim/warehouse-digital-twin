@@ -1,0 +1,9239 @@
+{
+  "building": "BLDG 22",
+  "bay": "3E",
+  "bay_origin": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "note": "Origin is at top-left of bay (westernmost & southernmost point)"
+  },
+  "metadata": {
+    "total_containers": 508,
+    "total_racks": 17,
+    "units": "feet",
+    "coordinate_system": {
+      "x": "horizontal (left-right, positive = east)",
+      "y": "vertical (height, 0 = floor, positive = up)",
+      "z": "depth (positive = north, into warehouse)"
+    }
+  },
+  "containers": [
+    {
+      "id": "3E01A1A",
+      "row": "01",
+      "section": "A",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 35.875,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01A1B",
+      "row": "01",
+      "section": "A",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01A1C",
+      "row": "01",
+      "section": "A",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01A1F",
+      "row": "01",
+      "section": "A",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01A1G",
+      "row": "01",
+      "section": "A",
+      "level": 1,
+      "slot": "G",
+      "position": {
+        "x": 38.125,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01A1H",
+      "row": "01",
+      "section": "A",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01B1A",
+      "row": "01",
+      "section": "B",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 35.875,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01B1B",
+      "row": "01",
+      "section": "B",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01B1C",
+      "row": "01",
+      "section": "B",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01B1D",
+      "row": "01",
+      "section": "B",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01B1E",
+      "row": "01",
+      "section": "B",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 37.375,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01B1F",
+      "row": "01",
+      "section": "B",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01C1B",
+      "row": "01",
+      "section": "C",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01C1C",
+      "row": "01",
+      "section": "C",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01C1D",
+      "row": "01",
+      "section": "C",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01C1F",
+      "row": "01",
+      "section": "C",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01C1G",
+      "row": "01",
+      "section": "C",
+      "level": 1,
+      "slot": "G",
+      "position": {
+        "x": 38.125,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01C1H",
+      "row": "01",
+      "section": "C",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01D1A",
+      "row": "01",
+      "section": "D",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 35.875,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01D1D",
+      "row": "01",
+      "section": "D",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01D1H",
+      "row": "01",
+      "section": "D",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01E1D",
+      "row": "01",
+      "section": "E",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01E1E",
+      "row": "01",
+      "section": "E",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 37.375,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01E1H",
+      "row": "01",
+      "section": "E",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01F1A",
+      "row": "01",
+      "section": "F",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 35.875,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01F1B",
+      "row": "01",
+      "section": "F",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01F1C",
+      "row": "01",
+      "section": "F",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01F1D",
+      "row": "01",
+      "section": "F",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01F1E",
+      "row": "01",
+      "section": "F",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 37.375,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01F1F",
+      "row": "01",
+      "section": "F",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01F1G",
+      "row": "01",
+      "section": "F",
+      "level": 1,
+      "slot": "G",
+      "position": {
+        "x": 38.125,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01F1H",
+      "row": "01",
+      "section": "F",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01G1A",
+      "row": "01",
+      "section": "G",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 35.875,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01G1B",
+      "row": "01",
+      "section": "G",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01G1C",
+      "row": "01",
+      "section": "G",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01G1D",
+      "row": "01",
+      "section": "G",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01G1E",
+      "row": "01",
+      "section": "G",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 37.375,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01G1H",
+      "row": "01",
+      "section": "G",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01H1A",
+      "row": "01",
+      "section": "H",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 35.875,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01H1B",
+      "row": "01",
+      "section": "H",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01H1C",
+      "row": "01",
+      "section": "H",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01H1D",
+      "row": "01",
+      "section": "H",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01H1E",
+      "row": "01",
+      "section": "H",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 37.375,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01H1F",
+      "row": "01",
+      "section": "H",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01H1G",
+      "row": "01",
+      "section": "H",
+      "level": 1,
+      "slot": "G",
+      "position": {
+        "x": 38.125,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01I1A",
+      "row": "01",
+      "section": "I",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 35.875,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01I1B",
+      "row": "01",
+      "section": "I",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01I1C",
+      "row": "01",
+      "section": "I",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01I1D",
+      "row": "01",
+      "section": "I",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01I1F",
+      "row": "01",
+      "section": "I",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01I1G",
+      "row": "01",
+      "section": "I",
+      "level": 1,
+      "slot": "G",
+      "position": {
+        "x": 38.125,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01J1B",
+      "row": "01",
+      "section": "J",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01J1C",
+      "row": "01",
+      "section": "J",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01J1E",
+      "row": "01",
+      "section": "J",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 37.375,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01J1F",
+      "row": "01",
+      "section": "J",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01J1G",
+      "row": "01",
+      "section": "J",
+      "level": 1,
+      "slot": "G",
+      "position": {
+        "x": 38.125,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01J1H",
+      "row": "01",
+      "section": "J",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01K1B",
+      "row": "01",
+      "section": "K",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01K1D",
+      "row": "01",
+      "section": "K",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01K1F",
+      "row": "01",
+      "section": "K",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01K1H",
+      "row": "01",
+      "section": "K",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01L1B",
+      "row": "01",
+      "section": "L",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01L1D",
+      "row": "01",
+      "section": "L",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01L1F",
+      "row": "01",
+      "section": "L",
+      "level": 1,
+      "slot": "F",
+      "position": {
+        "x": 37.75,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01L1H",
+      "row": "01",
+      "section": "L",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01M1B",
+      "row": "01",
+      "section": "M",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 36.25,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01M1C",
+      "row": "01",
+      "section": "M",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 36.625,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01M1D",
+      "row": "01",
+      "section": "M",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 37.0,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E01M1H",
+      "row": "01",
+      "section": "M",
+      "level": 1,
+      "slot": "H",
+      "position": {
+        "x": 38.5,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02C1A",
+      "row": "02",
+      "section": "C",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02C1B",
+      "row": "02",
+      "section": "C",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02C1C",
+      "row": "02",
+      "section": "C",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02C1D",
+      "row": "02",
+      "section": "C",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02C1E",
+      "row": "02",
+      "section": "C",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02D1A",
+      "row": "02",
+      "section": "D",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02D1B",
+      "row": "02",
+      "section": "D",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02D1C",
+      "row": "02",
+      "section": "D",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02D1D",
+      "row": "02",
+      "section": "D",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02D1E",
+      "row": "02",
+      "section": "D",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02E1A",
+      "row": "02",
+      "section": "E",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02E1B",
+      "row": "02",
+      "section": "E",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02E1C",
+      "row": "02",
+      "section": "E",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02E1D",
+      "row": "02",
+      "section": "E",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02E1E",
+      "row": "02",
+      "section": "E",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02F1A",
+      "row": "02",
+      "section": "F",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02F1B",
+      "row": "02",
+      "section": "F",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02F1C",
+      "row": "02",
+      "section": "F",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02F1D",
+      "row": "02",
+      "section": "F",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02F1E",
+      "row": "02",
+      "section": "F",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02G1A",
+      "row": "02",
+      "section": "G",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02G1B",
+      "row": "02",
+      "section": "G",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02G1C",
+      "row": "02",
+      "section": "G",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02G1D",
+      "row": "02",
+      "section": "G",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02H1A",
+      "row": "02",
+      "section": "H",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02H1B",
+      "row": "02",
+      "section": "H",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02H1C",
+      "row": "02",
+      "section": "H",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02H1D",
+      "row": "02",
+      "section": "H",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02H1E",
+      "row": "02",
+      "section": "H",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02I1B",
+      "row": "02",
+      "section": "I",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02I1C",
+      "row": "02",
+      "section": "I",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02I1D",
+      "row": "02",
+      "section": "I",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02I1E",
+      "row": "02",
+      "section": "I",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02J1B",
+      "row": "02",
+      "section": "J",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02J1C",
+      "row": "02",
+      "section": "J",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02J1D",
+      "row": "02",
+      "section": "J",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02J1E",
+      "row": "02",
+      "section": "J",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02K1A",
+      "row": "02",
+      "section": "K",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02K1B",
+      "row": "02",
+      "section": "K",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02K1C",
+      "row": "02",
+      "section": "K",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02K1D",
+      "row": "02",
+      "section": "K",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02K1E",
+      "row": "02",
+      "section": "K",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02L1A",
+      "row": "02",
+      "section": "L",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02L1B",
+      "row": "02",
+      "section": "L",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02L1C",
+      "row": "02",
+      "section": "L",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02L1D",
+      "row": "02",
+      "section": "L",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02L1E",
+      "row": "02",
+      "section": "L",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02M1A",
+      "row": "02",
+      "section": "M",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02M1B",
+      "row": "02",
+      "section": "M",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02M1C",
+      "row": "02",
+      "section": "M",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02M1D",
+      "row": "02",
+      "section": "M",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02M1E",
+      "row": "02",
+      "section": "M",
+      "level": 1,
+      "slot": "E",
+      "position": {
+        "x": 39.125,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02N1A",
+      "row": "02",
+      "section": "N",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 37.625,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02N1B",
+      "row": "02",
+      "section": "N",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02N1D",
+      "row": "02",
+      "section": "N",
+      "level": 1,
+      "slot": "D",
+      "position": {
+        "x": 38.75,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02O1B",
+      "row": "02",
+      "section": "O",
+      "level": 1,
+      "slot": "B",
+      "position": {
+        "x": 38.0,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E02O1C",
+      "row": "02",
+      "section": "O",
+      "level": 1,
+      "slot": "C",
+      "position": {
+        "x": 38.375,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03A1A",
+      "row": "03",
+      "section": "A",
+      "level": 1,
+      "slot": "A",
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 0.375,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03A4",
+      "row": "03",
+      "section": "A",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 3.6667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03B2",
+      "row": "03",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03B3",
+      "row": "03",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03B4",
+      "row": "03",
+      "section": "B",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 3.6667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03C1",
+      "row": "03",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03C2",
+      "row": "03",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03C3",
+      "row": "03",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03D1",
+      "row": "03",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03D2",
+      "row": "03",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03D3",
+      "row": "03",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03E1",
+      "row": "03",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03E2",
+      "row": "03",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03E3",
+      "row": "03",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03F1",
+      "row": "03",
+      "section": "F",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03F2",
+      "row": "03",
+      "section": "F",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03F3",
+      "row": "03",
+      "section": "F",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03G1",
+      "row": "03",
+      "section": "G",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03G2",
+      "row": "03",
+      "section": "G",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03G3",
+      "row": "03",
+      "section": "G",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03H1",
+      "row": "03",
+      "section": "H",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03H2",
+      "row": "03",
+      "section": "H",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03H3",
+      "row": "03",
+      "section": "H",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03I1",
+      "row": "03",
+      "section": "I",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03I2",
+      "row": "03",
+      "section": "I",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03I3",
+      "row": "03",
+      "section": "I",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03J1",
+      "row": "03",
+      "section": "J",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03J2",
+      "row": "03",
+      "section": "J",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03J3",
+      "row": "03",
+      "section": "J",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03K1",
+      "row": "03",
+      "section": "K",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03K2",
+      "row": "03",
+      "section": "K",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03K3",
+      "row": "03",
+      "section": "K",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03L1",
+      "row": "03",
+      "section": "L",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03L2",
+      "row": "03",
+      "section": "L",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03L3",
+      "row": "03",
+      "section": "L",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03M1",
+      "row": "03",
+      "section": "M",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03M2",
+      "row": "03",
+      "section": "M",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 1.3333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E03M3",
+      "row": "03",
+      "section": "M",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 42.125,
+        "y": 2.5,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04C1",
+      "row": "04",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04C2",
+      "row": "04",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04C3",
+      "row": "04",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04D1",
+      "row": "04",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04D2",
+      "row": "04",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04D3",
+      "row": "04",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04D4",
+      "row": "04",
+      "section": "D",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04D5",
+      "row": "04",
+      "section": "D",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04D6",
+      "row": "04",
+      "section": "D",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 6.0,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04E1",
+      "row": "04",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04E2",
+      "row": "04",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04E3",
+      "row": "04",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04E4",
+      "row": "04",
+      "section": "E",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04E5",
+      "row": "04",
+      "section": "E",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04F1",
+      "row": "04",
+      "section": "F",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04F2",
+      "row": "04",
+      "section": "F",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04F3",
+      "row": "04",
+      "section": "F",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04F4",
+      "row": "04",
+      "section": "F",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04F6",
+      "row": "04",
+      "section": "F",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 6.0,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04G1",
+      "row": "04",
+      "section": "G",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04G2",
+      "row": "04",
+      "section": "G",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04G3",
+      "row": "04",
+      "section": "G",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04G4",
+      "row": "04",
+      "section": "G",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04G5",
+      "row": "04",
+      "section": "G",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04H2",
+      "row": "04",
+      "section": "H",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04H3",
+      "row": "04",
+      "section": "H",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04H5",
+      "row": "04",
+      "section": "H",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04I1",
+      "row": "04",
+      "section": "I",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04I3",
+      "row": "04",
+      "section": "I",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04I4",
+      "row": "04",
+      "section": "I",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04I5",
+      "row": "04",
+      "section": "I",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04I6",
+      "row": "04",
+      "section": "I",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 6.0,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04J1",
+      "row": "04",
+      "section": "J",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04J2",
+      "row": "04",
+      "section": "J",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04J3",
+      "row": "04",
+      "section": "J",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04J4",
+      "row": "04",
+      "section": "J",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04J5",
+      "row": "04",
+      "section": "J",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04K1",
+      "row": "04",
+      "section": "K",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04K3",
+      "row": "04",
+      "section": "K",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04K4",
+      "row": "04",
+      "section": "K",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04L1",
+      "row": "04",
+      "section": "L",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04L2",
+      "row": "04",
+      "section": "L",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04L3",
+      "row": "04",
+      "section": "L",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04L4",
+      "row": "04",
+      "section": "L",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04L5",
+      "row": "04",
+      "section": "L",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04M1",
+      "row": "04",
+      "section": "M",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04M2",
+      "row": "04",
+      "section": "M",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 1.3333,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04M3",
+      "row": "04",
+      "section": "M",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04M4",
+      "row": "04",
+      "section": "M",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04M5",
+      "row": "04",
+      "section": "M",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04N3",
+      "row": "04",
+      "section": "N",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 2.5,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04N4",
+      "row": "04",
+      "section": "N",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 3.6667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04N5",
+      "row": "04",
+      "section": "N",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04N6",
+      "row": "04",
+      "section": "N",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 6.0,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04O1",
+      "row": "04",
+      "section": "O",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04O5",
+      "row": "04",
+      "section": "O",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 4.8333,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E04O6",
+      "row": "04",
+      "section": "O",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 43.875,
+        "y": 6.0,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05A2",
+      "row": "05",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05A3",
+      "row": "05",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05A4",
+      "row": "05",
+      "section": "A",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 3.6667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05B1",
+      "row": "05",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05B2",
+      "row": "05",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05B3",
+      "row": "05",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05B4",
+      "row": "05",
+      "section": "B",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 3.6667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05C1",
+      "row": "05",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05C2",
+      "row": "05",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05C3",
+      "row": "05",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05D1",
+      "row": "05",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05D2",
+      "row": "05",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05D3",
+      "row": "05",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05D4",
+      "row": "05",
+      "section": "D",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 3.6667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05D5",
+      "row": "05",
+      "section": "D",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 4.8333,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05E2",
+      "row": "05",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05E3",
+      "row": "05",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05E4",
+      "row": "05",
+      "section": "E",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 3.6667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05E5",
+      "row": "05",
+      "section": "E",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 4.8333,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05F1",
+      "row": "05",
+      "section": "F",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05F2",
+      "row": "05",
+      "section": "F",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05F3",
+      "row": "05",
+      "section": "F",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05G1",
+      "row": "05",
+      "section": "G",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05G2",
+      "row": "05",
+      "section": "G",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05G3",
+      "row": "05",
+      "section": "G",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05H1",
+      "row": "05",
+      "section": "H",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05H2",
+      "row": "05",
+      "section": "H",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05H3",
+      "row": "05",
+      "section": "H",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05I1",
+      "row": "05",
+      "section": "I",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05I2",
+      "row": "05",
+      "section": "I",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05I3",
+      "row": "05",
+      "section": "I",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05J1",
+      "row": "05",
+      "section": "J",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05J2",
+      "row": "05",
+      "section": "J",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05J3",
+      "row": "05",
+      "section": "J",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05K1",
+      "row": "05",
+      "section": "K",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05K2",
+      "row": "05",
+      "section": "K",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05K3",
+      "row": "05",
+      "section": "K",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05L1",
+      "row": "05",
+      "section": "L",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05L2",
+      "row": "05",
+      "section": "L",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05M1",
+      "row": "05",
+      "section": "M",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05M2",
+      "row": "05",
+      "section": "M",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 1.3333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E05M3",
+      "row": "05",
+      "section": "M",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 48.375,
+        "y": 2.5,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06C1",
+      "row": "06",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06C2",
+      "row": "06",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06C3",
+      "row": "06",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06C4",
+      "row": "06",
+      "section": "C",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06C5",
+      "row": "06",
+      "section": "C",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 4.8333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06D2",
+      "row": "06",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06D3",
+      "row": "06",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06D4",
+      "row": "06",
+      "section": "D",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06E2",
+      "row": "06",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06E3",
+      "row": "06",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06E5",
+      "row": "06",
+      "section": "E",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 4.8333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06F1",
+      "row": "06",
+      "section": "F",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06F2",
+      "row": "06",
+      "section": "F",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06F3",
+      "row": "06",
+      "section": "F",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06G1",
+      "row": "06",
+      "section": "G",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06G2",
+      "row": "06",
+      "section": "G",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06G3",
+      "row": "06",
+      "section": "G",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06H2",
+      "row": "06",
+      "section": "H",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06H4",
+      "row": "06",
+      "section": "H",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06H5",
+      "row": "06",
+      "section": "H",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 4.8333,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06I1",
+      "row": "06",
+      "section": "I",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06I2",
+      "row": "06",
+      "section": "I",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06I4",
+      "row": "06",
+      "section": "I",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06I5",
+      "row": "06",
+      "section": "I",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 4.8333,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06J1",
+      "row": "06",
+      "section": "J",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06J2",
+      "row": "06",
+      "section": "J",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06J4",
+      "row": "06",
+      "section": "J",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06K1",
+      "row": "06",
+      "section": "K",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06K2",
+      "row": "06",
+      "section": "K",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06K3",
+      "row": "06",
+      "section": "K",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06K4",
+      "row": "06",
+      "section": "K",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06L1",
+      "row": "06",
+      "section": "L",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06L3",
+      "row": "06",
+      "section": "L",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06L4",
+      "row": "06",
+      "section": "L",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06L6",
+      "row": "06",
+      "section": "L",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 6.0,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06M2",
+      "row": "06",
+      "section": "M",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06M4",
+      "row": "06",
+      "section": "M",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06N1",
+      "row": "06",
+      "section": "N",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06N2",
+      "row": "06",
+      "section": "N",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 1.3333,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06N3",
+      "row": "06",
+      "section": "N",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06N4",
+      "row": "06",
+      "section": "N",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06N5",
+      "row": "06",
+      "section": "N",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 4.8333,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06O1",
+      "row": "06",
+      "section": "O",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 0.1667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06O3",
+      "row": "06",
+      "section": "O",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 2.5,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06O4",
+      "row": "06",
+      "section": "O",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 3.6667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E06O6",
+      "row": "06",
+      "section": "O",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 50.125,
+        "y": 6.0,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07A2",
+      "row": "07",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07A3",
+      "row": "07",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07A4",
+      "row": "07",
+      "section": "A",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -8.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07B1",
+      "row": "07",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07B2",
+      "row": "07",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07B3",
+      "row": "07",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07B5",
+      "row": "07",
+      "section": "B",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 4.8333,
+        "z": -11.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07B6",
+      "row": "07",
+      "section": "B",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 6.0,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07C1",
+      "row": "07",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07C2",
+      "row": "07",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07C4",
+      "row": "07",
+      "section": "C",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07D4",
+      "row": "07",
+      "section": "D",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07D5",
+      "row": "07",
+      "section": "D",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 4.8333,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07E1",
+      "row": "07",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07E2",
+      "row": "07",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07E3",
+      "row": "07",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07E6",
+      "row": "07",
+      "section": "E",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 6.0,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07F2",
+      "row": "07",
+      "section": "F",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07F3",
+      "row": "07",
+      "section": "F",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07F4",
+      "row": "07",
+      "section": "F",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07F5",
+      "row": "07",
+      "section": "F",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 4.8333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07F6",
+      "row": "07",
+      "section": "F",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 6.0,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07G1",
+      "row": "07",
+      "section": "G",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07G2",
+      "row": "07",
+      "section": "G",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07G4",
+      "row": "07",
+      "section": "G",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07G6",
+      "row": "07",
+      "section": "G",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 6.0,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07H1",
+      "row": "07",
+      "section": "H",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07H3",
+      "row": "07",
+      "section": "H",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07H4",
+      "row": "07",
+      "section": "H",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07H5",
+      "row": "07",
+      "section": "H",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 4.8333,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07I1",
+      "row": "07",
+      "section": "I",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07I3",
+      "row": "07",
+      "section": "I",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07I4",
+      "row": "07",
+      "section": "I",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07I6",
+      "row": "07",
+      "section": "I",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 6.0,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07J1",
+      "row": "07",
+      "section": "J",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07J2",
+      "row": "07",
+      "section": "J",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07J3",
+      "row": "07",
+      "section": "J",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07J4",
+      "row": "07",
+      "section": "J",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07J5",
+      "row": "07",
+      "section": "J",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 4.8333,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07J6",
+      "row": "07",
+      "section": "J",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 6.0,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07K1",
+      "row": "07",
+      "section": "K",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07K2",
+      "row": "07",
+      "section": "K",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07K3",
+      "row": "07",
+      "section": "K",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07K5",
+      "row": "07",
+      "section": "K",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 4.8333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07L1",
+      "row": "07",
+      "section": "L",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07L2",
+      "row": "07",
+      "section": "L",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07L3",
+      "row": "07",
+      "section": "L",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07L4",
+      "row": "07",
+      "section": "L",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07L5",
+      "row": "07",
+      "section": "L",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 4.8333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07L6",
+      "row": "07",
+      "section": "L",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 6.0,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07M1",
+      "row": "07",
+      "section": "M",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07M2",
+      "row": "07",
+      "section": "M",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 1.3333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07M3",
+      "row": "07",
+      "section": "M",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 2.5,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07M4",
+      "row": "07",
+      "section": "M",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 3.6667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07M5",
+      "row": "07",
+      "section": "M",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 4.8333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E07M6",
+      "row": "07",
+      "section": "M",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 54.625,
+        "y": 6.0,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E0812",
+      "row": "08",
+      "section": "1",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08C1",
+      "row": "08",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 0.1667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08C2",
+      "row": "08",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08C3",
+      "row": "08",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 2.5,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08C4",
+      "row": "08",
+      "section": "C",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08C5",
+      "row": "08",
+      "section": "C",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08C6",
+      "row": "08",
+      "section": "C",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 6.0,
+        "z": -49.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08D2",
+      "row": "08",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08D3",
+      "row": "08",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 2.5,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08D5",
+      "row": "08",
+      "section": "D",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -46.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08E1",
+      "row": "08",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 0.1667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08E2",
+      "row": "08",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08E3",
+      "row": "08",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 2.5,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08E4",
+      "row": "08",
+      "section": "E",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08E5",
+      "row": "08",
+      "section": "E",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -43.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08F1",
+      "row": "08",
+      "section": "F",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 0.1667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08F2",
+      "row": "08",
+      "section": "F",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08F3",
+      "row": "08",
+      "section": "F",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 2.5,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08F4",
+      "row": "08",
+      "section": "F",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08F5",
+      "row": "08",
+      "section": "F",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -40.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08G1",
+      "row": "08",
+      "section": "G",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 0.1667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08G2",
+      "row": "08",
+      "section": "G",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08G4",
+      "row": "08",
+      "section": "G",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08G5",
+      "row": "08",
+      "section": "G",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -37.0
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08H2",
+      "row": "08",
+      "section": "H",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08H4",
+      "row": "08",
+      "section": "H",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08H6",
+      "row": "08",
+      "section": "H",
+      "level": 6,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 6.0,
+        "z": -33.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08I2",
+      "row": "08",
+      "section": "I",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08I4",
+      "row": "08",
+      "section": "I",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08I5",
+      "row": "08",
+      "section": "I",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -30.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08J2",
+      "row": "08",
+      "section": "J",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08J4",
+      "row": "08",
+      "section": "J",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08J5",
+      "row": "08",
+      "section": "J",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -27.5
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08K2",
+      "row": "08",
+      "section": "K",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08K3",
+      "row": "08",
+      "section": "K",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 2.5,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08K5",
+      "row": "08",
+      "section": "K",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -24.21
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08L1",
+      "row": "08",
+      "section": "L",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 0.1667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08L2",
+      "row": "08",
+      "section": "L",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08L4",
+      "row": "08",
+      "section": "L",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08L5",
+      "row": "08",
+      "section": "L",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -17.875
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08M1",
+      "row": "08",
+      "section": "M",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 0.1667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08M2",
+      "row": "08",
+      "section": "M",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 1.3333,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08M3",
+      "row": "08",
+      "section": "M",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 2.5,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08M4",
+      "row": "08",
+      "section": "M",
+      "level": 4,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 3.6667,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E08M5",
+      "row": "08",
+      "section": "M",
+      "level": 5,
+      "slot": null,
+      "position": {
+        "x": 56.375,
+        "y": 4.8333,
+        "z": -14.625
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E09A1",
+      "row": "09",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 0.1667,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 3.0,
+        "y": 0.9167,
+        "z": 1.5
+      }
+    },
+    {
+      "id": "3E09A2",
+      "row": "09",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09A3",
+      "row": "09",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 10.0,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09B1",
+      "row": "09",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 0.1667,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09B2",
+      "row": "09",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 5.0833,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09B3",
+      "row": "09",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 10.0,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09C2",
+      "row": "09",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09C3",
+      "row": "09",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 10.0,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09D1",
+      "row": "09",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09D2",
+      "row": "09",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 5.0833,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09D3",
+      "row": "09",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 10.0,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E09E3",
+      "row": "09",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 10.0,
+        "z": -61.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10A2",
+      "row": "10",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 5.0833,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10A3",
+      "row": "10",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 8.5,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10B1",
+      "row": "10",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10B2",
+      "row": "10",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 5.0833,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10B3",
+      "row": "10",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 8.5,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10C2",
+      "row": "10",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10C3",
+      "row": "10",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 8.5,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10D1",
+      "row": "10",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 0.1667,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10D3",
+      "row": "10",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 8.5,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10E1",
+      "row": "10",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 0.1667,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10E2",
+      "row": "10",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E10E3",
+      "row": "10",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": -58.25
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11A1",
+      "row": "11",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 0.1667,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11A2",
+      "row": "11",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11A3",
+      "row": "11",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11B1",
+      "row": "11",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 0.1667,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11B2",
+      "row": "11",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 5.0833,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11B3",
+      "row": "11",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 8.5,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11C1",
+      "row": "11",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 0.1667,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11C2",
+      "row": "11",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11C3",
+      "row": "11",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 8.5,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11D1",
+      "row": "11",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11D2",
+      "row": "11",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 5.0833,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11D3",
+      "row": "11",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 8.5,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11E1",
+      "row": "11",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 0.1667,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11E2",
+      "row": "11",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 5.0833,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E11E3",
+      "row": "11",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 8.5,
+        "z": -46.87
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E12B2",
+      "row": "12",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 5.0833,
+        "z": -43.67
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E12B3",
+      "row": "12",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 8.5,
+        "z": -43.67
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E12C1",
+      "row": "12",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 0.1667,
+        "z": -43.67
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E12C2",
+      "row": "12",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": -43.67
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E12C3",
+      "row": "12",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 8.5,
+        "z": -43.67
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E12E2",
+      "row": "12",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": -43.67
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E12E3",
+      "row": "12",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": -43.67
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13A2",
+      "row": "13",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13A3",
+      "row": "13",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13B1",
+      "row": "13",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 0.1667,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13B2",
+      "row": "13",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 5.0833,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13B3",
+      "row": "13",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 8.5,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13C2",
+      "row": "13",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13C3",
+      "row": "13",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 8.5,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13D1",
+      "row": "13",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13D2",
+      "row": "13",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 5.0833,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13D3",
+      "row": "13",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 8.5,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13E2",
+      "row": "13",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 5.0833,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E13E3",
+      "row": "13",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 8.5,
+        "z": -32.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14A2",
+      "row": "14",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 5.0833,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14A3",
+      "row": "14",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 8.5,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14B1",
+      "row": "14",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14B2",
+      "row": "14",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 5.0833,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14C2",
+      "row": "14",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14C3",
+      "row": "14",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 8.5,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14D2",
+      "row": "14",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 5.0833,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14D3",
+      "row": "14",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 8.5,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14E2",
+      "row": "14",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E14E3",
+      "row": "14",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": -29.5
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15A1",
+      "row": "15",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 0.1667,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15A2",
+      "row": "15",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15A3",
+      "row": "15",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15B2",
+      "row": "15",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 5.0833,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15B3",
+      "row": "15",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 8.5,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15C2",
+      "row": "15",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15D1",
+      "row": "15",
+      "section": "D",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15D2",
+      "row": "15",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 5.0833,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15D3",
+      "row": "15",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 8.5,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E15E3",
+      "row": "15",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 8.5,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16A1",
+      "row": "16",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 0.1667,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16A3",
+      "row": "16",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 23.0,
+        "y": 8.5,
+        "z": -18.0
+      },
+      "dimensions": {
+        "x": 3.8333,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16B1",
+      "row": "16",
+      "section": "B",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 0.1667,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16B2",
+      "row": "16",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 5.0833,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16B3",
+      "row": "16",
+      "section": "B",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 18.25,
+        "y": 8.5,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16C1",
+      "row": "16",
+      "section": "C",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 0.1667,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16C2",
+      "row": "16",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 5.0833,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16C3",
+      "row": "16",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 13.25,
+        "y": 8.5,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16D2",
+      "row": "16",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 5.0833,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16D3",
+      "row": "16",
+      "section": "D",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.5,
+        "y": 8.5,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16E1",
+      "row": "16",
+      "section": "E",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 0.1667,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.6667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16E2",
+      "row": "16",
+      "section": "E",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 5.0833,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E16E3",
+      "row": "16",
+      "section": "E",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 3.5,
+        "y": 8.5,
+        "z": -15.0
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E17A1",
+      "row": "17",
+      "section": "A",
+      "level": 1,
+      "slot": null,
+      "position": {
+        "x": 8.0,
+        "y": 0.1667,
+        "z": -3.75
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 4.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E17A2",
+      "row": "17",
+      "section": "A",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 8.0,
+        "y": 4.5833,
+        "z": -3.75
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E17A3",
+      "row": "17",
+      "section": "A",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 8.0,
+        "y": 8.0,
+        "z": -3.75
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E17B2",
+      "row": "17",
+      "section": "B",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 12.67,
+        "y": 4.5833,
+        "z": -3.75
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E17C2",
+      "row": "17",
+      "section": "C",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 17.67,
+        "y": 4.5833,
+        "z": -3.75
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 2.3333,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E17C3",
+      "row": "17",
+      "section": "C",
+      "level": 3,
+      "slot": null,
+      "position": {
+        "x": 17.67,
+        "y": 8.0,
+        "z": -3.75
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 5.0,
+        "z": 3.3333
+      }
+    },
+    {
+      "id": "3E17D2",
+      "row": "17",
+      "section": "D",
+      "level": 2,
+      "slot": null,
+      "position": {
+        "x": 22.5,
+        "y": 4.5833,
+        "z": -3.75
+      },
+      "dimensions": {
+        "x": 4.75,
+        "y": 3.1667,
+        "z": 3.3333
+      }
+    }
+  ],
+  "racks": [
+    {
+      "id": "R01",
+      "row": "01",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M"
+      ],
+      "max_level": 1,
+      "container_count": 69,
+      "bounds": {
+        "min": {
+          "x": 35.875,
+          "y": 0.1667,
+          "z": -49.875
+        },
+        "max": {
+          "x": 38.875,
+          "y": 1.0833,
+          "z": -6.71
+        }
+      },
+      "center": {
+        "x": 37.375,
+        "y": 0.625,
+        "z": -28.2925
+      }
+    },
+    {
+      "id": "R02",
+      "row": "02",
+      "sections": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O"
+      ],
+      "max_level": 1,
+      "container_count": 57,
+      "bounds": {
+        "min": {
+          "x": 37.625,
+          "y": 0.1667,
+          "z": -49.875
+        },
+        "max": {
+          "x": 39.5,
+          "y": 1.0833,
+          "z": -6.71
+        }
+      },
+      "center": {
+        "x": 38.5625,
+        "y": 0.625,
+        "z": -28.2925
+      }
+    },
+    {
+      "id": "R03",
+      "row": "03",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M"
+      ],
+      "max_level": 4,
+      "container_count": 38,
+      "bounds": {
+        "min": {
+          "x": 42.125,
+          "y": 0.1667,
+          "z": -49.875
+        },
+        "max": {
+          "x": 45.125,
+          "y": 4.5833,
+          "z": -6.71
+        }
+      },
+      "center": {
+        "x": 43.625,
+        "y": 2.375,
+        "z": -28.2925
+      }
+    },
+    {
+      "id": "R04",
+      "row": "04",
+      "sections": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O"
+      ],
+      "max_level": 6,
+      "container_count": 57,
+      "bounds": {
+        "min": {
+          "x": 43.875,
+          "y": 0.1667,
+          "z": -49.875
+        },
+        "max": {
+          "x": 46.875,
+          "y": 6.9167,
+          "z": -6.71
+        }
+      },
+      "center": {
+        "x": 45.375,
+        "y": 3.5417,
+        "z": -28.2925
+      }
+    },
+    {
+      "id": "R05",
+      "row": "05",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M"
+      ],
+      "max_level": 5,
+      "container_count": 42,
+      "bounds": {
+        "min": {
+          "x": 48.375,
+          "y": 0.1667,
+          "z": -49.875
+        },
+        "max": {
+          "x": 51.375,
+          "y": 5.75,
+          "z": -6.71
+        }
+      },
+      "center": {
+        "x": 49.875,
+        "y": 2.9583,
+        "z": -28.2925
+      }
+    },
+    {
+      "id": "R06",
+      "row": "06",
+      "sections": [
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O"
+      ],
+      "max_level": 6,
+      "container_count": 46,
+      "bounds": {
+        "min": {
+          "x": 50.125,
+          "y": 0.1667,
+          "z": -49.875
+        },
+        "max": {
+          "x": 53.125,
+          "y": 6.9167,
+          "z": -6.71
+        }
+      },
+      "center": {
+        "x": 51.625,
+        "y": 3.5417,
+        "z": -28.2925
+      }
+    },
+    {
+      "id": "R07",
+      "row": "07",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M"
+      ],
+      "max_level": 6,
+      "container_count": 56,
+      "bounds": {
+        "min": {
+          "x": 54.625,
+          "y": 0.1667,
+          "z": -49.875
+        },
+        "max": {
+          "x": 57.625,
+          "y": 6.9167,
+          "z": -6.71
+        }
+      },
+      "center": {
+        "x": 56.125,
+        "y": 3.5417,
+        "z": -28.2925
+      }
+    },
+    {
+      "id": "R08",
+      "row": "08",
+      "sections": [
+        "1",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M"
+      ],
+      "max_level": 6,
+      "container_count": 45,
+      "bounds": {
+        "min": {
+          "x": 56.375,
+          "y": 0.1667,
+          "z": -49.875
+        },
+        "max": {
+          "x": 59.375,
+          "y": 6.9167,
+          "z": -13.125
+        }
+      },
+      "center": {
+        "x": 57.875,
+        "y": 3.5417,
+        "z": -31.5
+      }
+    },
+    {
+      "id": "R09",
+      "row": "09",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 12,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": -61.25
+        },
+        "max": {
+          "x": 27.75,
+          "y": 15.0,
+          "z": -57.9167
+        }
+      },
+      "center": {
+        "x": 15.625,
+        "y": 7.5833,
+        "z": -59.5833
+      }
+    },
+    {
+      "id": "R10",
+      "row": "10",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 12,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": -58.25
+        },
+        "max": {
+          "x": 26.8333,
+          "y": 13.5,
+          "z": -54.9167
+        }
+      },
+      "center": {
+        "x": 15.1667,
+        "y": 6.8333,
+        "z": -56.5833
+      }
+    },
+    {
+      "id": "R11",
+      "row": "11",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 15,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": -46.87
+        },
+        "max": {
+          "x": 27.75,
+          "y": 13.5,
+          "z": -43.5367
+        }
+      },
+      "center": {
+        "x": 15.625,
+        "y": 6.8333,
+        "z": -45.2033
+      }
+    },
+    {
+      "id": "R12",
+      "row": "12",
+      "sections": [
+        "B",
+        "C",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 7,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": -43.67
+        },
+        "max": {
+          "x": 23.0,
+          "y": 13.5,
+          "z": -40.3367
+        }
+      },
+      "center": {
+        "x": 13.25,
+        "y": 6.8333,
+        "z": -42.0033
+      }
+    },
+    {
+      "id": "R13",
+      "row": "13",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 12,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": -32.5
+        },
+        "max": {
+          "x": 27.75,
+          "y": 13.5,
+          "z": -29.1667
+        }
+      },
+      "center": {
+        "x": 15.625,
+        "y": 6.8333,
+        "z": -30.8333
+      }
+    },
+    {
+      "id": "R14",
+      "row": "14",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 10,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": -29.5
+        },
+        "max": {
+          "x": 26.8333,
+          "y": 13.5,
+          "z": -26.1667
+        }
+      },
+      "center": {
+        "x": 15.1667,
+        "y": 6.8333,
+        "z": -27.8333
+      }
+    },
+    {
+      "id": "R15",
+      "row": "15",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 10,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": -18.0
+        },
+        "max": {
+          "x": 27.75,
+          "y": 13.5,
+          "z": -14.6667
+        }
+      },
+      "center": {
+        "x": 15.625,
+        "y": 6.8333,
+        "z": -16.3333
+      }
+    },
+    {
+      "id": "R16",
+      "row": "16",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "max_level": 3,
+      "container_count": 13,
+      "bounds": {
+        "min": {
+          "x": 3.5,
+          "y": 0.1667,
+          "z": -18.0
+        },
+        "max": {
+          "x": 27.75,
+          "y": 13.5,
+          "z": -11.6667
+        }
+      },
+      "center": {
+        "x": 15.625,
+        "y": 6.8333,
+        "z": -14.8333
+      }
+    },
+    {
+      "id": "R17",
+      "row": "17",
+      "sections": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "max_level": 3,
+      "container_count": 7,
+      "bounds": {
+        "min": {
+          "x": 8.0,
+          "y": 0.1667,
+          "z": -3.75
+        },
+        "max": {
+          "x": 27.25,
+          "y": 13.0,
+          "z": -0.4167
+        }
+      },
+      "center": {
+        "x": 17.625,
+        "y": 6.5833,
+        "z": -2.0833
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "SUMMARY: 5 row/level combinations have inconsistent shelf heights",
+    "Row 09, Level 1: Height mismatch - expected 56.0\" (2 sections) but found: 11.0\" in section(s) A",
+    "Row 09, Level 2: Height mismatch - expected 56.0\" (3 sections) but found: 38.0\" in section(s) C,D",
+    "Row 09, Level 3: Height mismatch - expected 60.0\" (4 sections) but found: 56.0\" in section(s) A",
+    "Row 16, Level 2: Height mismatch - expected 38.0\" (4 sections) but found: 56.0\" in section(s) C",
+    "Row 17, Level 2: Height mismatch - expected 38.0\" (4 sections) but found: 28.0\" in section(s) A,C"
+  ]
+}

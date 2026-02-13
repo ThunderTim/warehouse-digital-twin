@@ -7,8 +7,12 @@ import { BayContents } from "../components/BayContents";
 import type { ViewMode, Selection } from "../types/viewTypes";
 import type { RawSlot } from "../types/slotTypes";
 
-// Data
-import bay3WSlots from "../data/bay3W_slots.json";
+// Data-- old positions
+//import bay3WSlots from "../data/bay3W_slots.json";
+//New Positions:
+import bay3WSlots from "../data/bldg22_bay3W_containers.json";
+import bay3ESlots from "../data/bldg22_bay3E_containers.json"
+
 
 type GLTFResult = {
   scene: THREE.Group;
