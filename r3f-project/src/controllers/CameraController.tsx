@@ -71,6 +71,15 @@ export function CameraController({
     }
   }, [position, rotation, lookAt, fov, near, far, camera]);
 
+  useEffect(() => {
+  if ((camera as THREE.PerspectiveCamera).isPerspectiveCamera) {
+    const cam = camera as THREE.PerspectiveCamera;
+    cam.aspect = size.width / size.height;
+    cam.updateProjectionMatrix();
+  }
+}, [camera, size]);
+
+
   useFrame(() => {
     // Smoothly lerp camera position
     camera.position.lerp(targetPos.current, smooth);

@@ -10,7 +10,8 @@
   "skskun": "0TW3TVEdghzejHVz",
   "skpart": "P0008282",
   "innumb": "I0877468",
-  "imageUrl": "/images/googleDisplay.webp", 
+  "imageUrl": "/images/googleMini.webp", 
+  "rackImageUrl": "/images/googleDisplay.webp", 
   "status": "success"
 },
 {
@@ -25,6 +26,7 @@
   "skpart": "P0812693",
   "innumb": "I9682875",
   "imageUrl": "",
+  "rackImageUrl": "/images/googleDisplay.webp", 
   "status": "success"
 },
 {
@@ -39,6 +41,7 @@
   "skpart": "P4920183",
   "innumb": "I3409821",
   "imageUrl": "",
+  "rackImageUrl": "/images/googleDisplay.webp", 
   "status": "success"
 },
 {
@@ -53,6 +56,7 @@
   "skpart": "P9182736",
   "innumb": "I1827364",
   "imageUrl": "",
+  "rackImageUrl": "/images/googleDisplay.webp", 
   "status": "success"
 },
 {
@@ -67,6 +71,7 @@
   "skpart": "P7361829",
   "innumb": "I5463728",
   "imageUrl": "",
+  "rackImageUrl": "/images/googleDisplay.webp", 
   "status": "success"
 },
 {
@@ -81,6 +86,7 @@
   "skpart": "P1287364",
   "innumb": "I7648392",
   "imageUrl": "",
+  "rackImageUrl": "", 
   "status": "success"
 }
 

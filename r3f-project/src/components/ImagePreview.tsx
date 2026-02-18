@@ -8,6 +8,8 @@ interface ImagePreviewProps {
   src: string;
   alt: string;
   modalTitle?: string;
+ 
+  
 }
 
 export function ImagePreview({ src, alt, modalTitle }: ImagePreviewProps) {
@@ -18,6 +20,7 @@ export function ImagePreview({ src, alt, modalTitle }: ImagePreviewProps) {
       {/* Thumbnail with overlay */}
       <div className="image-preview-thumb" onClick={() => setIsOpen(true)}>
         <img src={src} alt={alt} />
+        
         <div className="image-preview-overlay">
           <img src={eyeIcon} alt="View larger" />
         </div>

@@ -9,7 +9,6 @@ type Props = {
   size: [number, number, number];
   fillPct: number;
   shrinkPct?: number;
-  frontIsNegativeZ?: boolean;
   slotId?: string;
   isInteractive?: boolean;
   isSelected?: boolean;
@@ -18,11 +17,17 @@ type Props = {
   onClick?: () => void;
 };
 
+/**
+ * SlotContainer renders a single container/slot box.
+ * 
+ * IMPORTANT: Position data is now CENTER-BASED.
+ * The parent component (SpawnInBay) places this group at the container's center,
+ * so the geometry should be centered at origin (no offset needed).
+ */
 export function SlotContainer({
   size,
   fillPct,
   shrinkPct = 0.95,
-  frontIsNegativeZ = false,
   slotId,
   isInteractive = false,
   isSelected = false,
@@ -30,6 +35,7 @@ export function SlotContainer({
   edgeWidth = 2.5,
   onClick,
 }: Props) {
+  // Apply shrink to create visual gaps between containers
   const dims = useMemo(() => {
     const [w, h, d] = size;
     return {
@@ -39,28 +45,19 @@ export function SlotContainer({
     };
   }, [size, shrinkPct]);
 
+  // Geometry is now centered at origin (no translate needed)
+  // Parent positions us at the container's center point
   const geometry = useMemo(() => {
     const { sw, sh, sd } = dims;
-    const g = new THREE.BoxGeometry(sw, sh, sd);
-    const zHalf = sd / 2;
-    g.translate(sw / 2, sh / 2, frontIsNegativeZ ? -zHalf : zHalf);
-    return g;
-  }, [dims, frontIsNegativeZ]);
+    return new THREE.BoxGeometry(sw, sh, sd);
+    // NOTE: No translate() - data is already center-based
+  }, [dims]);
 
+  // Popup appears above the container
   const popupOffset = useMemo<[number, number, number]>(() => {
-    const { sw, sh, sd } = dims;
-    return [sw / 2, sh + 0.3, (frontIsNegativeZ ? -1 : 1) * (sd / 2)];
-  }, [dims, frontIsNegativeZ]);
-
-  // Center of the slot box
-  const slotCenter = useMemo<[number, number, number]>(() => {
-    const { sw, sh, sd } = dims;
-    return [
-      sw / 2,
-      sh / 2,
-      frontIsNegativeZ ? -(sd / 2) : (sd / 2)
-    ];
-  }, [dims, frontIsNegativeZ]);
+    const { sh } = dims;
+    return [0, sh / 2 + 0.3, 0];
+  }, [dims]);
 
   const isEmpty = fillPct <= 0.001;
 
@@ -74,13 +71,13 @@ export function SlotContainer({
 
   return (
     <group>
-      {/* HTML label - fixed screen size, always faces camera */}
+      {/* HTML label - centered on container, always faces camera */}
       {showLabel && slotId && (
         <Html
-          position={slotCenter}
-          center                    // Centers the HTML element on the position
+          position={[0, 0, 0]}
+          center
           style={{
-            pointerEvents: 'none',  // Don't block clicks
+            pointerEvents: 'none',
             userSelect: 'none',
           }}
         >
@@ -89,7 +86,7 @@ export function SlotContainer({
             fontSize: '12px',
             fontWeight: 600,
             fontFamily: 'monospace',
-            textShadow: '0 0 4px #000, 0 0 2px #000',
+            
             whiteSpace: 'nowrap',
           }}>
             {slotId}

@@ -6,7 +6,8 @@ import { Interactable } from "../interaction/Interactable";
 
 
 // Ready buildings list - add IDs as you finish them
-const READY_BUILDINGS = new Set(["bldg-22"]);
+const READY_BUILDINGS = new Set(["bldg-22", "bldg-00"]);
+
 
 
 type GLTFResult = {
@@ -103,7 +104,7 @@ const FullAmount: string = '43%';
       <p>{READY_BUILDINGS.has(id) ? "Click to explore" : "Coming soon"}</p>
       
       
-      {id === "bldg-22" && (
+      {id === "bldg-22" || id === "bldg-00" && (
         <>
           <p>Total Inventory: {Items}</p>
           <p>Last Update: {Today}</p>

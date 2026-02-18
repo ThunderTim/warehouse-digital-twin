@@ -17,6 +17,8 @@ export type Inventory = {
   fullness: number;     // 
   
   imageUrl?: string; 
+  rackImageUrl?: string;
+
   ok: boolean;
   errorMessage?: string;
 };

@@ -4,46 +4,37 @@ import { useMemo } from "react";
 import { SpawnInBay } from "../functions/SpawnInBay";
 import { SlotContainer } from "./SlotContainer";
 import { RackHitboxes } from "./RackHitboxes";
-import { getCameraForRack, type RackBounds } from "../utils/rackUtils";
+import { getCameraForRack } from "../utils/rackUtils";
 import type { ViewMode, Selection } from "../types/viewTypes";
-import type { RawSlot } from "../types/slotTypes";  // Shared type
+import type { BayData } from "../types/slotTypes";
+import {
+  processBayData,
+  filterSlotsByRack,
+  parseRackId,
+} from "../utils/bayDataUtils";
 
 type BayTransform = {
   position: THREE.Vector3;
   rotation: THREE.Euler;
 };
 
-type SlotRecord = {
-  id: string;
-  rack: number;
-  size: [number, number, number];
-  pos: [number, number, number];
-  fillPct: number;
-};
-
 type Props = {
-  bayId: string;           // NEW
-  slots: RawSlot[];        // NEW - passed in, not imported
+  bayId: string;
+  bayData: BayData;
   bayTransform: BayTransform;
   viewMode: ViewMode;
   setViewMode: (v: ViewMode) => void;
   selection: Selection;
   setSelection: (s: Selection) => void;
-  onCameraUpdate?: (config: { position: [number, number, number]; lookAt: [number, number, number] }) => void;
+  onCameraUpdate?: (config: {
+    position: [number, number, number];
+    lookAt: [number, number, number];
+  }) => void;
 };
-
-function toVec3(arr: number[]): [number, number, number] {
-  return [arr[0] ?? 0, arr[1] ?? 0, arr[2] ?? 0];
-}
-
-function mapDbPosToThree(pos: [number, number, number]): [number, number, number] {
-  const [x, y, z] = pos;
-  return [x, z, y];
-}
 
 export function BayContents({
   bayId,
-  slots: rawSlots,        // Renamed to avoid confusion
+  bayData,
   bayTransform,
   viewMode,
   setViewMode,
@@ -51,63 +42,56 @@ export function BayContents({
   setSelection,
   onCameraUpdate,
 }: Props) {
-  
-  const slots: SlotRecord[] = useMemo(() => {
-    return rawSlots.map((r) => ({
-      id: r.id,
-      rack: r.rack,
-      size: toVec3(r.size),
-      pos: mapDbPosToThree(toVec3(r.pos)),
-      fillPct: r.fillPct,
-    }));
-  }, [rawSlots]);
+  const { slots, hitboxes } = useMemo(() => processBayData(bayData), [bayData]);
 
-  const slotsAreInteractive = viewMode === "rack" || viewMode === "row";
+  bayId == null;
 
-  const bayPos: [number, number, number] = useMemo(() => {
-    return [bayTransform.position.x, bayTransform.position.y, bayTransform.position.z];
-  }, [bayTransform.position]);
+  const bayPos = useMemo<[number, number, number]>(
+    () => [bayTransform.position.x, bayTransform.position.y, bayTransform.position.z],
+    [bayTransform.position]
+  );
 
-  const handleRackClick = (rack: RackBounds) => {
-    console.log(`[BayContents:${bayId}] rack clicked:`, rack.rackId);
-    setSelection({ ...selection, rackId: rack.rackId });
+  // ── Rack click → rack view ──────────────────────────────────────────
+  const handleRackClick = (rackRef: string) => {
+    const rackId = `rack-${rackRef}`;
+    setSelection({ ...selection, rackId });
     setViewMode("rack");
 
-    if (onCameraUpdate) {
-      const cameraConfig = getCameraForRack(rack, bayPos);
-      onCameraUpdate(cameraConfig);
+    const hitbox = hitboxes.find((h) => h.rackRef === rackRef || `rack-${h.rackRef.replace("R", "")}` === rackId);
+    if (hitbox && onCameraUpdate) {
+      onCameraUpdate(getCameraForRack(hitbox, bayPos));
     }
   };
 
   const handleSlotClick = (slotId: string) => {
-    if (!slotsAreInteractive) return;
-    console.log(`[BayContents:${bayId}] slot clicked:`, slotId);
     setSelection({ ...selection, slotId });
     setViewMode("slot");
   };
 
+  // ── Visible slots: all at bay level, filtered at rack/below ────────
   const visibleSlots = useMemo(() => {
     if (viewMode === "rack" || viewMode === "row" || viewMode === "slot") {
-      const rackNum = selection.rackId ? parseInt(selection.rackId.replace("rack-", "")) : null;
-      if (rackNum !== null) {
-        return slots.filter(s => s.rack === rackNum);
-      }
+      const rackRef = selection.rackId ? parseRackId(selection.rackId) : null;
+      if (rackRef) return filterSlotsByRack(slots, rackRef);
     }
     return slots;
   }, [slots, viewMode, selection.rackId]);
 
-  const showSlotLabels = viewMode === "bay" || viewMode === "rack" || viewMode === "row" || viewMode === "slot";
+  const slotsAreInteractive = viewMode === "rack" || viewMode === "row";
 
-
+  const showSlotLabels =
+    viewMode === "bay" ||
+    viewMode === "rack" ||
+    viewMode === "row" ||
+    viewMode === "slot";
 
   return (
     <group>
-      {/* Rack Hitboxes - only at bay level */}
+      {/* Rack hitboxes — bay view only */}
       {viewMode === "bay" && (
         <SpawnInBay bayTransform={bayTransform} localPos={[0, 0, 0]}>
           <RackHitboxes
-            slots={rawSlots}
-            isInteractive={true}
+            hitboxes={hitboxes}
             selectedRackId={selection.rackId}
             onRackClick={handleRackClick}
           />
@@ -115,20 +99,20 @@ export function BayContents({
       )}
 
       {/* Slot containers */}
-      {visibleSlots.map((rec, index) => (
+      {visibleSlots.map((slot, i) => (
         <SpawnInBay
-          key={`${rec.id}-${index}`}
+          key={`${slot.id}-${i}`}
           bayTransform={bayTransform}
-          localPos={rec.pos}
+          localPos={slot.position}
         >
           <SlotContainer
-            size={rec.size}
-            fillPct={rec.fillPct}
-            slotId={rec.id}
+            size={slot.size}
+            fillPct={slot.fillPct ?? 0}
+            slotId={slot.id}
             isInteractive={slotsAreInteractive}
-            isSelected={selection.slotId === rec.id}
-            showLabel={showSlotLabels}           // NEW
-            onClick={() => handleSlotClick(rec.id)}
+            isSelected={selection.slotId === slot.id}
+            showLabel={showSlotLabels}
+            onClick={() => handleSlotClick(slot.id)}
           />
         </SpawnInBay>
       ))}

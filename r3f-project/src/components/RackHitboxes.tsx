@@ -1,61 +1,82 @@
-// RackHitboxes.tsx
-import { useMemo } from "react";
-import { calculateRackBounds, type RackBounds } from "../utils/rackUtils";
-import { Interactable } from "../interaction/Interactable";
+// src/components/RackHitboxes.tsx
+// Renders clickable hitboxes for each rack.
+// Positions and sizes come directly from the JSON rack_hitboxes — no computation needed.
 
-type RawSlot = {
-  id: string;
-  rack: number;
-  sect: string;
-  pos: number[];
-  size: number[];
-};
+import * as THREE from "three";
+import { Interactable } from "../interaction/Interactable";
+import type { RackHitboxRecord } from "../types/slotTypes";
 
 type Props = {
-  slots: RawSlot[];
-  isInteractive: boolean;
-  selectedRackId?: string;
-  onRackClick: (rack: RackBounds) => void;
+  hitboxes: RackHitboxRecord[];
+  selectedRackId?: string | null;
+  onRackClick: (rackRef: string) => void;
 };
 
-export function RackHitboxes({
-  slots,
-  isInteractive,
-  selectedRackId,
-  onRackClick,
-}: Props) {
-  const rackBounds = useMemo(() => calculateRackBounds(slots), [slots]);
+export function RackHitboxes({ hitboxes, selectedRackId, onRackClick }: Props) {
+  return (
+    <group>
+      {hitboxes.map((h) => {
+        const rackId = `rack-${h.rackRef.replace("R", "")}`;
+        const isSelected = selectedRackId === rackId;
 
- return (
-  <group>
-    {rackBounds.map((rack) => (
-      <group key={rack.rackId} position={rack.center}>
-        <Interactable
-          isInteractive={isInteractive}
-          onClick={() => onRackClick(rack)}
-          popupContent={rack.rackId}
-          popupOffset={[0, rack.size[1] / 2 + 0.5, 0]}
-        >
-          {(hovered) => {
-            const isSelected = selectedRackId === rack.rackId;
-            const color = isSelected ? "#00ff88" : hovered ? "#ffd400" : "#00aaff";
-            const opacity = isSelected ? 0.4 : hovered ? 0.35 : 0.15;
+        return (
+          <group key={h.id} position={h.position}>
+            <Interactable
+              isInteractive={h.interactive}
+              popupMode="hover"
+              popupOffset={[0, h.size[1] / 2 + 0.5, 0]}
+              onClick={() => onRackClick(h.rackRef)}
+              popupContent={
+                <div style={{ padding: "8px", minWidth: "120px" }}>
+                  <h4 style={{ margin: "0 0 4px 0" }}>Rack {h.rackRef}</h4>
+                  <p style={{ margin: "0", fontSize: "12px" }}>
+                    {h.containerCount} containers
+                  </p>
+                  <p style={{ margin: "0", fontSize: "12px" }}>
+                    Sections: {h.sections.join(", ")}
+                  </p>
+                  <p style={{ margin: "0", fontSize: "12px" }}>
+                    Levels: 1–{h.levels}
+                  </p>
+                </div>
+              }
+            >
+              {(hovered) => (
+                <>
+                  {/* Invisible hit target */}
+                  <mesh>
+                    <boxGeometry args={h.size} />
+                    <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+                  </mesh>
 
-            return (
-              <mesh>
-                <boxGeometry args={[rack.size[0], rack.size[1], rack.size[2]]} />
-                <meshBasicMaterial
-                  color={color}
-                  transparent
-                  opacity={opacity}
-                  depthWrite={false}
-                />
-              </mesh>
-            );
-          }}
-        </Interactable>
-      </group>
-    ))}
-  </group>
-);
+                  {/* Hover / selected highlight */}
+                  {(hovered || isSelected) && (
+                    <mesh renderOrder={50}>
+                      <boxGeometry args={h.size} />
+                      <meshBasicMaterial
+                        color={isSelected ? "#00ff00" : "#ffd400"}
+                        transparent
+                        opacity={isSelected ? 0.3 : 0.2}
+                        depthWrite={false}
+                      />
+                    </mesh>
+                  )}
+
+                  {/* Wireframe outline */}
+                  {(hovered || isSelected) && (
+                    <lineSegments renderOrder={51}>
+                      <edgesGeometry args={[new THREE.BoxGeometry(...h.size)]} />
+                      <lineBasicMaterial
+                        color={isSelected ? "#00ff00" : "#ffd400"}
+                      />
+                    </lineSegments>
+                  )}
+                </>
+              )}
+            </Interactable>
+          </group>
+        );
+      })}
+    </group>
+  );
 }

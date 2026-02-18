@@ -14,6 +14,8 @@ export type InventoryApi = {
   innumb: string;              // internal inventory number
 
   imageUrl?: string | null;     // NEW: optional image URL
+  
+  rackImageUrl?: string | null;
   status: "success" | string;  // success or error message
 };
 

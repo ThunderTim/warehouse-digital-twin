@@ -1,10 +1,10 @@
 // App.tsx
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useState, useMemo } from "react";
+import { Suspense, useState, useMemo, useCallback } from "react";
 import { CampusModel } from "./components/CampusModel";
-import { Bldg22Model } from "./components/Bldg22Model";
+
 import { CameraController } from "./controllers/CameraController"
-import { CAMERA_POSITIONS, getBayCamera } from "./controllers/cameraPositions";
+import { CAMERA_POSITIONS } from "./controllers/cameraPositions";
 import type { ViewMode, Selection } from "./types/viewTypes";
 import rawInventory from "./data/inventory.json";
 import type { Inventory } from "../src/types/Inventory";
@@ -15,7 +15,22 @@ import companyLogo from "../src/assets/ccsoft_logo_opt.png"
 import { Compass } from "./components/Compass";
 import './index.css'
 import './App.css' 
+import { BuildingLoader } from "./components/BuildingLoader";
+
 import { ImagePreview } from "./components/ImagePreview";
+import {fitTopDownCameraToRect} from ".//controllers/cameraFit";
+
+
+
+import { CanvasSizeReporter } from "./components/CanvasSizeReporter";
+import {
+  getBuildingConfig,
+  getBuildingWorldCenter,
+  getBayConfig,
+  getBayWorldCenter,
+} from "./controllers/buildingConfigs";
+
+
 
 
 
@@ -31,34 +46,70 @@ export default function App() {
   const [viewMode, setViewMode] = useState<ViewMode>("campus");
   const [selection, setSelection] = useState<Selection>({});
   const [dynamicCamera, setDynamicCamera] = useState<DynamicCamera | null>(null);
+  
+  
+  // 
+  const [canvasSize, setCanvasSize] = useState({ width: 800, height: 600 }); // sensible default
+
+  const handleCanvasSizeChange = useCallback((width: number, height: number) => {
+    setCanvasSize({ width, height });
+  }, []);
+
 
   // ─────────────────────────────────────────────────
-  // Calculate camera config based on viewMode + selection
+  // Camera config — computed from buildingConfigs, never hardcoded centers
   // ─────────────────────────────────────────────────
   const cameraConfig = useMemo(() => {
+    const aspect = canvasSize.width / canvasSize.height;
+
     switch (viewMode) {
+
       case "campus":
         return { ...CAMERA_POSITIONS.campus, lookAt: undefined };
 
-      case "building":
-        return { ...CAMERA_POSITIONS.building, lookAt: undefined };
+      case "building": {
+        const center = getBuildingWorldCenter(selection.buildingId!);
+        const cfg    = getBuildingConfig(selection.buildingId!);
+        if (!center || !cfg) return { ...CAMERA_POSITIONS.campus, lookAt: undefined };
+        return {
+          ...fitTopDownCameraToRect({
+            center,
+            width:   cfg.size.width,
+            length:  cfg.size.length,
+            fovDeg:  22,
+            aspect,
+            padding: 1.15,
+          }),
+          lookAt: undefined,
+        };
+      }
 
-      case "bay":
-        if (selection.bayId) {
-          return { ...getBayCamera(selection.bayId), lookAt: undefined };
-        }
-        return { ...CAMERA_POSITIONS.building, lookAt: undefined };
+      case "bay": {
+        const center = getBayWorldCenter(selection.buildingId!, selection.bayId!);
+        const bay    = getBayConfig(selection.buildingId!, selection.bayId!);
+        if (!center || !bay) return { ...CAMERA_POSITIONS.campus, lookAt: undefined };
+        return {
+          ...fitTopDownCameraToRect({
+            center,
+            width:   bay.width,
+            length:  bay.length,
+            fovDeg:  30,
+            aspect,
+            padding: 1.15,
+          }),
+          lookAt: undefined,
+        };
+      }
 
       case "rack":
       case "row":
       case "slot":
-        // Use dynamic camera with lookAt
         if (dynamicCamera) {
           return {
-            position: dynamicCamera.position,
-            lookAt: dynamicCamera.lookAt,
-            rotation: undefined,  // Use lookAt, not rotation
-            fov: 45,
+            position:  dynamicCamera.position,
+            lookAt:    dynamicCamera.lookAt,
+            rotation:  undefined,
+            fov:       45,
           };
         }
         return { ...CAMERA_POSITIONS.rack, lookAt: undefined };
@@ -66,7 +117,7 @@ export default function App() {
       default:
         return { ...CAMERA_POSITIONS.campus, lookAt: undefined };
     }
-  }, [viewMode, selection, dynamicCamera]);
+  }, [viewMode, selection, dynamicCamera, canvasSize]);
 
   // Handle camera update from child components (rack selection)
   const handleCameraUpdate = (config: DynamicCamera) => {
@@ -138,6 +189,7 @@ export default function App() {
     [inventoryItems, selectedSku]
   );
 
+  
 
   
 
@@ -175,12 +227,29 @@ export default function App() {
           {selectedInventory.imageUrl ? (
               <ImagePreview
                 src={selectedInventory.imageUrl}
+                
+                
                 alt={selectedInventory.skuPart}
                 modalTitle={selectedInventory.skuPart}
               />
             ) : (
-              <div style={{ opacity: 0.7 }}>No image.</div>
+              <div style={{ opacity: 0.7 }}>No item image.</div>
             )}
+            {selectedInventory.rackImageUrl ? (
+  <ImagePreview
+    src={selectedInventory.rackImageUrl}
+    
+    alt={selectedInventory.skuPart}
+    modalTitle={selectedInventory.skuPart}
+  />
+  
+) : (
+  <div style={{ opacity: 0.7 }}>No Rack image.</div>
+  
+)}
+<div><b>Rack URL:</b> {selectedInventory.rackImageUrl ?? "(missing)"}</div>
+
+
         </div>
       )}
     </div>
@@ -236,6 +305,7 @@ export default function App() {
 
                 {/* 3D Canvas */}
                 <Canvas>
+                  <CanvasSizeReporter onSizeChange={handleCanvasSizeChange} />
                   {/* Single camera controller for entire app */}
                   <CameraController
                     position={cameraConfig.position}
@@ -263,14 +333,16 @@ export default function App() {
 
                     {/* Building scene */}
                     {selection.buildingId && (
-                      <Bldg22Model
-                        viewMode={viewMode}
-                        setViewMode={setViewMode}
-                        selection={selection}
-                        setSelection={setSelection}
-                        onCameraUpdate={handleCameraUpdate}
-                      />
-                    )}
+                    <BuildingLoader
+                      buildingId={selection.buildingId}
+                      viewMode={viewMode}
+                      setViewMode={setViewMode}
+                      selection={selection}
+                      setSelection={setSelection}
+                      onCameraUpdate={handleCameraUpdate}
+                    />
+                  )}
+
                   </Suspense>
                 </Canvas>
               </div>
