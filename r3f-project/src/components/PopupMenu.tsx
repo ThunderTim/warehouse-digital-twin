@@ -24,6 +24,7 @@ export function PopupMenu({
               padding: "8px 10px",
               borderRadius: 8,
               cursor: "pointer",
+              
             }}
           >
             {opt}

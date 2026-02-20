@@ -9,6 +9,7 @@ import { BayContents } from "../components/BayContents";
 import { BayMapLayer } from "../components/BayMapLayer";
 import type { ViewMode, Selection } from "../types/viewTypes";
 import type { BayData, MapLayerData } from "../types/slotTypes";
+import type { Inventory } from "../types/Inventory";
 import { validateBayData, extractMapLayer } from "../utils/bayDataUtils";
 import {
   getBuildingConfig,
@@ -16,18 +17,12 @@ import {
   getBayWorldOrigin,
 } from "../controllers/buildingConfigs";
 
-// ─────────────────────────────────────────────────
-// Bay data imports — add new bays here as JSON becomes available
-// ─────────────────────────────────────────────────
 import bay00NWData from "../data/BLDG-template-Bay00.json";
 
 const BUILDING_ID = "bldg-00";
 
 const BAY_DATA: Record<string, BayData> = {
   "BAY_00_NW": bay00NWData as unknown as BayData,
-  // "BAY_00_NE": bay00NEData as unknown as BayData,
-  // "BAY_00_SW": bay00SWData as unknown as BayData,
-  // "BAY_00_SE": bay00SEData as unknown as BayData,
 };
 
 type BayTransform = { position: THREE.Vector3; rotation: THREE.Euler };
@@ -42,6 +37,8 @@ type Props = {
     position: [number, number, number];
     lookAt: [number, number, number];
   }) => void;
+  fillByLocation: Map<string, number>;
+  itemsByLocation: Map<string, Inventory[]>;  // ← new
 };
 
 export function Bldg00Model({
@@ -50,6 +47,8 @@ export function Bldg00Model({
   selection,
   setSelection,
   onCameraUpdate,
+  fillByLocation,
+  itemsByLocation,  // ← new
 }: Props) {
   const buildingCfg = getBuildingConfig(BUILDING_ID)!;
   const activeBays  = getActiveBays(BUILDING_ID);
@@ -64,8 +63,6 @@ export function Bldg00Model({
   const activeBayId   = selection.bayId ?? null;
   const activeBayData = activeBayId ? BAY_DATA[activeBayId] : null;
 
-  // Pre-compute map layers for every bay that has JSON data.
-  // Pure data shaping — no Three.js objects, runs once on mount.
   const allBayMapLayers = useMemo<BayMapEntry[]>(() => {
     return Object.entries(BAY_DATA).flatMap(([bayId, data]) => {
       const wo = getBayWorldOrigin(BUILDING_ID, bayId);
@@ -81,7 +78,6 @@ export function Bldg00Model({
     });
   }, []);
 
-  // For bay contents — only needs transform of the selected bay
   const activeBayTransform = useMemo<BayTransform | null>(() => {
     if (!activeBayId) return null;
     const wo = getBayWorldOrigin(BUILDING_ID, activeBayId);
@@ -102,6 +98,7 @@ export function Bldg00Model({
         const cx = wx + bay.width  / 2;
         const cy = wy + 10;
         const cz = wz + bay.length / 2;
+        const labelOffset = cx * -.50;
 
         return (
           <group key={bay.bayId}>
@@ -124,29 +121,38 @@ export function Bldg00Model({
             >
               {(hovered) => (
                 <>
-                  <mesh position={[cx, cy, cz]}>
-                    <boxGeometry args={[bay.width, 20, bay.length]} />
-                    <meshBasicMaterial transparent opacity={0} depthWrite={false} />
-                  </mesh>
+                  {baysAreInteractive && (
+                    <mesh position={[cx, cy, cz]}>
+                      <boxGeometry args={[bay.width, 20, bay.length]} />
+                      <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+                    </mesh>
+                  )}
+
                   {hovered && baysAreInteractive && (
                     <mesh position={[cx, cy, cz]}>
                       <boxGeometry args={[bay.width, 20, bay.length]} />
-                      <meshBasicMaterial color="#ff9d00" transparent opacity={0.12} depthWrite={false} />
+                      <meshBasicMaterial color="#ffd400" transparent opacity={0.12} depthWrite={false} />
                     </mesh>
                   )}
-                  <lineSegments position={[cx, 0, cz]}>
-                    <edgesGeometry args={[new THREE.BoxGeometry(bay.width, 0.1, bay.length)]} />
-                    <lineBasicMaterial color={hovered && baysAreInteractive ? "#ffd400" : "#555"} />
-                  </lineSegments>
-                  <Html position={[cx, 8, cz]} center style={{ pointerEvents: "none" }}>
-                    <div style={{
-                      color: hovered && baysAreInteractive ? "#ffd400" : "#aaa",
-                      fontSize: "18px", fontFamily: "monospace", fontWeight: 600,
-                       whiteSpace: "nowrap",
-                    }}>
-                      {bay.label}
-                    </div>
-                  </Html>
+
+                  {viewMode !== "slot" && (
+                    <lineSegments position={[cx, 0, cz]}>
+                      <edgesGeometry args={[new THREE.BoxGeometry(bay.width, 0.1, bay.length)]} />
+                      <lineBasicMaterial color={hovered && baysAreInteractive ? "#ffd400" : "#555"} />
+                    </lineSegments>
+                  )}
+
+                  {(viewMode === "building" || viewMode === "bay") && (
+                    <Html position={[labelOffset, 8, cz]} center style={{ pointerEvents: "none" }}>
+                      <div style={{
+                        color: hovered && baysAreInteractive ? "#2e2d2a" : "#646462",
+                        fontSize: "16px", fontFamily: "monospace", fontWeight: 600,
+                        whiteSpace: "nowrap",
+                      }}>
+                        {bay.label}
+                      </div>
+                    </Html>
+                  )}
                 </>
               )}
             </Interactable>
@@ -155,42 +161,42 @@ export function Bldg00Model({
       })}
 
       {/* ── Inactive bay outlines ─────────────────────────────────────── */}
-      {buildingCfg.bays.filter((b) => !b.active).map((bay) => {
-        const worldOrigin = getBayWorldOrigin(BUILDING_ID, bay.bayId);
-        if (!worldOrigin) return null;
-        const [wx, , wz] = worldOrigin;
-        return (
-          <group key={bay.bayId}>
-            <lineSegments position={[wx + bay.width / 2, 0, wz + bay.length / 2]}>
-              <edgesGeometry args={[new THREE.BoxGeometry(bay.width, 0.1, bay.length)]} />
-              <lineBasicMaterial color="#333" />
-            </lineSegments>
-            <Html position={[wx + bay.width / 2, 4, wz + bay.length / 2]} center style={{ pointerEvents: "none" }}>
-              <div style={{
-                color: "#444", fontSize: "12px", fontFamily: "monospace",
-                 whiteSpace: "nowrap",
-              }}>
-                {bay.label} (inactive)
-              </div>
-            </Html>
-          </group>
-        );
-      })}
+      {viewMode !== "slot" && viewMode !== "rack" && buildingCfg.bays
+        .filter((b) => !b.active)
+        .map((bay) => {
+          const worldOrigin = getBayWorldOrigin(BUILDING_ID, bay.bayId);
+          if (!worldOrigin) return null;
+          const [wx, , wz] = worldOrigin;
+          return (
+            <group key={bay.bayId}>
+              <lineSegments position={[wx + bay.width / 2, 0, wz + bay.length / 2]}>
+                <edgesGeometry args={[new THREE.BoxGeometry(bay.width, 0.1, bay.length)]} />
+                <lineBasicMaterial color="#333" />
+              </lineSegments>
+              <Html position={[wx + bay.width / 2, 4, wz + bay.length / 2]} center style={{ pointerEvents: "none" }}>
+                <div style={{
+                  color: "#444", fontSize: "12px", fontFamily: "monospace", whiteSpace: "nowrap",
+                }}>
+                  {bay.label} (inactive)
+                </div>
+              </Html>
+            </group>
+          );
+        })}
 
       {/* ── Map layers ────────────────────────────────────────────────── */}
       {viewMode === "building" && allBayMapLayers.map(({ bayId, mapLayer, transform }) => (
-        // Building view: show map layer for every bay that has data
-        <BayMapLayer key={bayId} mapLayer={mapLayer} bayTransform={transform} />
+        <BayMapLayer key={bayId} mapLayer={mapLayer} bayTransform={transform} showLabels={true} labelOpacity={0.15} />
       ))}
-      {viewMode === "bay" && allBayMapLayers
-        .filter(({ bayId }) => bayId === activeBayId)
-        .map(({ bayId, mapLayer, transform }) => (
-          // Bay view: only the selected bay
-          <BayMapLayer key={bayId} mapLayer={mapLayer} bayTransform={transform} />
-        ))
+      {(viewMode === "bay" || viewMode === "rack") &&
+        allBayMapLayers
+          .filter(({ bayId }) => bayId === activeBayId)
+          .map(({ bayId, mapLayer, transform }) => (
+            <BayMapLayer key={bayId} mapLayer={mapLayer} bayTransform={transform} showLabels={viewMode === "bay"} labelOpacity={0.85} />
+          ))
       }
 
-      {/* ── Bay contents — racks + slots, only when bay is selected ──── */}
+      {/* ── Bay contents — racks + slots ─────────────────────────────── */}
       {activeBayId && activeBayData && activeBayTransform && (
         <BayContents
           bayId={activeBayId}
@@ -201,6 +207,8 @@ export function Bldg00Model({
           selection={selection}
           setSelection={setSelection}
           onCameraUpdate={onCameraUpdate}
+          fillByLocation={fillByLocation}
+          itemsByLocation={itemsByLocation}  // ← new
         />
       )}
     </>

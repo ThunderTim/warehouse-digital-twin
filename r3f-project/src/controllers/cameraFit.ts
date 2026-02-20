@@ -11,6 +11,8 @@ export type FitRect = {
   baseY?: number;   // add extra height offset if desired
 };
 
+
+
 export function fitTopDownCameraToRect({
   center,
   width,
@@ -40,3 +42,6 @@ export function fitTopDownCameraToRect({
     far: Math.max(2000, height * 6),
   };
 }
+
+
+

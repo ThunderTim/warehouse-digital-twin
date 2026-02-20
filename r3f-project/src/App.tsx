@@ -8,7 +8,7 @@ import { CAMERA_POSITIONS } from "./controllers/cameraPositions";
 import type { ViewMode, Selection } from "./types/viewTypes";
 import rawInventory from "./data/inventory.json";
 import type { Inventory } from "../src/types/Inventory";
-import type { InventoryApi } from "./types/InventoryApi"; // note: InventoryAPI.ts file
+import type { InventoryApi } from "./types/InventoryApi";
 import { mapInventory } from "./utils/mapInventory";
 import { InventoryDropdown } from "./components/InventoryDropdown";
 import companyLogo from "../src/assets/ccsoft_logo_opt.png"
@@ -20,7 +20,7 @@ import { BuildingLoader } from "./components/BuildingLoader";
 import { ImagePreview } from "./components/ImagePreview";
 import {fitTopDownCameraToRect} from ".//controllers/cameraFit";
 
-
+import { CameraDebug } from "./components/CameraDebug";
 
 import { CanvasSizeReporter } from "./components/CanvasSizeReporter";
 import {
@@ -28,15 +28,9 @@ import {
   getBuildingWorldCenter,
   getBayConfig,
   getBayWorldCenter,
+  getBayWorldOrigin,
 } from "./controllers/buildingConfigs";
 
-
-
-
-
-
-
-// Dynamic camera can use lookAt (for rack views) instead of rotation
 type DynamicCamera = {
   position: [number, number, number];
   lookAt: [number, number, number];
@@ -47,23 +41,19 @@ export default function App() {
   const [selection, setSelection] = useState<Selection>({});
   const [dynamicCamera, setDynamicCamera] = useState<DynamicCamera | null>(null);
   
-  
-  // 
-  const [canvasSize, setCanvasSize] = useState({ width: 800, height: 600 }); // sensible default
+  const [canvasSize, setCanvasSize] = useState({ width: 800, height: 600 });
 
   const handleCanvasSizeChange = useCallback((width: number, height: number) => {
     setCanvasSize({ width, height });
   }, []);
 
-
   // ─────────────────────────────────────────────────
-  // Camera config — computed from buildingConfigs, never hardcoded centers
+  // Camera config
   // ─────────────────────────────────────────────────
   const cameraConfig = useMemo(() => {
     const aspect = canvasSize.width / canvasSize.height;
 
     switch (viewMode) {
-
       case "campus":
         return { ...CAMERA_POSITIONS.campus, lookAt: undefined };
 
@@ -102,7 +92,6 @@ export default function App() {
       }
 
       case "rack":
-      case "row":
       case "slot":
         if (dynamicCamera) {
           return {
@@ -119,13 +108,13 @@ export default function App() {
     }
   }, [viewMode, selection, dynamicCamera, canvasSize]);
 
-  // Handle camera update from child components (rack selection)
+  const [rackCamera, setRackCamera] = useState<DynamicCamera | null>(null);
+
   const handleCameraUpdate = (config: DynamicCamera) => {
-    console.log("[App] camera update:", config);
     setDynamicCamera(config);
+    if (viewMode === "bay") setRackCamera(config);
   };
 
-  // Helper to go back one level
   const goBack = () => {
     switch (viewMode) {
       case "building":
@@ -146,37 +135,25 @@ export default function App() {
         });
         setDynamicCamera(null);
         break;
-      case "row":
+      case "slot":
         setViewMode("rack");
         setSelection({
           buildingId: selection.buildingId,
           bayId: selection.bayId,
           rackId: selection.rackId,
         });
-        break;
-      case "slot":
-        setViewMode("row");
-        setSelection({
-          buildingId: selection.buildingId,
-          bayId: selection.bayId,
-          rackId: selection.rackId,
-          rowId: selection.rowId,
-        });
+        if (rackCamera) setDynamicCamera(rackCamera);
         break;
     }
-
-    
   };
 
-    // ─────────────────────────────────────────────────
-  // Inventory (mocked from local JSON for now)
+  // ─────────────────────────────────────────────────
+  // Inventory
   // ─────────────────────────────────────────────────
   const inventoryItems: Inventory[] = useMemo(() => {
     const apiItems: InventoryApi[] = Array.isArray(rawInventory)
       ? (rawInventory as InventoryApi[])
       : [rawInventory as InventoryApi];
-
-    // Map + keep successes (you can decide later if you want to show errors in UI)
     return apiItems.map(mapInventory).filter((x) => x.ok);
   }, []);
 
@@ -184,170 +161,171 @@ export default function App() {
     inventoryItems[0]?.sku ?? ""
   );
 
+  // ─────────────────────────────────────────────────
+  // fillByLocation — binId → 0–1 fill fraction
+  // ─────────────────────────────────────────────────
+  const fillByLocation = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const item of inventoryItems) {
+      if (!map.has(item.binId)) {
+        map.set(item.binId, item.fullness / 100);
+      }
+    }
+    return map;
+  }, [inventoryItems]);
+
+  // ─────────────────────────────────────────────────
+  // itemsByLocation — binId → Inventory[]
+  // All items that share a bin are grouped here so the
+  // slot popup can list every SKU stored in that location.
+  // ─────────────────────────────────────────────────
+  const itemsByLocation = useMemo(() => {
+    const map = new Map<string, Inventory[]>();
+    for (const item of inventoryItems) {
+      const existing = map.get(item.binId);
+      if (existing) {
+        existing.push(item);
+      } else {
+        map.set(item.binId, [item]);
+      }
+    }
+    return map;
+  }, [inventoryItems]);
+
   const selectedInventory = useMemo(
     () => inventoryItems.find((x) => x.sku === selectedSku),
     [inventoryItems, selectedSku]
   );
 
-  
-
-  
-
   return (
     <div className="mainContainer">
-          {/* Left -Temp Menu */}
-          <div className="leftNav">
-          <img src={companyLogo} alt="Description of my image" />
-          <p>Warehouse Visualization Demo</p>
+      {/* Left nav */}
+      <div className="leftNav">
+        <img src={companyLogo} alt="Description of my image" />
+        <p>Warehouse Visualization Demo</p>
 
-
-  {inventoryItems.length === 0 ? (
-    <div style={{ fontSize: 12, opacity: 0.8 }}>
-      No inventory items loaded.
-    </div>
-  ) : (
-    <div style={{ display: "grid", gap: 12 }}>
-      <InventoryDropdown
-        items={inventoryItems}
-        selectedSku={selectedSku}
-        onChangeSku={setSelectedSku}
-      />
-
-      {selectedInventory && (
-        <div style={{ display: "grid", gap: 6, fontSize: 13 }}>
-          <div><b>SKU:</b> {selectedInventory.sku}</div>
-          <div><b>Part:</b> {selectedInventory.skuPart}</div>
-          <div><b>Bin:</b> {selectedInventory.binId}</div>
-          <div><b>Qty:</b> {selectedInventory.availableQty}</div>
-          <div>
-            <b>Item (W×D×H):</b>{" "}
-            {selectedInventory.item.width}×{selectedInventory.item.depth}×{selectedInventory.item.height}
+        {inventoryItems.length === 0 ? (
+          <div style={{ fontSize: 12, opacity: 0.8 }}>
+            No inventory items loaded.
           </div>
+        ) : (
+          <div style={{ display: "grid", gap: 12 }}>
+            <InventoryDropdown
+              items={inventoryItems}
+              selectedSku={selectedSku}
+              onChangeSku={setSelectedSku}
+            />
 
-          {selectedInventory.imageUrl ? (
-              <ImagePreview
-                src={selectedInventory.imageUrl}
-                
-                
-                alt={selectedInventory.skuPart}
-                modalTitle={selectedInventory.skuPart}
-              />
-            ) : (
-              <div style={{ opacity: 0.7 }}>No item image.</div>
-            )}
-            {selectedInventory.rackImageUrl ? (
-  <ImagePreview
-    src={selectedInventory.rackImageUrl}
-    
-    alt={selectedInventory.skuPart}
-    modalTitle={selectedInventory.skuPart}
-  />
-  
-) : (
-  <div style={{ opacity: 0.7 }}>No Rack image.</div>
-  
-)}
-<div><b>Rack URL:</b> {selectedInventory.rackImageUrl ?? "(missing)"}</div>
-
-
-        </div>
-      )}
-    </div>
-  )}
-</div>
-
-          {/* Right Warehouse Visualization */}
-      
-            <div className="vizWindow">
-              <Compass viewMode={viewMode} />
-                {viewMode !== "campus" && (
-                  <button
-                    onClick={goBack}
-                    style={{
-                      position: "absolute",
-                      top: 20,
-                      left: 20,
-                      zIndex: 10,
-                      padding: "10px 16px",
-                      fontSize: "14px",
-                      borderRadius: "6px",
-                      border: "none",
-                      cursor: "pointer",
-                      background: "#111",
-                      color: "white",
-                    }}
-                  >
-                    ← Back
-                  </button>
-                )}
-
-                {/* Debug: Current view indicator */}
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 20,
-                    right: 20,
-                    zIndex: 10,
-                    color: "#fff",
-                    background: "#333",
-                    padding: "8px 12px",
-                    borderRadius: "4px",
-                    fontFamily: "monospace",
-                    fontSize: "12px",
-                    overflow: "visible",
-                  }}
-                >
-                  view: {viewMode}
-                  {selection.buildingId && ` | bldg: ${selection.buildingId}`}
-                  {selection.bayId && ` | bay: ${selection.bayId}`}
-                  {selection.rackId && ` | rack: ${selection.rackId}`}
+            {selectedInventory && (
+              <div style={{ display: "grid", gap: 6, fontSize: 13 }}>
+                <div><b>SKU:</b> {selectedInventory.sku}</div>
+                <div><b>Part:</b> {selectedInventory.skuPart}</div>
+                <div><b>Bin:</b> {selectedInventory.binId}</div>
+                <div><b>Qty:</b> {selectedInventory.availableQty}</div>
+                <div>
+                  <b>Item (W×D×H):</b>{" "}
+                  {selectedInventory.item.width}×{selectedInventory.item.depth}×{selectedInventory.item.height}
                 </div>
 
-                {/* 3D Canvas */}
-                <Canvas>
-                  <CanvasSizeReporter onSizeChange={handleCanvasSizeChange} />
-                  {/* Single camera controller for entire app */}
-                  <CameraController
-                    position={cameraConfig.position}
-                    rotation={cameraConfig.rotation}
-                    lookAt={cameraConfig.lookAt}
-                    fov={cameraConfig.fov}
-                    //near={cameraConfig.near}
-                    //far={cameraConfig.far}
-                    smooth={1}
+                {selectedInventory.imageUrl ? (
+                  <ImagePreview
+                    src={selectedInventory.imageUrl}
+                    alt={selectedInventory.skuPart}
+                    modalTitle={selectedInventory.skuPart}
                   />
+                ) : (
+                  <div style={{ opacity: 0.7 }}>No item image.</div>
+                )}
 
-                  <ambientLight intensity={8.6} />
-                  <directionalLight position={[5, 10, 5]} intensity={3.2} />
-
-                  <Suspense fallback={null}>
-                    {/* Campus scene */}
-                    {!selection.buildingId && (
-                      <CampusModel
-                        onSelectBuilding={(id) => {
-                          setSelection({ buildingId: id });
-                          setViewMode("building");
-                        }}
-                      />
-                    )}
-
-                    {/* Building scene */}
-                    {selection.buildingId && (
-                    <BuildingLoader
-                      buildingId={selection.buildingId}
-                      viewMode={viewMode}
-                      setViewMode={setViewMode}
-                      selection={selection}
-                      setSelection={setSelection}
-                      onCameraUpdate={handleCameraUpdate}
-                    />
-                  )}
-
-                  </Suspense>
-                </Canvas>
+                {selectedInventory.rackImageUrl ? (
+                  <ImagePreview
+                    src={selectedInventory.rackImageUrl}
+                    alt={selectedInventory.skuPart}
+                    modalTitle={selectedInventory.skuPart}
+                  />
+                ) : (
+                  <div style={{ opacity: 0.7 }}>No Rack image.</div>
+                )}
+                <div><b>Rack URL:</b> {selectedInventory.rackImageUrl ?? "(missing)"}</div>
               </div>
+            )}
+          </div>
+        )}
+      </div>
 
+      {/* Right — 3D canvas */}
+      <div className="vizWindow">
+        <Compass viewMode={viewMode} />
+
+        {viewMode !== "campus" && (
+          <button
+            onClick={goBack}
+            style={{
+              position: "absolute",
+              top: 20, left: 20, zIndex: 10,
+              padding: "10px 16px", fontSize: "14px",
+              borderRadius: "6px", border: "none",
+              cursor: "pointer", background: "#111", color: "white",
+            }}
+          >
+            ← Back
+          </button>
+        )}
+
+        <div
+          style={{
+            position: "absolute",
+            top: 20, right: 20, zIndex: 10,
+            color: "#fff", background: "#333",
+            padding: "8px 12px", borderRadius: "4px",
+            fontFamily: "monospace", fontSize: "12px",
+          }}
+        >
+          view: {viewMode}
+          {selection.buildingId && ` | bldg: ${selection.buildingId}`}
+          {selection.bayId && ` | bay: ${selection.bayId}`}
+          {selection.rackId && ` | rack: ${selection.rackId}`}
+        </div>
+
+        <Canvas>
+          <CanvasSizeReporter onSizeChange={handleCanvasSizeChange} />
+          <CameraDebug enabled={true} />
+          <CameraController
+            position={cameraConfig.position}
+            rotation={cameraConfig.rotation}
+            lookAt={cameraConfig.lookAt}
+            fov={cameraConfig.fov}
+            smooth={1}
+          />
+
+          <ambientLight intensity={8.6} />
+          <directionalLight position={[5, 10, 5]} intensity={3.2} />
+
+          <Suspense fallback={null}>
+            {!selection.buildingId && (
+              <CampusModel
+                onSelectBuilding={(id) => {
+                  setSelection({ buildingId: id });
+                  setViewMode("building");
+                }}
+              />
+            )}
+
+            {selection.buildingId && (
+              <BuildingLoader
+                buildingId={selection.buildingId}
+                viewMode={viewMode}
+                setViewMode={setViewMode}
+                selection={selection}
+                setSelection={setSelection}
+                onCameraUpdate={handleCameraUpdate}
+                fillByLocation={fillByLocation}
+                itemsByLocation={itemsByLocation}   
+              />
+            )}
+          </Suspense>
+        </Canvas>
+      </div>
     </div>
-    
   );
 }

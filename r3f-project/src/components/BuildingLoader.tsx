@@ -1,15 +1,10 @@
 import React from "react";
 import type { ViewMode, Selection } from "../types/viewTypes";
+import type { Inventory } from "../types/Inventory";
 import { Html } from "@react-three/drei";
 
-//Import the 3d models / building scenes:
 import { Bldg22Model } from "./Bldg22Model";
 import { Bldg00Model } from "./Bldg00Model";
-
-// Update with next building when ready
-//import { Bldg00Model } from "./Bldg00Model";
-//"bldg-00": { ready: true, Component: Bldg00Model, label: "Building 00" },
-
 
 type DynamicCamera = {
   position: [number, number, number];
@@ -23,17 +18,13 @@ type Props = {
   selection: Selection;
   setSelection: React.Dispatch<React.SetStateAction<Selection>>;
   onCameraUpdate: (config: DynamicCamera) => void;
-  // Pass Footprint? - building and bay pos & size to contrain camera !?
+  fillByLocation: Map<string, number>;
+  itemsByLocation: Map<string, Inventory[]>;  // ← new
 };
 
-// Central registry
 const BUILDINGS: Record<
   string,
-  {
-    ready: boolean;
-    Component?: React.ComponentType<any>;
-    label?: string;
-  }
+  { ready: boolean; Component?: React.ComponentType<any>; label?: string }
 > = {
   "bldg-22": { ready: true, Component: Bldg22Model, label: "Building 22" },
   "bldg-00": { ready: true, Component: Bldg00Model, label: "Building 00" },
@@ -42,18 +33,14 @@ const BUILDINGS: Record<
 export function BuildingLoader(props: Props) {
   const def = BUILDINGS[props.buildingId];
 
-  // Unknown building
   if (!def) {
     return (
       <Html center>
-        <div className="building-message">
-          Unknown building: {props.buildingId}
-        </div>
+        <div className="building-message">Unknown building: {props.buildingId}</div>
       </Html>
     );
   }
 
-  // Known but not ready
   if (!def.ready || !def.Component) {
     return (
       <Html center>
@@ -73,6 +60,8 @@ export function BuildingLoader(props: Props) {
       selection={props.selection}
       setSelection={props.setSelection}
       onCameraUpdate={props.onCameraUpdate}
+      fillByLocation={props.fillByLocation}
+      itemsByLocation={props.itemsByLocation}  // ← new
     />
   );
 }

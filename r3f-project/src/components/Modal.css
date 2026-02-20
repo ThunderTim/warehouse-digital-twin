@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;   /* Center horizontally */
   align-items: center;       /* Center vertically */
-  z-index: 1000;             /* Above everything else */
+  z-index: 39000;             /* Above everything else */
    backdrop-filter: blur(.68px);
 }
 

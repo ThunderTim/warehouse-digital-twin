@@ -27,6 +27,10 @@ export type RawRack = {
   sections: string[];
   levels: number;
   slots_per_section: number;
+  /** XZ unit vector pointing toward the viewable front face.
+   *  [1,0]=+X  [-1,0]=-X  [0,1]=+Z  [0,-1]=-Z
+   *  Camera is placed in this direction from the rack center. */
+  facing?: [number, number];
 };
 
 export type RawRackHitbox = {
@@ -72,6 +76,7 @@ export type RawFloorGuide = {
   position: Vec3;
   dimensions: Vec3;
   style: StyleDef;
+  sections?: string[]; 
 };
 
 export type RawBuildingOutline = {
@@ -142,6 +147,9 @@ export type RackHitboxRecord = {
   levels: number;
   containerCount: number;
   interactive: boolean;
+  /** XZ unit vector: which direction the camera should be placed.
+   *  Sourced from rack JSON facing field, defaults to [0, 1] (+Z). */
+  frontFacing: [number, number];
 };
 
 /** All static map layer data extracted from the JSON */
@@ -186,5 +194,6 @@ export type MapLayerData = {
     position: [number, number, number];
     size: [number, number, number];
     color: string;
+    sections?: string[];
   }[];
 };

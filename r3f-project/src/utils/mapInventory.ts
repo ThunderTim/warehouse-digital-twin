@@ -26,13 +26,14 @@ export function mapInventory(api: InventoryApi): Inventory {
     availableQty: toNumber(api.inavlq, "inavlq"),
 
     item: {
-      width: toNumber(api.itemwd, "itemwd"),
-      depth: toNumber(api.itemdp, "itemdp"),
+      width:  toNumber(api.itemwd, "itemwd"),
+      depth:  toNumber(api.itemdp, "itemdp"),
       height: toNumber(api.itemht, "itemht"),
     },
 
-    fullness: toNumber(api.lofull, "lofull"),
-    imageUrl: normalizeUrl(api.imageUrl),
+    fullness:     toNumber(api.lofull, "lofull"),
+    imageUrl:     normalizeUrl(api.imageUrl),
+    rackImageUrl: normalizeUrl(api.rackImageUrl), // ← was missing
 
     ok,
     ...(ok ? {} : { errorMessage: api.status }),

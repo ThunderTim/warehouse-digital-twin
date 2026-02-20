@@ -16,5 +16,6 @@ export function SpawnInBay({ bayTransform, localPos = [0, 0, 0], children }: Pro
     <group position={bayTransform.position} rotation={bayTransform.rotation}>
       <group position={localPos}>{children}</group>
     </group>
+    
   );
 }

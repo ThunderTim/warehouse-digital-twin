@@ -51,6 +51,13 @@ function buildRackHitboxRecord(
     levels: rack?.levels ?? 0,
     containerCount,
     interactive: hitbox.interactive ?? true,
+    // Use facing from JSON if provided.
+    // Otherwise auto-detect: sections run along the longer horizontal axis,
+    // so camera should face from the perpendicular axis.
+    // e.g. rack depth(z)=24 > width(x)=3 → sections run along Z → face from X → [1,0]
+    frontFacing: rack?.facing ?? (
+      (rack?.dimensions?.z ?? 0) > (rack?.dimensions?.x ?? 0) ? [1, 0] : [0, 1]
+    ),
   };
 }
 
@@ -104,6 +111,8 @@ export function extractMapLayer(data: BayData): MapLayerData {
       position: cornerToCenter(f.position, f.dimensions),
       size: [f.dimensions.x, f.dimensions.y || 0.01, f.dimensions.z] as [number, number, number],
       color: f.style?.color ?? "#FFCC00",
+      sections: f.sections, 
+      
     })),
   };
 }

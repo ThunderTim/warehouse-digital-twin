@@ -32,7 +32,7 @@
 }
 
 .leftNav {
-  width: 280px;
+  width: auto;
   min-width: 280px;
   background: var(--color-bg-dark);
   color: #fff;

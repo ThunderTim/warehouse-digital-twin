@@ -6,7 +6,7 @@ import { extend } from "@react-three/fiber";
 // 1️⃣ Create material
 export const ShellMaterialImpl = shaderMaterial(
   {
-    baseColor: new THREE.Color("#cfd6ff"),
+    baseColor: new THREE.Color("#9db9e4"),
     opacity: 0.22,
     fresnelPower: 2.2,
     fresnelStrength: 0.9,
