@@ -43,6 +43,8 @@ export default function App() {
   
   const [canvasSize, setCanvasSize] = useState({ width: 800, height: 600 });
 
+  getBayWorldOrigin== null;
+
   const handleCanvasSizeChange = useCallback((width: number, height: number) => {
     setCanvasSize({ width, height });
   }, []);
