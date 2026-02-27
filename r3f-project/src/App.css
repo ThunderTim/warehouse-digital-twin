@@ -29,6 +29,7 @@
   display: flex;
   width: 100vw;
   height: 100vh;
+  background-color: var(--color-bg-light);
 }
 
 .leftNav {
@@ -36,7 +37,7 @@
   min-width: 280px;
   background: var(--color-bg-dark);
   color: #fff;
-  margin: 20px;
+  margin: 20px 10px 20px 20px;
   border-radius: 12px;
   padding: 16px;
   box-sizing: border-box;
@@ -51,8 +52,10 @@
 .vizWindow {
   flex: 1;
   position: relative;
-  background: #fdfdfd;
-  height: 100vh;  /* or 100% if parent has explicit height */
+  background: #ffffff;
+  border-radius: 12px;
+  margin: 20px 20px 10px 10px;
+  height: 96vh;  /* or 100% if parent has explicit height */
 }
 
 .vizWindow canvas {
