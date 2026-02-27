@@ -86,6 +86,7 @@ export function getCameraForSlot(
   bayPos: [number, number, number],
   frontFacing: [number, number] = [0, 1]
 ): CameraResult {
+   void slotSize;
   const [fx, fz] = frontFacing;
 
   const worldCenter: [number, number, number] = [

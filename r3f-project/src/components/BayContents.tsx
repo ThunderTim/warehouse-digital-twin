@@ -52,7 +52,7 @@ export function BayContents({
   itemsByLocation,
 }: Props) {
   const { slots, hitboxes } = useMemo(() => processBayData(bayData), [bayData]);
-
+   bayId == null;
   const bayPos = useMemo<[number, number, number]>(
     () => [bayTransform.position.x, bayTransform.position.y, bayTransform.position.z],
     [bayTransform.position]

@@ -1,6 +1,6 @@
 // PopUp.tsx
 import { Html } from "@react-three/drei";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
