@@ -8,7 +8,7 @@ import { useMemo } from "react";
 import { Html } from "@react-three/drei";
 import { SpawnInBay } from "../functions/SpawnInBay";
 import type { MapLayerData } from "../types/slotTypes";
-import { bleach } from "three/examples/jsm/tsl/display/BleachBypass.js";
+//import { bleach } from "three/examples/jsm/tsl/display/BleachBypass.js";
 
 type BayTransform = { position: THREE.Vector3; rotation: THREE.Euler };
 type Props = { 
